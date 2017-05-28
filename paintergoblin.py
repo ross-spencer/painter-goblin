@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 import png
 import sys
@@ -69,6 +72,10 @@ class PainterGoblin:
 	tmpfilename = "enhanced-image.png"
 
 	def paintpicture(self, img, depth, tmpfolder, outfilename):
+
+		# open the image to convert..
+		img = Image.open(img)
+
 		i = self.enhance(img)
 		i = self.saturate(i)
 		i = self.addpalette(i, depth)
@@ -83,11 +90,8 @@ def paintimage(imagein, imageout):
 	# image palette depth to use...
 	depth = 5
 
-	# open the image to convert..
-	img = Image.open(imagein)
-
 	# get an image to paint...
-	pg.paintpicture(img, depth, "images/", imageout)
+	pg.paintpicture(imgagein, depth, "images/", imageout)
 
 def main():
 
