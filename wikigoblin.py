@@ -26,6 +26,9 @@ class WikiGoblin:
 
 	def resultsfromlink(self, link):
 
+		# check we're looking at the URI not the item URL...
+		link = link.replace("https://www.wikidata.org/wiki/", "http://www.wikidata.org/entity/")
+
 		sys.stderr.write("retriving from: " + link + "\n")
 	
 		string = """
@@ -35,12 +38,14 @@ class WikiGoblin:
 		  <{{LINK}}> wdt:P276 ?loc .
 		  <{{LINK}}> wdt:P195 ?coll .
 		  <{{LINK}}> wdt:P170 ?artist .
-		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en"}
+		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
 		} ORDER BY ?random
 		LIMIT 1
 		"""
 
 		sparql.setQuery(string.replace("{{LINK}}", link))
+
+		sys.stderr.write(string.replace("{{LINK}}", link) + "\n")
 
 		sparql.setReturnFormat(JSON)
 		results = sparql.query().convert()
@@ -72,7 +77,7 @@ class WikiGoblin:
 		  ?item wdt:P276 ?loc .
 		  ?item wdt:P195 ?coll .
 		  ?item wdt:P170 ?artist .
-		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en"}
+		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
 		} ORDER BY ?random
 		LIMIT 1
 		""")
@@ -95,6 +100,7 @@ class WikiGoblin:
 
 	def getfile(self, res, loc):
 		urllib.urlretrieve(res.fileloc, loc)
+		return
 
 	# not pretty code below here but works for now... 
 	def maketweet(self, res):
