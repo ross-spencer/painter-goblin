@@ -2,6 +2,10 @@
 # -*- coding: utf-8 -*
 
 import os
+import sys
+
+#twitter
+sys.path.insert(0, 'twitter')
 from twitter import *
 
 #Twitter pieces

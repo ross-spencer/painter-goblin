@@ -1,2 +1,3 @@
 .twitter-consumer-keys
 .twitter-paintergoblin-credentials
+*.pyc

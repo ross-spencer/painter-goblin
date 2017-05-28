@@ -103,7 +103,7 @@ class WikiGoblin:
 		if len(tweet) >= 140:
 			tweet = res.label + ", " + res.artist + " " + res.uri + " " + emoji
 		else:
-			return tweet 
+			return tweet
 		if len(tweet) >= 140:
 			tweet = res.label + " " + res.uri + " " + emoji
 		else:
