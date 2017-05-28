@@ -29,10 +29,11 @@ class WikiGoblin:
 		sys.stderr.write("retriving from: " + link + "\n")
 	
 		string = """
-		SELECT ?itemLabel ?image ?loc ?locLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 		  <{{LINK}}> rdfs:label ?itemLabel .
 		  <{{LINK}}> wdt:P18 ?image .
 		  <{{LINK}}> wdt:P276 ?loc .
+		  <{{LINK}}> wdt:P195 ?coll .
 		  <{{LINK}}> wdt:P170 ?artist .
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en"}
 		} ORDER BY ?random
@@ -50,6 +51,8 @@ class WikiGoblin:
 			res.label = r['itemLabel']['value']
 			res.artist = r['artistLabel']['value']
 			res.loc = r['locLabel']['value']
+			if res.loc == "museum's storage space":
+				res.loc = r['collLabel']['value']
 			res.fileloc = r['image']['value']
 
 		res.uri = link
@@ -63,10 +66,11 @@ class WikiGoblin:
 		sys.stderr.write("Retrieving new image for the Painter Goblin" + "\n")
 
 		sparql.setQuery("""
-		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 		  ?item wdt:P31 wd:Q3305213.
 		  ?item wdt:P18 ?image.
 		  ?item wdt:P276 ?loc .
+		  ?item wdt:P195 ?coll .
 		  ?item wdt:P170 ?artist .
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en"}
 		} ORDER BY ?random
@@ -83,6 +87,8 @@ class WikiGoblin:
 			res.label = r['itemLabel']['value']
 			res.artist = r['artistLabel']['value']
 			res.loc = r['locLabel']['value']
+			if res.loc == "museum's storage space":
+				res.loc = r['collLabel']['value']
 			res.fileloc = r['image']['value']
 	
 		return res
