@@ -6,6 +6,7 @@ import argparse
 import twitterpieces as tw
 from wikigoblin import WikiGoblin
 from paintergoblin import PainterGoblin
+from PIL import Image
 
 #legacy
 import base64
@@ -28,7 +29,6 @@ paintloc = "PaintedByThePainterGoblin.png"
 
 emoji = unicode("🖌🎨", 'utf-8')
 
-
 def MakeTweet(link, sendtweet):
 
 	if link is not False:
@@ -37,39 +37,75 @@ def MakeTweet(link, sendtweet):
 		res = wg.newresults()
 	
 	tweet = wg.maketweet(res)
+	tweet = tweet.encode('utf-8')
+	sys.stderr.write(tweet + "\n")
 
 	wg.getfile(res, wikiloc)
-
 	pg.paintpicture(wikiloc, 5, tempfolder, paintloc)
 
-	tweet = tweet.encode('utf-8')
+	#new file
+	nf = tempfolder + "/" + paintloc
 
-	sys.stdout.write(tweet + "\n")
-
-	twitter = tw.twitter_authentication()
+	#if we need to resize the image, do it here...
+	testresize(nf)
 
 	if not legacy:
-
 		if sendtweet:
 			#update twitter with our image...
-			with open(tempfolder + "/" + paintloc, "rb") as imagefile:
+			with open(nf, "rb") as imagefile:
 				 imagedata = imagefile.read()
 			t_upload = tw.twitter_image_authentication()
 			imgID = t_upload.media.upload(media=imagedata)["media_id_string"]
 
-			# finally send tweet with the list of media ids:
-			twitter.statuses.update(status=tweet, media_ids=imgID)
+			#authenticate at last minute and send...
+			try:
+				#authenticate and prepare to send tweet...
+				twitter = tw.twitter_authentication()
+				twitter.statuses.update(status=tweet, media_ids=imgID)
+			except TwitterHTTPError as e:
+				sys.stderr.write(e[0] + "\n")
 		else:
 			sys.stdout.write("Testing config, Tweet not sent.\n")
 
 	elif legacy:
-
 		if sendtweet:
-			with open(tempfolder + "/" + paintloc, "rb") as imagefile:
+			with open(nf, "rb") as imagefile:
 				 base64_image = base64.b64encode(imagefile.read())
 
 			params = {"media[]": base64_image, "status": tweet, "_base64": True}
-			twitter.statuses.update_with_media(**params)
+
+			#authenticate at last minute and send...
+			try:
+				#authenticate and prepare to send tweet...
+				twitter = tw.twitter_authentication()
+				twitter.statuses.update_with_media(**params)
+			except TwitterHTTPError as e:
+				sys.stderr.write(e[0] + "\n")
+
+#filesize needs to be 3145728
+def testresize(img):
+	sys.stderr.write("test resize...\n")
+	fsz = os.stat(img).st_size
+	sys.stderr.write("size: " + str(fsz) + "\n")
+	ideal = 1000000
+	if fsz  >= ideal:
+		diff = float(fsz) - float(ideal)
+		avg = float(fsz) + float(ideal) / 2
+		perc = (diff / avg)
+		sys.stderr.write("File size too big, making smaller: " + str(fsz) + "\n")
+		sys.stderr.write("Percent too big: " + str(perc * 100) + "\n")
+		resize(img, perc)
+	else:
+		return
+
+def resize(img, perc):
+	i = Image.open(img)
+	w, h = i.size
+	size = int((w-(w*perc)-1)), int((h-(h*perc)-1))
+	sys.stderr.write("resize to: " + str(size) + "\n")
+	i.thumbnail(size, Image.ANTIALIAS)
+	i.save(img, "PNG")
+	return testresize(img)
 
 def main():
 
