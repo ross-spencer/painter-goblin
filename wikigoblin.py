@@ -89,7 +89,7 @@ class WikiGoblin:
 		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 		  ?item wdt:P31 wd:{{TYPE}}.
 		  ?item wdt:P18 ?image.
-		  ?item wdt:P276 ?loc .
+		  OPTIONAL { ?item wdt:P276 ?loc . }
 		  ?item wdt:P195 ?coll .
 		  ?item wdt:P170 ?artist .
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
