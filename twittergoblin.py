@@ -36,6 +36,9 @@ def MakeTweet(link, sendtweet, style):
 	else:	
 		res = wg.newresults(style)
 
+	if res is None:
+		return MakeTweet(link, sendtweet, style)
+
 	tweet = wg.maketweet(res)
 	tweet = tweet.encode('utf-8')
 	sys.stderr.write(tweet + "\n")

@@ -43,7 +43,7 @@ class WikiGoblin:
 		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 		  <{{LINK}}> rdfs:label ?itemLabel .
 		  <{{LINK}}> wdt:P18 ?image .
-		  <{{LINK}}> wdt:P276 ?loc .
+  		  OPTIONAL { <{{LINK}}> wdt:P276 ?loc . }
 		  <{{LINK}}> wdt:P195 ?coll .
 		  <{{LINK}}> wdt:P170 ?artist .
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
@@ -63,9 +63,10 @@ class WikiGoblin:
 		for r in results['results']['bindings']:
 			res.label = r['itemLabel']['value']
 			res.artist = r['artistLabel']['value']
-			res.loc = r['locLabel']['value']
-			if res.loc == "museum's storage space":
-				res.loc = r['collLabel']['value']
+			if 'locLabel' in r:
+				res.loc = r['locLabel']['value']
+				if res.loc == "museum's storage space":
+					res.loc = r['collLabel']['value']
 			res.fileloc = r['image']['value']
 
 		res.uri = link
@@ -80,7 +81,7 @@ class WikiGoblin:
 			shuffle(self.arttypes)
 			style = self.arttypes[0]
 
-		print style
+		sys.stderr.write(style + "\n")
 
 		sys.stderr.write("Retrieving new image for the Painter Goblin" + "\n")
 
@@ -108,9 +109,10 @@ class WikiGoblin:
 			res.uri = r['item']['value']
 			res.label = r['itemLabel']['value']
 			res.artist = r['artistLabel']['value']
-			res.loc = r['locLabel']['value']
-			if res.loc == "museum's storage space":
-				res.loc = r['collLabel']['value']
+			if 'locLabel' in r:
+				res.loc = r['locLabel']['value']
+				if res.loc == "museum's storage space":
+					res.loc = r['collLabel']['value']
 			res.fileloc = r['image']['value']
 	
 		return res
