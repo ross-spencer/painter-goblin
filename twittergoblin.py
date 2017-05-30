@@ -29,13 +29,13 @@ paintloc = "PaintedByThePainterGoblin.png"
 
 emoji = unicode("🖌🎨", 'utf-8')
 
-def MakeTweet(link, sendtweet):
+def MakeTweet(link, sendtweet, style):
 
 	if link is not False:
 		res = wg.resultsfromlink(link)
 	else:	
-		res = wg.newresults()
-	
+		res = wg.newresults(style)
+
 	tweet = wg.maketweet(res)
 	tweet = tweet.encode('utf-8')
 	sys.stderr.write(tweet + "\n")
@@ -114,7 +114,10 @@ def main():
 	#	Handle command line arguments for the script
 	parser = argparse.ArgumentParser(description='Run the Wikidata algorithm manually.')
 	parser.add_argument('--link', help='OPTIONAL: Wikidata link to retrieve file from...', default=False)
-	parser.add_argument('--tweet', help='OPTIONAL: For testing choose not to update Twitter status...', default=True)
+	parser.add_argument('--notweet', help='OPTIONAL: For testing choose not to update Twitter status...', action='store_false')
+	parser.add_argument('--tprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tpaint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tdraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
 
 	if len(sys.argv)==0:
 		parser.print_help()
@@ -124,10 +127,15 @@ def main():
 	global args
 	args = parser.parse_args()
 
-	if args.tweet != True:
-		args.tweet = False
+	style = wg.imgnone
+	if args.tprint:
+		style = wg.imgprint
+	elif args.tpaint:
+		style = wg.imgpainting
+	elif args.tdraw:
+		style = wg.imgdrawing
 
-	MakeTweet(args.link, args.tweet)			
+	MakeTweet(args.link, args.notweet, style)			
 
 if __name__ == "__main__":
 	main()

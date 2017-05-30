@@ -28,6 +28,7 @@ class WikiGoblin:
 	imgprint = "Q11060274"
 	imgdrawing = "Q93184"
 	imgpainting = "Q3305213"
+	imgnone = None
 
 	arttypes = [imgprint, imgdrawing, imgpainting]
 
@@ -73,11 +74,13 @@ class WikiGoblin:
 
 	#random query generator from:
 	# Partially from https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples
-	def newresults(self, t=False):
+	def newresults(self, style=None):
 
-		if t is False:
-			shuffle(arttypes)
-			t = arttypes[0]
+		if style is None:
+			shuffle(self.arttypes)
+			style = self.arttypes[0]
+
+		print style
 
 		sys.stderr.write("Retrieving new image for the Painter Goblin" + "\n")
 
@@ -93,8 +96,8 @@ class WikiGoblin:
 		LIMIT 1
 		"""
 
-		sparql.setQuery(query.replace("{{TYPE}}", t))
-		sys.stderr.write(query.replace("{{TYPE}}", t) + "\n")
+		sparql.setQuery(query.replace("{{TYPE}}", style))
+		sys.stderr.write(query.replace("{{TYPE}}", style) + "\n")
 
 		sparql.setReturnFormat(JSON)
 		results = sparql.query().convert()
@@ -145,9 +148,9 @@ def main():
 	#	Handle command line arguments for the script
 	parser = argparse.ArgumentParser(description='Run the Wikidata algorithm manually.')
 	parser.add_argument('--link', help='OPTIONAL: Wikidata link to retrieve file from...', default=False)
-	parser.add_argument('--iprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
-	parser.add_argument('--ipaint', help='OPTIONAL: Choose an art style to output...', action='store_true')
-	parser.add_argument('--idraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tpaint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tdraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
 
 	if len(sys.argv)==0:
 		parser.print_help()
@@ -159,15 +162,15 @@ def main():
 
 	wg = WikiGoblin()
 
-	t = False
-	if args.iprint:
-		t = wg.imgprint
-	elif args.ipaint:
-		t = wg.imgpainting
-	elif args.idraw:
-		t = wg.imgdrawing
+	style = wg.imgnone
+	if args.tprint:
+		style = wg.imgprint
+	elif args.tpaint:
+		style = wg.imgpainting
+	elif args.tdraw:
+		style = wg.imgdrawing
 
-	res = wg.getresults(args.link, t)			
+	res = wg.getresults(args.link, style)			
 	print wg.maketweet(res)
 
 if __name__ == "__main__":
