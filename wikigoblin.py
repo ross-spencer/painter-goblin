@@ -4,6 +4,7 @@
 import sys
 import urllib
 import argparse
+from random import shuffle
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
@@ -24,6 +25,12 @@ class WikiResults:
 
 class WikiGoblin:
 
+	imgprint = "Q11060274"
+	imgdrawing = "Q93184"
+	imgpainting = "Q3305213"
+
+	arttypes = [imgprint, imgdrawing, imgpainting]
+
 	def resultsfromlink(self, link):
 
 		# check we're looking at the URI not the item URL...
@@ -31,7 +38,7 @@ class WikiGoblin:
 
 		sys.stderr.write("retriving from: " + link + "\n")
 	
-		string = """
+		query = """
 		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 		  <{{LINK}}> rdfs:label ?itemLabel .
 		  <{{LINK}}> wdt:P18 ?image .
@@ -43,9 +50,9 @@ class WikiGoblin:
 		LIMIT 1
 		"""
 
-		sparql.setQuery(string.replace("{{LINK}}", link))
+		sparql.setQuery(query.replace("{{LINK}}", link))
 
-		sys.stderr.write(string.replace("{{LINK}}", link) + "\n")
+		sys.stderr.write(query.replace("{{LINK}}", link) + "\n")
 
 		sparql.setReturnFormat(JSON)
 		results = sparql.query().convert()
@@ -66,13 +73,17 @@ class WikiGoblin:
 
 	#random query generator from:
 	# Partially from https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples
-	def newresults(self):
+	def newresults(self, t=False):
+
+		if t is False:
+			shuffle(arttypes)
+			t = arttypes[0]
 
 		sys.stderr.write("Retrieving new image for the Painter Goblin" + "\n")
 
-		sparql.setQuery("""
+		query = """
 		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
-		  ?item wdt:P31 wd:Q3305213.
+		  ?item wdt:P31 wd:{{TYPE}}.
 		  ?item wdt:P18 ?image.
 		  ?item wdt:P276 ?loc .
 		  ?item wdt:P195 ?coll .
@@ -80,7 +91,10 @@ class WikiGoblin:
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
 		} ORDER BY ?random
 		LIMIT 1
-		""")
+		"""
+
+		sparql.setQuery(query.replace("{{TYPE}}", t))
+		sys.stderr.write(query.replace("{{TYPE}}", t) + "\n")
 
 		sparql.setReturnFormat(JSON)
 		results = sparql.query().convert()
@@ -116,12 +130,12 @@ class WikiGoblin:
 			return tweet
 
 	# get a results structure for our tweet
-	def getresults(self, link=False):
+	def getresults(self, link=False, t=False):
 		wg = WikiGoblin()
 		if link is not False:
 			res = wg.resultsfromlink(link)
 		else:	
-			res = wg.newresults()
+			res = wg.newresults(t)
 		return res
 
 def main():
@@ -131,6 +145,9 @@ def main():
 	#	Handle command line arguments for the script
 	parser = argparse.ArgumentParser(description='Run the Wikidata algorithm manually.')
 	parser.add_argument('--link', help='OPTIONAL: Wikidata link to retrieve file from...', default=False)
+	parser.add_argument('--iprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--ipaint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--idraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
 
 	if len(sys.argv)==0:
 		parser.print_help()
@@ -141,7 +158,16 @@ def main():
 	args = parser.parse_args()
 
 	wg = WikiGoblin()
-	res = wg.getresults(args.link)			
+
+	t = False
+	if args.iprint:
+		t = wg.imgprint
+	elif args.ipaint:
+		t = wg.imgpainting
+	elif args.idraw:
+		t = wg.imgdrawing
+
+	res = wg.getresults(args.link, t)			
 	print wg.maketweet(res)
 
 if __name__ == "__main__":
