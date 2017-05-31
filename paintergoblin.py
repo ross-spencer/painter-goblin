@@ -4,10 +4,11 @@
 import os
 import png
 import sys
+import time
 import argparse
 from PIL import Image
 from PIL import ImageEnhance
-from random import shuffle
+from random import seed, shuffle
 
 class PainterGoblin:
 
@@ -45,6 +46,9 @@ class PainterGoblin:
 
 		p = [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9, \
 			palette10, palette11, palette12, palette13, palette14, palette15, palette16]
+
+		#seed the random number generator
+		seed(time.time())
 
 		#get the palette we want
 		shuffle(p)

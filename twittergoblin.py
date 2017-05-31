@@ -36,11 +36,16 @@ def MakeTweet(link, sendtweet, style):
 	else:	
 		res = wg.newresults(style)
 
-	if res is None:
+	tweet = wg.maketweet(res)
+
+	# we've seen attribute error a few times, see if we can
+	# counter it here somehow...
+	try:
+		tweet = tweet.encode('utf-8')
+	except AttributeError as e:
+		sys.stderr.write(e + "\n")
 		return MakeTweet(link, sendtweet, style)
 
-	tweet = wg.maketweet(res)
-	tweet = tweet.encode('utf-8')
 	sys.stderr.write(tweet + "\n")
 
 	wg.getfile(res, wikiloc)
