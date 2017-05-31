@@ -71,7 +71,7 @@ class PainterGoblin:
 		shuffle(p)
 	
 		#get first entry following shuffle
-		p = palette15 #p[0]
+		p = p[0]
 
 		#and shuffle that palette
 		shuffle(p)
