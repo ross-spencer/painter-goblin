@@ -25,10 +25,14 @@ class WikiResults:
 
 class WikiGoblin:
 
+	#thumbnail query to trial...
+	#https://query.wikidata.org/#%23defaultView%3AImageGrid%0ASELECT%20%3Fitem%20%3FitemLabel%20%3Fimage%20%3Floc%20%3FlocLabel%20%3Fcoll%20%3FcollLabel%20%3Fartist%20%3FartistLabel%20%28MD5%28CONCAT%28str%28%3Fitem%29%2Cstr%28RAND%28%29%29%29%29%20as%20%3Frandom%29%20%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP31%20wd%3AQ125191.%0A%20%20%3Fitem%20wdt%3AP18%20%3Fimage.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP276%20%3Floc%20.%20%7D%0A%20%20%3Fitem%20wdt%3AP195%20%3Fcoll%20.%0A%20%20%3Fitem%20wdt%3AP170%20%3Fartist%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2Cfr%2Cde%2Cit%22%7D%0A%7D%20ORDER%20BY%20%3Frandom%0ALIMIT%201%0A%0A
+
 	#imgprint = "Q11060274"		#a lot of prints seem to be from wales, monitor
 	#imgdrawing = "Q93184"
 	imgwatercolor = "Q18761202"
 	imgpainting = "Q3305213"
+	#imgphoto = "Q125191"
 	imgnone = None
 
 	arttypes = [imgwatercolor, imgpainting]

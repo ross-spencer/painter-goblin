@@ -61,8 +61,11 @@ class PainterGoblin:
 		#france
 		palette16 = [(0xff,0x00,0x00), (0xFF,0xFF,0xFF), (0x00,0x00,0xFF)]
 
+		#stark
+		palette17 = [(0xC0,0x00,0x00), (0xFF,0xFF,0xFF), (0x00,0x00,0x00)]
+
 		p = [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9, \
-			palette10, palette11, palette12, palette13, palette14, palette15, palette16]
+			palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17]
 
 		#seed the random number generator
 		seed(time.time())
