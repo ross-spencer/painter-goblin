@@ -25,12 +25,12 @@ class WikiResults:
 
 class WikiGoblin:
 
-	imgprint = "Q11060274"		#a lot of prints seem to be from wales, monitor
+	#imgprint = "Q11060274"		#a lot of prints seem to be from wales, monitor
 	imgdrawing = "Q93184"
 	imgpainting = "Q3305213"
 	imgnone = None
 
-	arttypes = [imgprint, imgdrawing, imgpainting]
+	arttypes = [imgdrawing, imgpainting]
 
 	def resultsfromlink(self, link):
 
@@ -42,6 +42,7 @@ class WikiGoblin:
 		query = """
 		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 		  <{{LINK}}> rdfs:label ?itemLabel .
+		  FILTER (LANG(?itemLabel) = "en") 
 		  <{{LINK}}> wdt:P18 ?image .
   		  OPTIONAL { <{{LINK}}> wdt:P276 ?loc . }
 		  <{{LINK}}> wdt:P195 ?coll .
