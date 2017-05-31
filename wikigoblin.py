@@ -216,7 +216,7 @@ def main():
 		style = wg.imgposter
 
 	res = wg.getresults(args.link, style)			
-	print wg.maketweet(res)
+	sys.stdout.write(wg.maketweet(res) + "\n")
 
 if __name__ == "__main__":
 	main()
