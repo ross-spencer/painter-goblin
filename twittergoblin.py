@@ -123,9 +123,18 @@ def main():
 	parser = argparse.ArgumentParser(description='Run the Wikidata algorithm manually.')
 	parser.add_argument('--link', help='OPTIONAL: Wikidata link to retrieve file from...', default=False)
 	parser.add_argument('--notweet', help='OPTIONAL: For testing choose not to update Twitter status...', action='store_false')
+
+	#not so good styles to generate art from...
 	parser.add_argument('--tprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
-	parser.add_argument('--tpaint', help='OPTIONAL: Choose an art style to output...', action='store_true')
 	parser.add_argument('--tdraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tphoto', help='OPTIONAL: Choose an art style to output...', action='store_true')
+
+	#best styles to generate art from...
+	parser.add_argument('--twater', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tpaint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--twood', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tpastel', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tposter', help='OPTIONAL: Choose an art style to output...', action='store_true')
 
 	if len(sys.argv)==0:
 		parser.print_help()
@@ -138,10 +147,20 @@ def main():
 	style = wg.imgnone
 	if args.tprint:
 		style = wg.imgprint
-	elif args.tpaint:
-		style = wg.imgpainting
 	elif args.tdraw:
 		style = wg.imgdrawing
+	elif args.tphoto:
+		style = wg.imgphoto
+	elif args.twater:
+		style = wg.imgwatercolor
+	elif args.tpaint:
+		style = wg.imgpainting
+	elif args.twood:
+		style = wg.imgwoodcutprint
+	elif args.tpastel:
+		style = wg.imgpastel
+	elif args.tposter:
+		style = wg.imgposter
 
 	MakeTweet(args.link, args.notweet, style)			
 
