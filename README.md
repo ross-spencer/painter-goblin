@@ -1,6 +1,10 @@
-# painter-goblin
+# The Painter Goblin
 
-Painter Goblin Twitter Bot. Inspired by a [Zine](https://github.com/ross-spencer/painter-goblin/tree/master/goblin-zine/pages) I created in 2015.
+Paints from a basement near you. Hates the outdoors, loves art. [Gallery](http://twitter.com/paintergoblin).
+
+## Intro
+
+Painter Goblin Twitter Bot. Inspired by a [Zine](https://github.com/ross-spencer/painter-goblin/tree/master/goblin-zine/pages) I created in 2015. The zine in turn was inspired by a Reddit user comment. I thought it cool so figured I'd give it a whirl.
 
 ## Wikidata
 
