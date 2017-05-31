@@ -26,11 +26,12 @@ class WikiResults:
 class WikiGoblin:
 
 	#imgprint = "Q11060274"		#a lot of prints seem to be from wales, monitor
-	imgdrawing = "Q93184"
+	#imgdrawing = "Q93184"
+	imgwatercolor = "Q18761202"
 	imgpainting = "Q3305213"
 	imgnone = None
 
-	arttypes = [imgdrawing, imgpainting]
+	arttypes = [imgwatercolor, imgpainting]
 
 	def resultsfromlink(self, link):
 
