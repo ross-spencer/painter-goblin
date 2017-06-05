@@ -56,7 +56,7 @@ class WikiGoblin:
 		sys.stderr.write("retriving from: " + link + "\n")
 	
 		query = """
-		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel WHERE {
 		  OPTIONAL { <{{LINK}}> rdfs:label ?itemLabel . 
 		  FILTER (LANG(?itemLabel) = "en") }
 		  <{{LINK}}> wdt:P18 ?image .
@@ -64,7 +64,7 @@ class WikiGoblin:
 		  <{{LINK}}> wdt:P195 ?coll .
 		  <{{LINK}}> wdt:P170 ?artist .
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
-		} ORDER BY ?random
+		}
 		LIMIT 1
 		"""
 
