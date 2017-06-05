@@ -148,14 +148,18 @@ class WikiGoblin:
 	# not pretty code below here but works for now... 
 	def maketweet(self, res):
 		emoji = unicode("🖌🎨", 'utf-8')
-		tweet = res.label + ", " + res.artist + ", " + res.loc + " " + res.uri + " " + emoji
-		if len(tweet) >= 140:
-			tweet = res.label + ", " + res.artist + " " + res.uri + " " + emoji
+		hashtag = "#wikidata #digitalart"
+		urilen = 22
+		tweet = res.label + ", " + res.artist + ", " + res.loc + " " + res.uri + " " + hashtag + " " + emoji
+		if len(tweet)-urilen >= 140:
+			tweet = res.label + ", " + res.artist + " " + res.uri + " " + hashtag + " " + emoji
 		else:
+			sys.stderr.write("Tweet len, first cut: " + str(len(tweet)) + "\n")
 			return tweet
-		if len(tweet) >= 140:
-			tweet = res.label + " " + res.uri + " " + emoji
+		if len(tweet)-urilen >= 140:
+			tweet = res.label + " " + res.uri + " " + hashtag + " " + emoji
 		else:
+			sys.stderr.write("Tweet len, second cut: " + str(len(tweet)) + "\n")
 			return tweet
 
 	# get a results structure for our tweet

@@ -73,9 +73,12 @@ class PainterGoblin:
 		#teletext3 (red, yellow blue)
 		palette20 = [(0xfe,0xfe,0x00),(0x00,0xfe,0xfe),(0xff,0x00,0x00),(0x00,0x00,0x00)]
 
+		#mario sprite
+		palette21 = [(0x3f,0x47,0xcc),(0xf9,0x38,0x01),(0xfe,0xa3,0x46),(0xFF,0xFF,0xFF),(0x00,0x00,0x00)]
+
 		p = [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9, \
 			palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17, palette18, \
-				palette19, palette20]
+				palette19, palette20, palette21]
 
 		#seed the random number generator
 		seed(time.time())
