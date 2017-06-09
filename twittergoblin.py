@@ -59,44 +59,57 @@ def MakeTweet(link, sendtweet, style):
 
 	if not legacy:
 		if sendtweet:
-			#update twitter with our image...
-			with open(nf, "rb") as imagefile:
-				 imagedata = imagefile.read()
-			t_upload = tw.twitter_image_authentication()
-			imgID = t_upload.media.upload(media=imagedata)["media_id_string"]
-
-			#authenticate at last minute and send...
-			try:
-				#authenticate and prepare to send tweet...
-				twitter = tw.twitter_authentication()
-				twitter.statuses.update(status=tweet, media_ids=imgID)
-			except TwitterHTTPError as e:
-				sys.stderr.write(e[0] + "\n")
-		else:
-			sys.stdout.write("Testing config, Tweet not sent.\n")
-
+			sendNewMethod(tweet, nf)
 	elif legacy:
 		if sendtweet:
-			with open(nf, "rb") as imagefile:
-				 base64_image = base64.b64encode(imagefile.read())
+			sendLegacyMethod(tweet, nf)
+	else:
+		sys.stdout.write("Testing config, Tweet not sent.\n")
 
-			params = {"media[]": base64_image, "status": tweet, "_base64": True}
+def sendNewMethod(tweet, nf):
+	#update twitter with our image...
+	with open(nf, "rb") as imagefile:
+		 imagedata = imagefile.read()
+	t_upload = tw.twitter_image_authentication()
+	imgID = t_upload.media.upload(media=imagedata)["media_id_string"]
 
-			#authenticate at last minute and send...
-			try:
-				#authenticate and prepare to send tweet...
-				twitter = tw.twitter_authentication()
-				twitter.statuses.update_with_media(**params)
-			except TwitterHTTPError as e:
-				sys.stderr.write(e[0] + "\n")
+	#authenticate at last minute and send...
+	try:
+		#authenticate and prepare to send tweet...
+		twitter = tw.twitter_authentication()
+		twitter.statuses.update(status=tweet, media_ids=imgID)
+	except TwitterHTTPError as e:
+		sys.stderr.write(e[0] + "\n")
+		if "details: {u'errors': [{u'message': u'Internal error', u'code': 131}]}" in e[0]:
+			testresize(nf, 0.1)	
+			sendNewMethod(tweet, nf)
+
+def sendLegacyMethod(tweet, nf):
+	with open(nf, "rb") as imagefile:
+		 base64_image = base64.b64encode(imagefile.read())
+
+	params = {"media[]": base64_image, "status": tweet, "_base64": True}
+
+	#authenticate at last minute and send...
+	try:
+		#authenticate and prepare to send tweet...
+		twitter = tw.twitter_authentication()
+		twitter.statuses.update_with_media(**params)
+	except TwitterHTTPError as e:
+		sys.stderr.write(e[0] + "\n")
+		if "details: {u'errors': [{u'message': u'Internal error', u'code': 131}]}" in e[0]:
+			testresize(nf, 0.1)
+		sendLegacyMethod(tweet, nf)
 
 #filesize needs to be 3145728
-def testresize(img):
+def testresize (img, p=None):
 	sys.stderr.write("test resize...\n")
 	fsz = os.stat(img).st_size
 	sys.stderr.write("size: " + str(fsz) + "\n")
 	ideal = 1000000
-	if fsz  >= ideal:
+	if p is not None:
+		resize(img, float(p))
+	elif fsz  >= ideal:
 		diff = float(fsz) - float(ideal)
 		avg = float(fsz) + float(ideal) / 2
 		perc = (diff / avg)
