@@ -89,10 +89,15 @@ class PainterGoblin:
 		#print-test, The Crack, William Kokoni
 		palette25 = [(0x00,0x9d,0xc4), (0xa0,0xc3,0xbd), (0xfa,0x18,0x3b), (0x3a,0x45,0x42), (0xd6,0x7b,0x7e)]
 
+		#moma, Emigre 29, The Designers Republic, Emigre Inc., Rudy VanderLans, Zuzana Licko, 1994 
+		palette26 = [(0x50,0x4d,0x6b),(0x84,0x64,0x5a),(0xa6,0x9e,0x9e),(0xfc,0xc1,0x78),(0xf6,0xed,0xdb)]
+
+		#toronto queen
+		palette27 = [(0xfc,0x2f,0xac),(0x00,0x48,0xff),(0x07,0x1e,0x45),(0xf0,0xb3,0x00),(0xc1,0xe3,0xff)]
 
 		p = [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9, \
 			palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17, palette18, \
-				palette19, palette20, palette21, palette22, palette23, palette24, palette25]
+				palette19, palette20, palette21, palette22, palette23, palette24, palette25, palette26, palette27]
 
 		#seed the random number generator
 		seed(time.time())
