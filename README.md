@@ -32,6 +32,42 @@ He enjoys his work, I hope you do!
 * Wikigoblin.py - retrieves data to tweet from the Wikidata SPARQL services
 * Twittergoblin.py - Tweets for us! Either a random Wikidata image or from am existing Wikidata link
 
+## Image Categories
+
+Categories of Image:
+
+* imgprint = "Q11060274"
+* imgdrawing = "Q93184"
+* imgphoto = "Q125191"
+* imgwatercolor = "Q18761202"
+* imgpainting = "Q3305213"
+* imgwoodcutprint = "Q18219090"
+* imgpastel = "Q12043905"
+* imgposter = "Q429785"
+* imgnone = None
+
+**Counts as of July 2017**
+
+	3756 Prints
+	1044 Drawings
+	2614 Photos, 49 not from NatLib Wales or Scotland
+    1250 Watercolors
+    60501 Paintings
+    44 Woodcut Prints
+    320 Pastels
+    38 Posters
+
+**Example count in SPARQL:**
+
+    SELECT (COUNT (DISTINCT ?item) as ?count) WHERE {
+        ?item wdt:P31 wd:Q429785.
+        ?item wdt:P18 ?image.
+        OPTIONAL { ?item wdt:P276 ?loc . }
+        ?item wdt:P195 ?coll .
+        ?item wdt:P170 ?artist .
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
+    } 
+
 ## License
 
 GPL v3.0

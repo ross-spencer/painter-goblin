@@ -95,9 +95,13 @@ class PainterGoblin:
 		#toronto queen
 		palette27 = [(0xfc,0x2f,0xac),(0x00,0x48,0xff),(0x07,0x1e,0x45),(0xf0,0xb3,0x00),(0xc1,0xe3,0xff)]
 
+		#warhol cow... 
+		palette28 = [(0x27,0x0b,0x17),(0x7f,0x0d,0x34),(0xc8,0x0f,0x4e),(0xfe,0x1d,0x69),(0xff,0xe1,0x3b)]
+
 		p = [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9, \
 			palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17, palette18, \
-				palette19, palette20, palette21, palette22, palette23, palette24, palette25, palette26, palette27]
+				palette19, palette20, palette21, palette22, palette23, palette24, palette25, palette26, palette27, \
+					palette28]
 
 		#seed the random number generator
 		seed(time.time())

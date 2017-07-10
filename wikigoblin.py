@@ -46,7 +46,7 @@ class WikiGoblin:
 	imgnone = None
 
 	# art type list...
-	arttypes = [imgwatercolor, imgpainting, imgwoodcutprint, imgpastel, imgposter]
+	arttypes = [imgwatercolor, imgpainting, imgwoodcutprint, imgpastel, imgposter, imgphoto]
 
 	def resultsfromlink(self, link):
 
@@ -118,8 +118,27 @@ class WikiGoblin:
 		LIMIT 1
 		"""
 
-		sparql.setQuery(query.replace("{{TYPE}}", style))
-		sys.stderr.write(query.replace("{{TYPE}}", style) + "\n")
+		# When we want photos we can use this query...
+		photoQuery = """
+			#defaultView:ImageGrid
+			SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+			  ?item wdt:P31 wd:Q125191.
+			  ?item wdt:P18 ?image.
+			  OPTIONAL { ?item wdt:P276 ?loc . }
+			  FILTER NOT EXISTS { ?item wdt:P276 wd:Q666063 . }
+			  FILTER NOT EXISTS { ?item wdt:P276 wd:Q2051997 . }
+			  ?item wdt:P195 ?coll .
+			  ?item wdt:P170 ?artist .
+			  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
+			} ORDER BY ?random
+			LIMIT 1
+		"""
+
+		if style != self.imgphoto:
+			sparql.setQuery(query.replace("{{TYPE}}", style))
+			sys.stderr.write(query.replace("{{TYPE}}", style) + "\n")
+		else:
+			sparql.setQuery(photoQuery)
 
 		sparql.setReturnFormat(JSON)
 		results = sparql.query().convert()
