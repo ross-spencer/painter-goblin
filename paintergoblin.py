@@ -98,10 +98,13 @@ class PainterGoblin:
 		#warhol cow... 
 		palette28 = [(0x27,0x0b,0x17),(0x7f,0x0d,0x34),(0xc8,0x0f,0x4e),(0xfe,0x1d,0x69),(0xff,0xe1,0x3b)]
 
+		#palette from wiki image http://www.wikidata.org/entity/Q28771811
+		palette29 = [(0xf1,0xa0,0x30),(0xf6,0x59,0x01),(0xb5,0x42,0x19),(0x62,0x3a,0x29),(0x2d,0x28,0x30)]
+
 		p = [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9, \
 			palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17, palette18, \
 				palette19, palette20, palette21, palette22, palette23, palette24, palette25, palette26, palette27, \
-					palette28]
+					palette28, palette29]
 
 		#seed the random number generator
 		seed(time.time())
