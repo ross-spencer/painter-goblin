@@ -104,10 +104,13 @@ class PainterGoblin:
 		#alien
 		palette30 = [(0x00,0x02,0x00),(0x30,0x5e,0x1a),(0x77,0xac,0x1a),(0xce,0xc3,0x66),(0xff,0xed,0x21)]
 
+		#bowie - ziggy stardust
+		palette31 = [(0xdf,0x1c,0x06),(0x4b,0x4d,0x4b),(0x59,0x55,0xcc),(0xff,0x95,0x71),(0xff,0xeb,0xdf)]
+		
 		p = [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9, \
 			palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17, palette18, \
 				palette19, palette20, palette21, palette22, palette23, palette24, palette25, palette26, palette27, \
-					palette28, palette29, palette30]
+					palette28, palette29, palette30, palette31]
 
 		#seed the random number generator
 		seed(time.time())
