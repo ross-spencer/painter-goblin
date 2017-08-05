@@ -20,9 +20,10 @@ sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
 class WikiResults:
 	label = ""
 	artist = ""
-	loc = ""
+	loc = None
 	fileloc = ""
 	uri = ""
+	twitter = None
 
 class WikiGoblin:
 
@@ -56,13 +57,17 @@ class WikiGoblin:
 		sys.stderr.write("retriving from: " + link + "\n")
 	
 		query = """
-		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel WHERE {
+		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll WHERE {
 		  OPTIONAL { <{{LINK}}> rdfs:label ?itemLabel . 
 		  FILTER (LANG(?itemLabel) = "en") }
 		  <{{LINK}}> wdt:P18 ?image .
-  		  OPTIONAL { <{{LINK}}> wdt:P276 ?loc . }
+  		  OPTIONAL { 
+             <{{LINK}}> wdt:P276 ?loc . 
+		     ?loc wdt:P2002 ?twitter_loc .
+		  }
 		  <{{LINK}}> wdt:P195 ?coll .
 		  <{{LINK}}> wdt:P170 ?artist .
+		  OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
 		}
 		LIMIT 1
@@ -87,7 +92,15 @@ class WikiGoblin:
 				res.loc = r['locLabel']['value']
 				if res.loc == "museum's storage space":
 					res.loc = r['collLabel']['value']
+			if res.loc == None:
+				res.loc = r['collLabel']['value']
 			res.fileloc = r['image']['value']
+			if 'twitter_loc' in r:
+				print "twitter loc"
+				res.twitter = "@" + r['twitter_loc']['value']
+			elif 'twitter_coll' in r:
+				"twitter col"
+				res.twitter = "@" + r['twitter_coll']['value']
 
 		res.uri = link
 
@@ -107,12 +120,16 @@ class WikiGoblin:
 		sys.stderr.write("Retrieving new image for the Painter Goblin" + "\n")
 
 		query = """
-		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 		  ?item wdt:P31 wd:{{TYPE}}.
 		  ?item wdt:P18 ?image.
-		  OPTIONAL { ?item wdt:P276 ?loc . }
+		  OPTIONAL { 
+	         ?item wdt:P276 ?loc . 
+			 ?loc wdt:P2002 ?twitter_loc . 
+	      }
 		  ?item wdt:P195 ?coll .
 		  ?item wdt:P170 ?artist .
+		  OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
 		} ORDER BY ?random
 		LIMIT 1
@@ -121,14 +138,18 @@ class WikiGoblin:
 		# When we want photos we can use this query...
 		photoQuery = """
 			#defaultView:ImageGrid
-			SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+			SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 			  ?item wdt:P31 wd:Q125191.
 			  ?item wdt:P18 ?image.
-			  OPTIONAL { ?item wdt:P276 ?loc . }
+			  OPTIONAL { 
+		         ?item wdt:P276 ?loc .
+				 ?loc wdt:P2002 ?twitter_loc . 
+		      }
 			  FILTER NOT EXISTS { ?item wdt:P276 wd:Q666063 . }
 			  FILTER NOT EXISTS { ?item wdt:P276 wd:Q2051997 . }
 			  ?item wdt:P195 ?coll .
 			  ?item wdt:P170 ?artist .
+  			  OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
 			  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
 			} ORDER BY ?random
 			LIMIT 1
@@ -156,8 +177,16 @@ class WikiGoblin:
 				res.loc = r['locLabel']['value']
 				if res.loc == "museum's storage space":
 					res.loc = r['collLabel']['value']
+			if res.loc == None:
+				res.loc = r['collLabel']['value']
 			res.fileloc = r['image']['value']
-	
+			if 'twitter_loc' in r:
+				print "twitter loc"
+				res.twitter = "@" + r['twitter_loc']['value']
+			elif 'twitter_coll' in r:
+				"twitter col"
+				res.twitter = "@" + r['twitter_coll']['value']	
+
 		return res
 
 	def getfile(self, res, loc):
@@ -169,7 +198,16 @@ class WikiGoblin:
 		emoji = unicode("🖌🎨", 'utf-8')
 		hashtag = "#wikidata #digitalart"
 		urilen = 22
-		tweet = res.label + ", " + res.artist + ", " + res.loc + " " + res.uri + " " + hashtag + " " + emoji
+		loc = ""
+
+		if res.twitter != None:
+			print "twitter", res.twitter
+			loc = res.twitter
+		else:
+			print "xx", res.loc
+			loc = res.loc
+
+		tweet = res.label + ", " + res.artist + ", " + loc + " " + res.uri + " " + hashtag + " " + emoji
 		if len(tweet)-urilen >= 140:
 			tweet = res.label + ", " + res.artist + " " + res.uri + " " + hashtag + " " + emoji
 		else:
