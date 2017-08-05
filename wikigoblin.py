@@ -201,10 +201,8 @@ class WikiGoblin:
 		loc = ""
 
 		if res.twitter != None:
-			print "twitter", res.twitter
 			loc = res.twitter
 		else:
-			print "xx", res.loc
 			loc = res.loc
 
 		tweet = res.label + ", " + res.artist + ", " + loc + " " + res.uri + " " + hashtag + " " + emoji
