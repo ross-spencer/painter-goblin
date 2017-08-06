@@ -96,7 +96,6 @@ class WikiGoblin:
 				res.loc = r['collLabel']['value']
 			res.fileloc = r['image']['value']
 			if 'twitter_loc' in r:
-				print "twitter loc"
 				res.twitter = "@" + r['twitter_loc']['value']
 			elif 'twitter_coll' in r:
 				"twitter col"
@@ -181,7 +180,6 @@ class WikiGoblin:
 				res.loc = r['collLabel']['value']
 			res.fileloc = r['image']['value']
 			if 'twitter_loc' in r:
-				print "twitter loc"
 				res.twitter = "@" + r['twitter_loc']['value']
 			elif 'twitter_coll' in r:
 				"twitter col"
@@ -202,9 +200,9 @@ class WikiGoblin:
 
 		if res.twitter != None:
 			loc = res.twitter
-		else:
+		elif res.loc != None:
 			loc = res.loc
-
+	
 		tweet = res.label + ", " + res.artist + ", " + loc + " " + res.uri + " " + hashtag + " " + emoji
 		if len(tweet)-urilen >= 140:
 			tweet = res.label + ", " + res.artist + " " + res.uri + " " + hashtag + " " + emoji
