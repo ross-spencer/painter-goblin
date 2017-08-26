@@ -118,10 +118,16 @@ class PainterGoblin:
 		#The Icknield Way, Spencer Gore, 1912
 		palette35 = [(0x95,0x2b,0x58),(0x05,0x6a,0x47),(0x00,0x46,0x76),(0xf7,0x76,0x20),(0xff,0x9f,0x22)]
 
+		#Original Batman
+		palette36 = [(0x39,0x3a,0x38),(0xfd,0xf7,0x00),(0x00,0x02,0x00)]
+
+		#Picasso: Blue Period: Mother and Child
+		palette37 = [(0xf4,0xf4,0xf4), (0x9b,0x74,0x57), (0x3d,0x64,0x45), (0x0d,0x24,0x46), (0x2b,0x7a,0xbc)]
+
 		p = [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9, \
 			palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17, palette18, \
 				palette19, palette20, palette21, palette22, palette23, palette24, palette25, palette26, palette27, \
-					palette28, palette29, palette30, palette31, palette32, palette33, palette34, palette35]
+					palette28, palette29, palette30, palette31, palette32, palette33, palette34, palette35, palette36, palette37]
 
 		#seed the random number generator
 		seed(time.time())
