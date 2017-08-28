@@ -14,6 +14,10 @@ He enjoys his work, I hope you do!
 
 ## Samples
 
+**Lioness Reclining**, Eugène Delacroix, Minneapolis Institute of Art:
+
+![image](samples/04.jpg)
+
 **Die Sterrenag**, Vincent van Gogh, Museum of Modern Art:
 
 ![image](samples/01.jpg)
