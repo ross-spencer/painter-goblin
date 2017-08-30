@@ -28,6 +28,7 @@ pg = PainterGoblin()
 wikiloc = "images/FromWikiData.jpg"
 tempfolder = "images"
 paintloc = "PaintedByThePainterGoblin.png"
+listloc = "/home/goatslayer/git/ross-spencer/painter-goblin/urilist"
 
 emoji = unicode("🖌🎨", 'utf-8')
 
@@ -122,7 +123,7 @@ def sendLegacyMethod(link, tweet, nf, uri):
 		sendLegacyMethod(link, tweet, nf, uri)
 
 def logtweet(wikiuri):
-	lto = pl.ListToPy(set(ulist.wikilist), "wikilist", "/home/goatslayer/git/ross-spencer/painter-goblin/urilist")
+	lto = pl.ListToPy(set(ulist.wikilist), "wikilist", listloc)
 	lto.list_to_py()
 
 #filesize needs to be 3145728
