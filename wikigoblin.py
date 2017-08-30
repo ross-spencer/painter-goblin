@@ -48,6 +48,7 @@ class WikiGoblin:
 
 	# art type list...
 	arttypes = [imgwatercolor, imgpainting, imgwoodcutprint, imgpastel, imgposter, imgphoto]
+	artdict = {imgwatercolor: "water color", imgpainting: "painting", imgwoodcutprint: "wood cut print", imgpastel: "pastel", imgposter: "poster", imgphoto: "photo"}
 
 	def resultsfromlink(self, link):
 
@@ -107,19 +108,17 @@ class WikiGoblin:
 
 	#random query generator from:
 	# Partially from https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples
-	def newresults(self, style=None):
+	def newresults(self, style=None, algorithm="MD5"):
 
 		if style is None:
 			seed(time.time())
 			shuffle(self.arttypes)
 			style = self.arttypes[0]
 
-		sys.stderr.write(style + "\n")
-
-		sys.stderr.write("Retrieving new image for the Painter Goblin" + "\n")
+		sys.stderr.write("Painter Goblin is retrieving a " + self.artdict[style] + " to paint... " + "\n")
 
 		query = """
-		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll ({{ALGORITHM}}(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 		  ?item wdt:P31 wd:{{TYPE}}.
 		  ?item wdt:P18 ?image.
 		  OPTIONAL { 
@@ -137,7 +136,7 @@ class WikiGoblin:
 		# When we want photos we can use this query...
 		photoQuery = """
 			#defaultView:ImageGrid
-			SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll (MD5(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+			SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll ({{ALGORITHM}}(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
 			  ?item wdt:P31 wd:Q125191.
 			  ?item wdt:P18 ?image.
 			  OPTIONAL { 
@@ -154,10 +153,14 @@ class WikiGoblin:
 			LIMIT 1
 		"""
 
+		query = query.replace("{{ALGORITHM}}", algorithm)
+		photoQuery = photoQuery.replace("{{ALGORITHM}}", algorithm)
+
 		if style != self.imgphoto:
 			sparql.setQuery(query.replace("{{TYPE}}", style))
 			sys.stderr.write(query.replace("{{TYPE}}", style) + "\n")
 		else:
+			sys.stderr.write(photoQuery + "\n")
 			sparql.setQuery(photoQuery)
 
 		sparql.setReturnFormat(JSON)
@@ -208,12 +211,12 @@ class WikiGoblin:
 			tweet = res.label + ", " + res.artist + " " + res.uri + " " + hashtag + " " + emoji
 		else:
 			sys.stderr.write("Tweet len, first cut: " + str(len(tweet)) + "\n")
-			return tweet
+			return tweet, res.uri
 		if len(tweet)-urilen >= 140:
 			tweet = res.label + " " + res.uri + " " + hashtag + " " + emoji
 		else:
 			sys.stderr.write("Tweet len, second cut: " + str(len(tweet)) + "\n")
-			return tweet
+			return tweet, res.uri
 
 	# get a results structure for our tweet
 	def getresults(self, link=False, t=False):

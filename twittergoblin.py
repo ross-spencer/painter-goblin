@@ -3,6 +3,8 @@
 import os
 import sys
 import argparse
+import pylisttopy as pl
+import urilist as ulist
 import twitterpieces as tw
 from wikigoblin import WikiGoblin
 from paintergoblin import PainterGoblin
@@ -29,14 +31,28 @@ paintloc = "PaintedByThePainterGoblin.png"
 
 emoji = unicode("🖌🎨", 'utf-8')
 
-def MakeTweet(link, sendtweet, style):
+def MakeTweet(link, sendtweet, style, algorithm="MD5"):
 
 	if link is not False:
 		res = wg.resultsfromlink(link)
 	else:	
-		res = wg.newresults(style)
+		res = wg.newresults(style, algorithm)
 
-	tweet = wg.maketweet(res)
+	# return tuple from maketweet...
+	data = wg.maketweet(res)
+
+	# pull apart tuple...
+	tweet = data[0]
+	uri = data[1]
+	
+	# unique tweets...
+	if not link:
+		if uri in ulist.wikilist:
+			sys.stderr.write("Painter Goblin has painted this before. Making new Tweet" + "\n")
+			return MakeTweet(link, sendtweet, style, "SHA1")		
+		else:	
+			sys.stderr.write("Adding to Painter Goblin's Tweet list." + "\n")
+			ulist.wikilist.append(uri)
 
 	# we've seen attribute error a few times, see if we can
 	# counter it here somehow...
@@ -59,14 +75,14 @@ def MakeTweet(link, sendtweet, style):
 
 	if not legacy:
 		if sendtweet:
-			sendNewMethod(tweet, nf)
+			sendNewMethod(link, tweet, nf, uri)
 	elif legacy:
 		if sendtweet:
-			sendLegacyMethod(tweet, nf)
+			sendLegacyMethod(link, tweet, nf, uri)
 	else:
 		sys.stdout.write("Testing config, Tweet not sent.\n")
 
-def sendNewMethod(tweet, nf):
+def sendNewMethod(link, tweet, nf, uri):
 	#update twitter with our image...
 	with open(nf, "rb") as imagefile:
 		 imagedata = imagefile.read()
@@ -78,13 +94,15 @@ def sendNewMethod(tweet, nf):
 		#authenticate and prepare to send tweet...
 		twitter = tw.twitter_authentication()
 		twitter.statuses.update(status=tweet, media_ids=imgID)
+		if not link:
+			logtweet(uri)
 	except TwitterHTTPError as e:
 		sys.stderr.write(e[0] + "\n")
 		if "details: {u'errors': [{u'message': u'Internal error', u'code': 131}]}" in e[0]:
 			testresize(nf, 0.1)	
-			sendNewMethod(tweet, nf)
+			sendNewMethod(link, tweet, nf, uri)
 
-def sendLegacyMethod(tweet, nf):
+def sendLegacyMethod(link, tweet, nf, uri):
 	with open(nf, "rb") as imagefile:
 		 base64_image = base64.b64encode(imagefile.read())
 
@@ -95,11 +113,17 @@ def sendLegacyMethod(tweet, nf):
 		#authenticate and prepare to send tweet...
 		twitter = tw.twitter_authentication()
 		twitter.statuses.update_with_media(**params)
+		if not link: 
+			logtweet(uri)
 	except TwitterHTTPError as e:
 		sys.stderr.write(e[0] + "\n")
 		if "details: {u'errors': [{u'message': u'Internal error', u'code': 131}]}" in e[0]:
 			testresize(nf, 0.1)
-		sendLegacyMethod(tweet, nf)
+		sendLegacyMethod(link, tweet, nf, uri)
+
+def logtweet(wikiuri):
+	lto = pl.ListToPy(set(ulist.wikilist), "wikilist", "/home/goatslayer/git/ross-spencer/painter-goblin/urilist")
+	lto.list_to_py()
 
 #filesize needs to be 3145728
 def testresize (img, p=None):
