@@ -23,6 +23,7 @@ class WikiResults:
 	loc = None
 	fileloc = ""
 	uri = ""
+	arttype = None
 	twitter = None
 
 class WikiGoblin:
@@ -48,7 +49,9 @@ class WikiGoblin:
 
 	# art type list...
 	arttypes = [imgwatercolor, imgpainting, imgwoodcutprint, imgpastel, imgposter, imgphoto]
-	artdict = {imgwatercolor: "water color", imgpainting: "painting", imgwoodcutprint: "wood cut print", imgpastel: "pastel", imgposter: "poster", imgphoto: "photo"}
+
+	# plain-text art types
+	artdict = {imgwatercolor: "#watercolor", imgpainting: "#painting", imgwoodcutprint: "#woodcutprint", imgpastel: "#pastel", imgposter: "#poster", imgphoto: "#photo"}
 
 	def resultsfromlink(self, link):
 
@@ -188,6 +191,8 @@ class WikiGoblin:
 				"twitter col"
 				res.twitter = "@" + r['twitter_coll']['value']	
 
+		res.arttype = self.artdict[style]
+
 		return res
 
 	def getfile(self, res, loc):
@@ -200,13 +205,22 @@ class WikiGoblin:
 		hashtag = "#wikidata #digitalart"
 		urilen = 22
 		loc = ""
+		arttype = ""
 
 		if res.twitter != None:
 			loc = res.twitter
 		elif res.loc != None:
 			loc = res.loc
-	
-		tweet = res.label + ", " + res.artist + ", " + loc + " " + res.uri + " " + hashtag + " " + emoji
+
+		if loc != "" and res.arttype != None:
+			tweet = res.label + ", " + res.artist + ", " + loc + " " + res.uri + " " + hashtag + " " + res.arttype + " " + emoji
+		elif loc != "" and res.arttype == None:
+			tweet = res.label + ", " + res.artist + ", " + loc + " " + res.uri + " " + hashtag + " " + emoji
+		elif loc == "" and res.arttype != None:
+			tweet = res.label + ", " + res.artist + ", " + res.uri + " " + hashtag + " " + res.arttype + " " + emoji
+		else:
+			tweet = res.label + ", " + res.artist + ", " + res.uri + " " + hashtag + " " + emoji
+
 		if len(tweet)-urilen >= 140:
 			tweet = res.label + ", " + res.artist + " " + res.uri + " " + hashtag + " " + emoji
 		else:
