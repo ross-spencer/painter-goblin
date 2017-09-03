@@ -36,6 +36,7 @@ class WikiGoblin:
 
 	# difficult art styles to work with...
 	imgprint = "Q11060274"
+	imglitho = "Q15123870"
 	imgdrawing = "Q93184"
 	imgphoto = "Q125191"
 
@@ -51,7 +52,10 @@ class WikiGoblin:
 	arttypes = [imgwatercolor, imgpainting, imgwoodcutprint, imgpastel, imgposter, imgphoto]
 
 	# plain-text art types
-	artdict = {imgwatercolor: "#watercolor", imgpainting: "#painting", imgwoodcutprint: "#woodcutprint", imgpastel: "#pastel", imgposter: "#poster", imgphoto: "#photo"}
+	artdict = {imgwatercolor: "#watercolor", imgpainting: "#painting", \
+				imgwoodcutprint: "#woodcutprint", imgpastel: "#pastel", \
+				imgposter: "#poster", imgphoto: "#photo", imgprint: "#print", \
+				imglitho: "#lithograph", imgdrawing: "#drawing"}
 
 	def resultsfromlink(self, link):
 
@@ -203,6 +207,7 @@ class WikiGoblin:
 	def maketweet(self, res):
 		emoji = unicode("🖌🎨", 'utf-8')
 		hashtag = "#wikidata #digitalart"
+		hashtagshort = "#digitalart"
 		urilen = 22
 		loc = ""
 		arttype = ""
@@ -221,15 +226,22 @@ class WikiGoblin:
 		else:
 			tweet = res.label + ", " + res.artist + ", " + res.uri + " " + hashtag + " " + emoji
 
-		if len(tweet)-urilen >= 140:
+		if len(tweet) - urilen + len(emoji) >= 140:
+			tweet = tweet.replace(hashtag, hashtagshort)
+		else:
+			sys.stderr.write("Tweet len, first cut: " + str(len(tweet) - urilen) + "\n")
+			return tweet, res.uri
+
+		if len(tweet) - urilen + len(emoji) >= 140:
 			tweet = res.label + ", " + res.artist + " " + res.uri + " " + hashtag + " " + emoji
 		else:
-			sys.stderr.write("Tweet len, first cut: " + str(len(tweet)) + "\n")
+			sys.stderr.write("Tweet len, first cut: " + str(len(tweet) - urilen) + "\n")
 			return tweet, res.uri
-		if len(tweet)-urilen >= 140:
+
+		if len(tweet) - urilen + len(emoji) >= 140:
 			tweet = res.label + " " + res.uri + " " + hashtag + " " + emoji
 		else:
-			sys.stderr.write("Tweet len, second cut: " + str(len(tweet)) + "\n")
+			sys.stderr.write("Tweet len, second cut: " + str(len(tweet) - urilen) + "\n")
 			return tweet, res.uri
 
 	# get a results structure for our tweet
@@ -251,6 +263,7 @@ def main():
 
 	#not so good styles to generate art from...
 	parser.add_argument('--tprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tlitho', help='OPTIONAL: Choose an art style to output...', action='store_true')
 	parser.add_argument('--tdraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
 	parser.add_argument('--tphoto', help='OPTIONAL: Choose an art style to output...', action='store_true')
 
@@ -288,6 +301,8 @@ def main():
 		style = wg.imgpastel
 	elif args.tposter:
 		style = wg.imgposter
+	elif args.tlitho:
+		style = wg.imglitho
 
 	res = wg.getresults(args.link, style)			
 	sys.stdout.write(wg.maketweet(res) + "\n")

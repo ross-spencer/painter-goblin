@@ -164,6 +164,7 @@ def main():
 
 	#not so good styles to generate art from...
 	parser.add_argument('--tprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+	parser.add_argument('--tlitho', help='OPTIONAL: Choose an art style to output...', action='store_true')
 	parser.add_argument('--tdraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
 	parser.add_argument('--tphoto', help='OPTIONAL: Choose an art style to output...', action='store_true')
 
@@ -199,6 +200,8 @@ def main():
 		style = wg.imgpastel
 	elif args.tposter:
 		style = wg.imgposter
+	elif args.tlitho:
+		style = wg.imglitho
 
 	MakeTweet(args.link, args.notweet, style)			
 
