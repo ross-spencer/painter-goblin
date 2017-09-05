@@ -74,7 +74,7 @@ class WikiGoblin:
 		     ?loc wdt:P2002 ?twitter_loc .
 		  }
 		  <{{LINK}}> wdt:P195 ?coll .
-		  <{{LINK}}> wdt:P170 ?artist .
+		  OPTIONAL { <{{LINK}}> wdt:P170 ?artist . }
 		  OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
 		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
 		}
@@ -95,7 +95,10 @@ class WikiGoblin:
 				res.label = r['itemLabel']['value']
 			else:
 				res.label = "Untitled"
-			res.artist = r['artistLabel']['value']
+			if 'artistLabel' in r:
+				res.artist = r['artistLabel']['value']
+			else:
+				res.artist = "Unknown"
 			if 'locLabel' in r:
 				res.loc = r['locLabel']['value']
 				if res.loc == "museum's storage space":
