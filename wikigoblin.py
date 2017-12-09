@@ -214,6 +214,7 @@ class WikiGoblin:
 		urilen = 22
 		loc = ""
 		arttype = ""
+		charlimit = 280
 
 		if res.twitter != None:
 			loc = res.twitter
@@ -229,19 +230,19 @@ class WikiGoblin:
 		else:
 			tweet = res.label + ", " + res.artist + ", " + res.uri + " " + hashtag + " " + emoji
 
-		if len(tweet) - urilen + len(emoji) >= 140:
+		if len(tweet) - urilen + len(emoji) >= charlimit:
 			tweet = tweet.replace(hashtag, hashtagshort)
 		else:
 			sys.stderr.write("Tweet len, first cut: " + str(len(tweet) - urilen) + "\n")
 			return tweet, res.uri
 
-		if len(tweet) - urilen + len(emoji) >= 140:
+		if len(tweet) - urilen + len(emoji) >= charlimit:
 			tweet = res.label + ", " + res.artist + " " + res.uri + " " + hashtag + " " + emoji
 		else:
 			sys.stderr.write("Tweet len, first cut: " + str(len(tweet) - urilen) + "\n")
 			return tweet, res.uri
 
-		if len(tweet) - urilen + len(emoji) >= 140:
+		if len(tweet) - urilen + len(emoji) >= charlimit:
 			tweet = res.label + " " + res.uri + " " + hashtag + " " + emoji
 		else:
 			sys.stderr.write("Tweet len, second cut: " + str(len(tweet) - urilen) + "\n")
