@@ -164,11 +164,20 @@ class PainterGoblin:
         palette37 = [(0xf4, 0xf4, 0xf4), (0x9b, 0x74, 0x57), (
             0x3d, 0x64, 0x45), (0x0d, 0x24, 0x46), (0x2b, 0x7a, 0xbc)]
 
+        # Cybercats
+        palette38 = [(0x18, 0x15, 0x13), (0xe1, 0x24, 0x05), (
+            0x57, 0x55, 0x4e), (0x34, 0x91, 0xc6), (0xe7, 0xff, 0x1e)]
+
+        # Solaris : Concept Art
+        palette39 = [(0x10, 0x0e, 0x29), (0xcb, 0xe1, 0x33), (
+            0x30, 0x41, 0x33), (0x30, 0x2e, 0x46), (0xbf, 0x21, 0x3b)]
+
         p = [
             palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9,
                 palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17, palette18,
                         palette19, palette20, palette21, palette22, palette23, palette24, palette25, palette26, palette27,
-                                palette28, palette29, palette30, palette31, palette32, palette33, palette34, palette35, palette36, palette37]
+                                palette28, palette29, palette30, palette31, palette32, palette33, palette34, palette35, palette36, palette37,
+                                                                        palette38, palette39]
 
         # seed the random number generator
         seed(time.time())
