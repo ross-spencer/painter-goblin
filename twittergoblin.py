@@ -2,6 +2,7 @@
 
 import os
 import sys
+import time
 import argparse
 import pylisttopy as pl
 import urilist as ulist
@@ -50,7 +51,12 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
 	if not link:
 		if uri in ulist.wikilist:
 			sys.stderr.write("Painter Goblin has painted this before. Making new Tweet" + "\n")
-			return MakeTweet(link, sendtweet, style, "SHA1")		
+			if algorithm == "MD5":
+				return MakeTweet(link, sendtweet, style, "SHA1")
+			if algorithm == "SHA1":
+				sys.stderr.write("Two hashes used, trying to sleep before trying again..." + "\n")
+				time.sleep(10)
+			return MakeTweet(link, sendtweet, style)		
 		else:	
 			sys.stderr.write("Adding to Painter Goblin's Tweet list." + "\n")
 			ulist.wikilist.append(uri)
