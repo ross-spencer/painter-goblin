@@ -17,7 +17,6 @@ sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
 # p276, location of item
 # p170, creator of item
 
-
 class WikiResults:
     label = ""
     artist = ""
@@ -26,7 +25,6 @@ class WikiResults:
     uri = ""
     arttype = None
     twitter = None
-
 
 class WikiGoblin:
 
@@ -66,7 +64,7 @@ class WikiGoblin:
         link = link.replace(
             "https://www.wikidata.org/wiki/", "http://www.wikidata.org/entity/")
 
-        sys.stderr.write("retriving from: " + link + "\n")
+        sys.stderr.write("retrieving from: " + link + "\n")
 
         query = """
 		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll WHERE {
@@ -213,8 +211,9 @@ class WikiGoblin:
         return
 
     # not pretty code below here but works for now...
-    def maketweet(self, res):
+    def maketweet(self, res, palette_name):
         emoji = unicode("🖌🎨", 'utf-8')
+        palette_name = "(Palette: %s)" % palette_name
         hashtag = "#wikidata #digitalart"
         hashtagshort = "#digitalart"
         urilen = 22
@@ -222,45 +221,44 @@ class WikiGoblin:
         arttype = ""
         charlimit = 280
 
+        # Use Twitter handle if we have one, else try for Museum Location
         if res.twitter != None:
             loc = res.twitter
         elif res.loc != None:
             loc = res.loc
 
+        # Build Tweets based on the information we have. TODO: Make more
+        # intelligent... this is not very sophisticated...
         if loc != "" and res.arttype != None:
             tweet = res.label + ", " + res.artist + ", " + loc + " " + \
-                res.uri + " " + hashtag + " " + res.arttype + " " + emoji
+                res.uri + " " + hashtag + " " + res.arttype + " " + \
+                palette_name + " " + emoji
         elif loc != "" and res.arttype == None:
             tweet = res.label + ", " + res.artist + ", " + \
-                loc + " " + res.uri + " " + hashtag + " " + emoji
+                loc + " " + res.uri + " " + hashtag + " " + palette_name + \
+                " " + emoji
         elif loc == "" and res.arttype != None:
             tweet = res.label + ", " + res.artist + ", " + \
-                res.uri + " " + hashtag + " " + res.arttype + " " + emoji
+                res.uri + " " + hashtag + " " + res.arttype + " " + \
+                palette_name + " " +  emoji
         else:
             tweet = res.label + ", " + res.artist + \
-                ", " + res.uri + " " + hashtag + " " + emoji
+                ", " + res.uri + " " + hashtag + " " + palette_name + " " + \
+                emoji
 
         if len(tweet) - urilen + len(emoji) >= charlimit:
             tweet = tweet.replace(hashtag, hashtagshort)
-        else:
-            sys.stderr.write(
-                "Tweet len, first cut: " + str(len(tweet) - urilen) + "\n")
-            return tweet, res.uri
 
         if len(tweet) - urilen + len(emoji) >= charlimit:
             tweet = res.label + ", " + res.artist + \
                 " " + res.uri + " " + hashtag + " " + emoji
-        else:
-            sys.stderr.write(
-                "Tweet len, first cut: " + str(len(tweet) - urilen) + "\n")
-            return tweet, res.uri
 
         if len(tweet) - urilen + len(emoji) >= charlimit:
             tweet = res.label + " " + res.uri + " " + hashtag + " " + emoji
-        else:
-            sys.stderr.write(
-                "Tweet len, second cut: " + str(len(tweet) - urilen) + "\n")
-            return tweet, res.uri
+
+        sys.stderr.write("Tweet len: " + str(len(tweet) - urilen) + "\n")
+        
+        return tweet, res.uri
 
     # get a results structure for our tweet
     def getresults(self, link=False, t=False):
@@ -271,11 +269,9 @@ class WikiGoblin:
             res = wg.newresults(t)
         return res
 
-
 def main():
 
     #	Usage: 	--link [imgFile]
-
     #	Handle command line arguments for the script
     parser = argparse.ArgumentParser(
         description='Run the Wikidata algorithm manually.')

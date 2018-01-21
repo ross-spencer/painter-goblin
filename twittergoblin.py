@@ -4,12 +4,17 @@ import os
 import sys
 import time
 import argparse
-import pylisttopy as pl
-import urilist as ulist
-import twitterpieces as tw
+from PIL import Image
+
+# Library libs
+from lib import locations
+from lib import pylisttopy as pl
+from lib import urilist as ulist
+from lib import twitterpieces as tw
+
+# Primary Exes
 from wikigoblin import WikiGoblin
 from paintergoblin import PainterGoblin
-from PIL import Image
 
 # legacy
 import base64
@@ -26,11 +31,6 @@ legacy = False
 wg = WikiGoblin()
 pg = PainterGoblin()
 
-wikiloc = "images/FromWikiData.jpg"
-tempfolder = "images"
-paintloc = "PaintedByThePainterGoblin.png"
-listloc = "/home/goatslayer/git/ross-spencer/painter-goblin/urilist"
-
 emoji = unicode("🖌🎨", 'utf-8')
 
 
@@ -41,8 +41,14 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
     else:
         res = wg.newresults(style, algorithm)
 
+    # get file from wikidata
+    wg.getfile(res, locations.wikiloc)
+
+    # make a new image and return the palette
+    palette_label = pg.paintpicture(locations.wikiloc, 5, locations.tempfolder, locations.paintloc)
+
     # return tuple from maketweet...
-    data = wg.maketweet(res)
+    data = wg.maketweet(res, palette_label)
 
     # pull apart tuple...
     tweet = data[0]
@@ -64,6 +70,12 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
             sys.stderr.write("Adding to Painter Goblin's Tweet list." + "\n")
             ulist.wikilist.append(uri)
 
+    # new file
+    nf = locations.tempfolder + "/" + locations.paintloc
+
+    # if we need to resize the image, do it here...
+    testresize(nf)
+
     # we've seen attribute error a few times, see if we can
     # counter it here somehow...
     try:
@@ -73,15 +85,6 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
         return MakeTweet(link, sendtweet, style)
 
     sys.stderr.write(tweet + "\n")
-
-    wg.getfile(res, wikiloc)
-    pg.paintpicture(wikiloc, 5, tempfolder, paintloc)
-
-    # new file
-    nf = tempfolder + "/" + paintloc
-
-    # if we need to resize the image, do it here...
-    testresize(nf)
 
     if not legacy:
         if sendtweet:
@@ -135,12 +138,10 @@ def sendLegacyMethod(link, tweet, nf, uri):
 
 
 def logtweet(wikiuri):
-    lto = pl.ListToPy(set(ulist.wikilist), "wikilist", listloc)
+    lto = pl.ListToPy(set(ulist.wikilist), "wikilist", locations.listloc)
     lto.list_to_py()
 
 # filesize needs to be 3145728
-
-
 def testresize(img, p=None):
     sys.stderr.write("test resize...\n")
     fsz = os.stat(img).st_size
@@ -158,7 +159,6 @@ def testresize(img, p=None):
         resize(img, perc)
     else:
         return
-
 
 def resize(img, perc):
     i = Image.open(img)
