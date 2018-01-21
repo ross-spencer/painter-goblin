@@ -172,13 +172,15 @@ class PainterGoblin:
         palette39 = [(0x10, 0x0e, 0x29), (0xcb, 0xe1, 0x33), (
             0x30, 0x41, 0x33), (0x30, 0x2e, 0x46), (0xbf, 0x21, 0x3b)]
 
+        # Leroy W. Flint Apocalypse, A Triptych , c. 1953
+        palette40 = [(0xff,0xbb,0x08),(0xff,0x3d,0x00),(0xb9,0x00,0x00),(0x53,0x00,0x00),(0x21,0x02,0x00)]
+
         p = [
             palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8, palette9,
                 palette10, palette11, palette12, palette13, palette14, palette15, palette16, palette17, palette18,
                         palette19, palette20, palette21, palette22, palette23, palette24, palette25, palette26, palette27,
                                 palette28, palette29, palette30, palette31, palette32, palette33, palette34, palette35, palette36, palette37,
-                                                                        palette38, palette39]
-
+                                                                        palette38, palette39, palette40]
         # seed the random number generator
         seed(time.time())
 
