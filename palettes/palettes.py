@@ -168,7 +168,7 @@ class Palettes:
 
 		# Anna Atkins's cyanotypes:
 		# https://digitalcollections.nypl.org/collections/ocean-flowers-anna-atkinss-cyanotypes-of-british-algae#/?tab=navigation
-		Painter_goblin_palette("#CyanoTypes", [(0x22, 0x67, 0x88),
+		Painter_goblin_palette("#AnnaAtkins #CyanoTypes", [(0x22, 0x67, 0x88),
 			(0x30, 0x6e, 0x8e), (0x59, 0x8c, 0xa6), (0x88, 0xb0, 0xc0),
 			(0xc6, 0xd6, 0xd7)]),
 
