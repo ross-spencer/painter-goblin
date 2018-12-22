@@ -50,7 +50,9 @@ class WikiGoblin:
 
     # art type list...
     arttypes = [imgwatercolor, imgpainting,
-                imgwoodcutprint, imgpastel, imgposter, imgphoto]
+                imgwoodcutprint, imgpastel, imgposter, imgphoto,
+                imgprint, imglitho, imgdrawing,
+                ]
 
     # plain-text art types
     artdict = {imgwatercolor: "#watercolor", imgpainting: "#painting",
@@ -257,7 +259,7 @@ class WikiGoblin:
             tweet = res.label + " " + res.uri + " " + hashtag + " " + emoji
 
         sys.stderr.write("Tweet len: " + str(len(tweet) - urilen) + "\n")
-        
+
         return tweet, res.uri
 
     # get a results structure for our tweet
