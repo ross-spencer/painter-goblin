@@ -5,17 +5,20 @@ import os
 import sys
 
 # twitter
-sys.path.insert(0, 'twitter')
+#sys.path.insert(0, 'twitter')
 from twitter import *
 
 # Twitter pieces
 
+conkey = ""
+creds = ""
+
 
 def twitter_authentication():
-    CONSUMER_KEYS = os.path.expanduser('.twitter-consumer-keys')
+    CONSUMER_KEYS = conkey
     CONSUMER_KEY, CONSUMER_SECRET = read_token_file(CONSUMER_KEYS)
 
-    MY_TWITTER_CREDS = os.path.expanduser('.twitter-paintergoblin-credentials')
+    MY_TWITTER_CREDS = creds
     if not os.path.exists(MY_TWITTER_CREDS):
         oauth_dance("paintergoblin", CONSUMER_KEY,
                     CONSUMER_SECRET, MY_TWITTER_CREDS)
@@ -28,10 +31,10 @@ def twitter_authentication():
 
 
 def twitter_image_authentication():
-    CONSUMER_KEYS = os.path.expanduser('.twitter-consumer-keys')
-    CONSUMER_KEY, CONSUMER_SECRET = read_token_file(CONSUMER_KEYS)
+    CONSUMER_KEYS = conkey
+    CONSUMER_KEY, CONSUMER_SECRET = read_token_file(conkey)
 
-    MY_TWITTER_CREDS = os.path.expanduser('.twitter-paintergoblin-credentials')
+    MY_TWITTER_CREDS = os.path.expanduser(creds)
     if not os.path.exists(MY_TWITTER_CREDS):
         oauth_dance("paintergoblin", CONSUMER_KEY,
                     CONSUMER_SECRET, MY_TWITTER_CREDS)
