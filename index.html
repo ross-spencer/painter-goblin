@@ -1,0 +1,75 @@
+---
+---
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="gallery/favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="gallery/favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="gallery/favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="gallery/favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="gallery/favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="gallery/favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="gallery/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="gallery/favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="gallery/favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="gallery/favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="gallery/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="gallery/favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="gallery/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="gallery/favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--End favicon includes.-->
+
+    <link rel="stylesheet" type="text/css" href="gallery/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="gallery/css/style.css">
+    <link rel="stylesheet" type="text/css" href="gallery/css/zoom.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <script src="https://use.fontawesome.com/4c9066f1a6.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h2 class="header">{{ site.full_name }}</h2>
+      <div id="gallery">
+      </div>
+    </div>
+    <div class="footer">
+      <div class="links">
+        <a id="twitter" class="links__icon" href="https://twitter.com/{{ site.twitter }}">
+          <span class="view-ig"> View {{ site.title }}'s Twitter </span>
+          <i class="fa fa-twitter fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+  <script src="gallery/js/transition.js"></script>
+  <script src="gallery/js/zoom.min.js"></script>
+  <script src="gallery/js/gallery.js"></script>
+  <script>
+    var COLUMNS = 'columns';
+    var ROWS = 'rows';
+    var SQUARES = 'squares';
+
+    var columns = COLUMNS;
+    var rows = ROWS;
+    var squares = SQUARES;
+
+    var layoutStyle = {{ site.layout_style }};
+
+    var configuration = {
+      spacing: {{ site.spacing }},
+      shuffle: {{ site.shuffle }},
+      columns: {{ site.columns }},
+      maxHeight: {{ site.max_height }}
+    };
+  </script>
+  <script src="gallery/js/script.js"></script>
+</html>

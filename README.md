@@ -8,7 +8,7 @@ Painter Goblin Twitter Bot. Inspired by a [Zine](https://github.com/ross-spencer
 
 ## Wikidata
 
-Paints new images from Wikidata. The algorithm is simple. Enhance contrast, enhance brightness. This makes muddy images less blurry. Enhance contrast and then convert to paletted image and swap in a randomized curated palette from the collection. 
+Paints new images from Wikidata. The algorithm is simple. Enhance contrast, enhance brightness. This makes muddy images less blurry. Enhance contrast and then convert to paletted image and swap in a randomized curated palette from the collection.
 
 He enjoys his work, I hope you do!
 
@@ -70,7 +70,16 @@ Categories of Image:
         ?item wdt:P195 ?coll .
         ?item wdt:P170 ?artist .
         SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
-    } 
+    }
+
+## Gallery
+
+Gallery code is provided by [Andy Zhang](https://github.com/andyzg/gallery)
+please support their work. It has made it incredibly easy for me to provide
+some level of gallery support for the Painter Goblin's work.
+
+* To install: `bundle install`
+* To run: `bundle exec jekyll serve`
 
 ## License
 

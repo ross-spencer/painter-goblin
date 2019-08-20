@@ -1,0 +1,22 @@
+{
+  "name": "gallery",
+  "version": "1.0.0",
+  "description": "The Painter Goblin",
+  "main": "gallery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ross-spencer/painter-goblin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ross-spencer/painter-goblin/issues"
+  },
+  "homepage": "https://ross-spencer.github.io/painter-goblin/",
+  "dependencies": {
+    "image-size": "^0.5.0"
+  }
+}
