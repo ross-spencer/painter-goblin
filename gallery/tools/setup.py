@@ -11,7 +11,7 @@ import json
 import re
 
 PATH = os.path.dirname(__file__) + '/../'
-RELATIVE_PATH = 'photos'
+RELATIVE_PATH = 'images'
 PHOTO_PATH = PATH + RELATIVE_PATH
 
 

@@ -66,6 +66,22 @@
     },
     {
       "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1156165357276663808-EAuGQ6mX4AAEqxs.min.png",
+      "width": 1024,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1156165357276663808-EAuGQ6mX4AAEqxs.placeholder.png",
+      "path": "gallery/images/remix-salon/1156165357276663808-EAuGQ6mX4AAEqxs.png"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1147903370864316416-D-4sB_EXUAEee3s.min.png",
+      "width": 809,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1147903370864316416-D-4sB_EXUAEee3s.placeholder.png",
+      "path": "gallery/images/remix-salon/1147903370864316416-D-4sB_EXUAEee3s.png"
+    },
+    {
+      "height": 1200,
       "compressed_path": "gallery/images/remix-salon/964824999713542145-DWO_OQ2WAAAswC9.min.jpg",
       "width": 976,
       "compressed": false,
@@ -97,6 +113,14 @@
       "path": "gallery/images/remix-salon/906052792334376960-DJLyNd3XgAAQJbQ.jpg"
     },
     {
+      "height": 881,
+      "compressed_path": "gallery/images/remix-salon/999727364321013760-Dd--vTGVwAEsL-o.min.jpg",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/999727364321013760-Dd--vTGVwAEsL-o.placeholder.jpg",
+      "path": "gallery/images/remix-salon/999727364321013760-Dd--vTGVwAEsL-o.jpg"
+    },
+    {
       "height": 300,
       "compressed_path": "gallery/images/remix-salon/993025900424855554-DcfvyteXUAADqfL.min.jpg",
       "width": 1200,
@@ -119,6 +143,14 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/972791836799414272-DYAMu9kVwAAEAJg.placeholder.jpg",
       "path": "gallery/images/remix-salon/972791836799414272-DYAMu9kVwAAEAJg.jpg"
+    },
+    {
+      "height": 1199,
+      "compressed_path": "gallery/images/remix-salon/1157083697235079175-EA7JfZHVAAApwDU.min.png",
+      "width": 805,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1157083697235079175-EA7JfZHVAAApwDU.placeholder.png",
+      "path": "gallery/images/remix-salon/1157083697235079175-EA7JfZHVAAApwDU.png"
     },
     {
       "height": 796,
@@ -329,12 +361,28 @@
       "path": "gallery/images/remix-salon/890473767029268480-DFuYwoUUMAEBbAQ.jpg"
     },
     {
+      "height": 812,
+      "compressed_path": "gallery/images/remix-salon/1098980929454948354-D0BdVKSWoAAqQns.min.png",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1098980929454948354-D0BdVKSWoAAqQns.placeholder.png",
+      "path": "gallery/images/remix-salon/1098980929454948354-D0BdVKSWoAAqQns.png"
+    },
+    {
       "height": 719,
       "compressed_path": "gallery/images/remix-salon/953421973543112704-DTs8OrxW0AALA7s.min.jpg",
       "width": 1200,
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/953421973543112704-DTs8OrxW0AALA7s.placeholder.jpg",
       "path": "gallery/images/remix-salon/953421973543112704-DTs8OrxW0AALA7s.jpg"
+    },
+    {
+      "height": 768,
+      "compressed_path": "gallery/images/remix-salon/1076802326214643712-DvGSAk9XgAAkpKq.min.jpg",
+      "width": 1000,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1076802326214643712-DvGSAk9XgAAkpKq.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1076802326214643712-DvGSAk9XgAAkpKq.jpg"
     },
     {
       "height": 666,
@@ -369,12 +417,60 @@
       "path": "gallery/images/remix-salon/888010002048233476-DFLYY1IUIAU-gU4.jpg"
     },
     {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1006250186216230913-DfbrNgIUEAAJpAC.min.jpg",
+      "width": 927,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1006250186216230913-DfbrNgIUEAAJpAC.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1006250186216230913-DfbrNgIUEAAJpAC.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1088899880469311493-DxyMq20WoAA7XJz.min.jpg",
+      "width": 886,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1088899880469311493-DxyMq20WoAA7XJz.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1088899880469311493-DxyMq20WoAA7XJz.jpg"
+    },
+    {
+      "height": 500,
+      "compressed_path": "gallery/images/remix-salon/983215294750609408-DaUVGUpWkAAQhv3.min.jpg",
+      "width": 494,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/983215294750609408-DaUVGUpWkAAQhv3.placeholder.jpg",
+      "path": "gallery/images/remix-salon/983215294750609408-DaUVGUpWkAAQhv3.jpg"
+    },
+    {
+      "height": 592,
+      "compressed_path": "gallery/images/remix-salon/1108040650254110720-D2CNGTRW0AA6YaA.min.png",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1108040650254110720-D2CNGTRW0AA6YaA.placeholder.png",
+      "path": "gallery/images/remix-salon/1108040650254110720-D2CNGTRW0AA6YaA.png"
+    },
+    {
       "height": 911,
       "compressed_path": "gallery/images/remix-salon/1018095467039805440-DiEAbXhU8AEHF9M.min.jpg",
       "width": 1200,
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/1018095467039805440-DiEAbXhU8AEHF9M.placeholder.jpg",
       "path": "gallery/images/remix-salon/1018095467039805440-DiEAbXhU8AEHF9M.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1116133985577521152-D31N8aVWsAIfkaF.min.png",
+      "width": 1021,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1116133985577521152-D31N8aVWsAIfkaF.placeholder.png",
+      "path": "gallery/images/remix-salon/1116133985577521152-D31N8aVWsAIfkaF.png"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1116302622787624961-D33nUZTWkAEmIYN.min.png",
+      "width": 814,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1116302622787624961-D33nUZTWkAEmIYN.placeholder.png",
+      "path": "gallery/images/remix-salon/1116302622787624961-D33nUZTWkAEmIYN.png"
     },
     {
       "height": 798,
@@ -433,6 +529,14 @@
       "path": "gallery/images/remix-salon/890486679730962432-DFuk5IeUwAEYmf3.jpg"
     },
     {
+      "height": 974,
+      "compressed_path": "gallery/images/remix-salon/1163552666661920768-ECXE-7ZXkAA1etO.min.png",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1163552666661920768-ECXE-7ZXkAA1etO.placeholder.png",
+      "path": "gallery/images/remix-salon/1163552666661920768-ECXE-7ZXkAA1etO.png"
+    },
+    {
       "height": 1200,
       "compressed_path": "gallery/images/remix-salon/943999888504782848-DRnC5N3VQAAZR-X.min.jpg",
       "width": 916,
@@ -487,6 +591,14 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/1008311021730193408-Df49h3RW4AEpavU.placeholder.jpg",
       "path": "gallery/images/remix-salon/1008311021730193408-Df49h3RW4AEpavU.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1108112364681994240-D2DNnSuX4AAI_Vx.min.png",
+      "width": 927,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1108112364681994240-D2DNnSuX4AAI_Vx.placeholder.png",
+      "path": "gallery/images/remix-salon/1108112364681994240-D2DNnSuX4AAI_Vx.png"
     },
     {
       "height": 1200,
@@ -554,6 +666,14 @@
     },
     {
       "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1161739820869345280-EB9UNc6WwAE5Gut.min.png",
+      "width": 1151,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1161739820869345280-EB9UNc6WwAE5Gut.placeholder.png",
+      "path": "gallery/images/remix-salon/1161739820869345280-EB9UNc6WwAE5Gut.png"
+    },
+    {
+      "height": 1200,
       "compressed_path": "gallery/images/remix-salon/938033020367527936-DQSQDz7XkAAvjnd.min.jpg",
       "width": 938,
       "compressed": false,
@@ -567,6 +687,14 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/869151812959387648-DA_Y9zTUwAAtvT4.placeholder.jpg",
       "path": "gallery/images/remix-salon/869151812959387648-DA_Y9zTUwAAtvT4.jpg"
+    },
+    {
+      "height": 778,
+      "compressed_path": "gallery/images/remix-salon/1161673985005953024-EB8YVT2WsAIRG9v.min.png",
+      "width": 1095,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1161673985005953024-EB8YVT2WsAIRG9v.placeholder.png",
+      "path": "gallery/images/remix-salon/1161673985005953024-EB8YVT2WsAIRG9v.png"
     },
     {
       "height": 892,
@@ -583,6 +711,14 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/949266991772258304-DSx5S9WV4AEMDDw.placeholder.jpg",
       "path": "gallery/images/remix-salon/949266991772258304-DSx5S9WV4AEMDDw.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1001538961708388352-DeYuYHNVMAAaWsq.min.jpg",
+      "width": 911,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1001538961708388352-DeYuYHNVMAAaWsq.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1001538961708388352-DeYuYHNVMAAaWsq.jpg"
     },
     {
       "height": 900,
@@ -615,6 +751,30 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/948268527559077899-DSjtMqtX4AEvA20.placeholder.jpg",
       "path": "gallery/images/remix-salon/948268527559077899-DSjtMqtX4AEvA20.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1109055008778137600-D2QnptwXgAA8P2Q.min.png",
+      "width": 896,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1109055008778137600-D2QnptwXgAA8P2Q.placeholder.png",
+      "path": "gallery/images/remix-salon/1109055008778137600-D2QnptwXgAA8P2Q.png"
+    },
+    {
+      "height": 496,
+      "compressed_path": "gallery/images/remix-salon/983214830294315008-DaUUrL6WsAMv1zt.min.jpg",
+      "width": 391,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/983214830294315008-DaUUrL6WsAMv1zt.placeholder.jpg",
+      "path": "gallery/images/remix-salon/983214830294315008-DaUUrL6WsAMv1zt.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1130370877957263361-D6_iUrfWkAAwOEv.min.png",
+      "width": 722,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1130370877957263361-D6_iUrfWkAAwOEv.placeholder.png",
+      "path": "gallery/images/remix-salon/1130370877957263361-D6_iUrfWkAAwOEv.png"
     },
     {
       "height": 832,
@@ -673,6 +833,30 @@
       "path": "gallery/images/remix-salon/965859574019276800-DWdr61pVAAAgEwq.jpg"
     },
     {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1076737448321957888-DvFXALrXgAAqpCs.min.jpg",
+      "width": 780,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1076737448321957888-DvFXALrXgAAqpCs.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1076737448321957888-DvFXALrXgAAqpCs.jpg"
+    },
+    {
+      "height": 1024,
+      "compressed_path": "gallery/images/remix-salon/986219133841936389-Da_AyEbWsAAzQNv.min.jpg",
+      "width": 826,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/986219133841936389-Da_AyEbWsAAzQNv.placeholder.jpg",
+      "path": "gallery/images/remix-salon/986219133841936389-Da_AyEbWsAAzQNv.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1091233079979622400-DyTWs9lX4AAc1JC.min.jpg",
+      "width": 924,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1091233079979622400-DyTWs9lX4AAc1JC.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1091233079979622400-DyTWs9lX4AAc1JC.jpg"
+    },
+    {
       "height": 655,
       "compressed_path": "gallery/images/remix-salon/965313327646699520-DWV6Yq_UMAANnTK.min.jpg",
       "width": 1200,
@@ -729,6 +913,14 @@
       "path": "gallery/images/remix-salon/868831810028949504-DA617HIVYAAFiXD.jpg"
     },
     {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/978530364351242240-DZRwLc8WkAARhfp.min.jpg",
+      "width": 913,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/978530364351242240-DZRwLc8WkAARhfp.placeholder.jpg",
+      "path": "gallery/images/remix-salon/978530364351242240-DZRwLc8WkAARhfp.jpg"
+    },
+    {
       "height": 847,
       "compressed_path": "gallery/images/remix-salon/951441433394860034-DTQy8G7WsAAz5aH.min.jpg",
       "width": 1200,
@@ -777,6 +969,14 @@
       "path": "gallery/images/remix-salon/888958619001040896-DFY3GAmU0AIi24T.jpg"
     },
     {
+      "height": 776,
+      "compressed_path": "gallery/images/remix-salon/1160707680203345920-EBupe73XYAUm9cm.min.png",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1160707680203345920-EBupe73XYAUm9cm.placeholder.png",
+      "path": "gallery/images/remix-salon/1160707680203345920-EBupe73XYAUm9cm.png"
+    },
+    {
       "height": 1200,
       "compressed_path": "gallery/images/remix-salon/956924933396819968-DUeuJ2LWAAEfnqs.min.jpg",
       "width": 978,
@@ -791,6 +991,14 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/983635052696399873-DaaS3e_WkAAjUIB.placeholder.jpg",
       "path": "gallery/images/remix-salon/983635052696399873-DaaS3e_WkAAjUIB.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1140910599221764096-D9VUJJWWsAAzpVK.min.png",
+      "width": 882,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1140910599221764096-D9VUJJWWsAAzpVK.placeholder.png",
+      "path": "gallery/images/remix-salon/1140910599221764096-D9VUJJWWsAAzpVK.png"
     },
     {
       "height": 1200,
@@ -881,6 +1089,14 @@
       "path": "gallery/images/remix-salon/902855024178376705-DIeV22PV4AAlan2.jpg"
     },
     {
+      "height": 927,
+      "compressed_path": "gallery/images/remix-salon/1049012211660869633-Do7XC8DW4Acizxl.min.jpg",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1049012211660869633-Do7XC8DW4Acizxl.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1049012211660869633-Do7XC8DW4Acizxl.jpg"
+    },
+    {
       "height": 858,
       "compressed_path": "gallery/images/remix-salon/1019545224517996547-DiYm-iVX0AA80vg.min.jpg",
       "width": 1200,
@@ -897,6 +1113,22 @@
       "path": "gallery/images/remix-salon/956542221276385281-DUZSFEWW0AAh38s.jpg"
     },
     {
+      "height": 825,
+      "compressed_path": "gallery/images/remix-salon/1124831293773176837-D5w0GZbWsAAyk8z.min.png",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1124831293773176837-D5w0GZbWsAAyk8z.placeholder.png",
+      "path": "gallery/images/remix-salon/1124831293773176837-D5w0GZbWsAAyk8z.png"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1108112364681994240-D2DNnSyWsAAWvzq.min.png",
+      "width": 927,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1108112364681994240-D2DNnSyWsAAWvzq.placeholder.png",
+      "path": "gallery/images/remix-salon/1108112364681994240-D2DNnSyWsAAWvzq.png"
+    },
+    {
       "height": 1200,
       "compressed_path": "gallery/images/remix-salon/944828303466205185-DRy0VU5UMAAtFOT.min.jpg",
       "width": 890,
@@ -911,6 +1143,14 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/944644419600470018-DRwNF5XX4AYPIA_.placeholder.jpg",
       "path": "gallery/images/remix-salon/944644419600470018-DRwNF5XX4AYPIA_.jpg"
+    },
+    {
+      "height": 826,
+      "compressed_path": "gallery/images/remix-salon/1019654444022226944-DiaKT5dU0AAvsyZ.min.jpg",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1019654444022226944-DiaKT5dU0AAvsyZ.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1019654444022226944-DiaKT5dU0AAvsyZ.jpg"
     },
     {
       "height": 836,
@@ -961,6 +1201,14 @@
       "path": "gallery/images/remix-salon/904203201666154496-DIxgAs2UQAAi2og.jpg"
     },
     {
+      "height": 895,
+      "compressed_path": "gallery/images/remix-salon/1024691558736642048-Djhvir2WwAcdx2B.min.jpg",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1024691558736642048-Djhvir2WwAcdx2B.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1024691558736642048-Djhvir2WwAcdx2B.jpg"
+    },
+    {
       "height": 761,
       "compressed_path": "gallery/images/remix-salon/1015856581978796032-DhkMLSJVMAAoa5n.min.jpg",
       "width": 1200,
@@ -969,12 +1217,28 @@
       "path": "gallery/images/remix-salon/1015856581978796032-DhkMLSJVMAAoa5n.jpg"
     },
     {
+      "height": 879,
+      "compressed_path": "gallery/images/remix-salon/1161432345276223489-EB48kA-XYAEDQT8.min.png",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1161432345276223489-EB48kA-XYAEDQT8.placeholder.png",
+      "path": "gallery/images/remix-salon/1161432345276223489-EB48kA-XYAEDQT8.png"
+    },
+    {
       "height": 413,
       "compressed_path": "gallery/images/remix-salon/958302021240713223-DUySm7uWAAAqDW4.min.jpg",
       "width": 936,
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/958302021240713223-DUySm7uWAAAqDW4.placeholder.jpg",
       "path": "gallery/images/remix-salon/958302021240713223-DUySm7uWAAAqDW4.jpg"
+    },
+    {
+      "height": 428,
+      "compressed_path": "gallery/images/remix-salon/1091263443661922305-DyTyUZ3WwAAvWZP.min.jpg",
+      "width": 700,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1091263443661922305-DyTyUZ3WwAAvWZP.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1091263443661922305-DyTyUZ3WwAAvWZP.jpg"
     },
     {
       "height": 1200,
@@ -991,6 +1255,14 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/966749647304830976-DWqVrbTW4AIbHlK.placeholder.jpg",
       "path": "gallery/images/remix-salon/966749647304830976-DWqVrbTW4AIbHlK.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1156130952428605441-EAtm-U5WwAYfSxQ.min.png",
+      "width": 787,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1156130952428605441-EAtm-U5WwAYfSxQ.placeholder.png",
+      "path": "gallery/images/remix-salon/1156130952428605441-EAtm-U5WwAYfSxQ.png"
     },
     {
       "height": 1200,
@@ -1121,6 +1393,14 @@
       "path": "gallery/images/remix-salon/993418744704765952-DclVFBsW0AAMykB.jpg"
     },
     {
+      "height": 560,
+      "compressed_path": "gallery/images/remix-salon/983215004253122560-DaUU1aTXcAA1gyG.min.jpg",
+      "width": 700,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/983215004253122560-DaUU1aTXcAA1gyG.placeholder.jpg",
+      "path": "gallery/images/remix-salon/983215004253122560-DaUU1aTXcAA1gyG.jpg"
+    },
+    {
       "height": 778,
       "compressed_path": "gallery/images/remix-salon/962222927675580416-DVqApuGX0AIlkBr.min.jpg",
       "width": 1200,
@@ -1193,12 +1473,28 @@
       "path": "gallery/images/remix-salon/952438481439031296-DTe9wB2W4AAEj-K.jpg"
     },
     {
+      "height": 816,
+      "compressed_path": "gallery/images/remix-salon/1157325384314236931-EA-lTaMWkAASv5c.min.png",
+      "width": 1200,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1157325384314236931-EA-lTaMWkAASv5c.placeholder.png",
+      "path": "gallery/images/remix-salon/1157325384314236931-EA-lTaMWkAASv5c.png"
+    },
+    {
       "height": 930,
       "compressed_path": "gallery/images/remix-salon/962947753142898688-DV0T4GHWAAABjyt.min.jpg",
       "width": 1200,
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/962947753142898688-DV0T4GHWAAABjyt.placeholder.jpg",
       "path": "gallery/images/remix-salon/962947753142898688-DV0T4GHWAAABjyt.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1161601073775357953-EB7WBURXUAMDg4c.min.png",
+      "width": 1059,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1161601073775357953-EB7WBURXUAMDg4c.placeholder.png",
+      "path": "gallery/images/remix-salon/1161601073775357953-EB7WBURXUAMDg4c.png"
     },
     {
       "height": 900,
@@ -1210,11 +1506,27 @@
     },
     {
       "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1154650929196609538-EAYk5pYWkAAW__j.min.png",
+      "width": 901,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1154650929196609538-EAYk5pYWkAAW__j.placeholder.png",
+      "path": "gallery/images/remix-salon/1154650929196609538-EAYk5pYWkAAW__j.png"
+    },
+    {
+      "height": 1200,
       "compressed_path": "gallery/images/remix-salon/950443362632523776-DTCnMu-WkAIjDoW.min.jpg",
       "width": 792,
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/950443362632523776-DTCnMu-WkAIjDoW.placeholder.jpg",
       "path": "gallery/images/remix-salon/950443362632523776-DTCnMu-WkAIjDoW.jpg"
+    },
+    {
+      "height": 768,
+      "compressed_path": "gallery/images/remix-salon/1163378640345882630-ECUmtU4X4AEMfDd.min.png",
+      "width": 520,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1163378640345882630-ECUmtU4X4AEMfDd.placeholder.png",
+      "path": "gallery/images/remix-salon/1163378640345882630-ECUmtU4X4AEMfDd.png"
     },
     {
       "height": 1200,
@@ -1223,6 +1535,14 @@
       "compressed": false,
       "placeholder_path": "gallery/images/remix-salon/873696400336408576-DB_-Pk_XsAAhzri.placeholder.jpg",
       "path": "gallery/images/remix-salon/873696400336408576-DB_-Pk_XsAAhzri.jpg"
+    },
+    {
+      "height": 1200,
+      "compressed_path": "gallery/images/remix-salon/1088364058112393216-DxqlV5iWwAALdUc.min.jpg",
+      "width": 882,
+      "compressed": false,
+      "placeholder_path": "gallery/images/remix-salon/1088364058112393216-DxqlV5iWwAALdUc.placeholder.jpg",
+      "path": "gallery/images/remix-salon/1088364058112393216-DxqlV5iWwAALdUc.jpg"
     },
     {
       "height": 824,
