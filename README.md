@@ -1,6 +1,9 @@
 # The Painter Goblin
 
-Paints from a basement near you. Hates the outdoors, loves art. [Gallery](http://twitter.com/paintergoblin).
+Paints from a basement near you. Hates the outdoors, loves art:
+
+* [Gallery](https://ross-spencer.github.io/painter-goblin/)
+* [Twitter](http://twitter.com/paintergoblin)
 
 ## Intro
 

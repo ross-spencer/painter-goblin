@@ -1,5 +1,5 @@
 {
-  "Remix Salon": [
+  "the remix salon": [
     {
       "height": 1200,
       "compressed_path": "gallery/images/low-res/1130370877957263361-D6_iUrfWkAAwOEv.min.webp",
@@ -375,14 +375,6 @@
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1015558780958986241-Dhf9VBuWkAE4zsL.placeholder.jpg",
       "path": "gallery/images/remix-salon/1015558780958986241-Dhf9VBuWkAE4zsL.jpg"
-    },
-    {
-      "height": 1200,
-      "compressed_path": "gallery/images/low-res/890473767029268480-DFuYwoUUMAEBbAQ.min.webp",
-      "width": 621,
-      "compressed": true,
-      "placeholder_path": "gallery/images/lazy/890473767029268480-DFuYwoUUMAEBbAQ.placeholder.jpg",
-      "path": "gallery/images/remix-salon/890473767029268480-DFuYwoUUMAEBbAQ.jpg"
     },
     {
       "height": 719,

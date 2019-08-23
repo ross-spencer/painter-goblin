@@ -65,7 +65,7 @@ def get_images(path):
             'width': width,
             'height': height,
             'path': WEB_PATH + '/' + path + '/' + img,
-            'compressed_path': p.replace("remix-salon", "low-res").replace("jpg", "min.jpg").replace("png", "min.jpg").replace("webp", "min.webp"),
+            'compressed_path': p.replace("remix-salon", "low-res").replace("jpg", "min.webp"),
             'compressed': has_compressed,
             'placeholder_path': p.replace("remix-salon", "lazy").replace("jpg", "placeholder.jpg").replace("png", "placeholder.jpg")
         })
