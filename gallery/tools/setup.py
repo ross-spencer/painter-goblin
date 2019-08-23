@@ -12,6 +12,7 @@ import re
 
 PATH = os.path.dirname(__file__) + '/../'
 RELATIVE_PATH = 'images'
+WEB_PATH = os.path.join("gallery", "images")
 PHOTO_PATH = PATH + RELATIVE_PATH
 
 
@@ -56,18 +57,17 @@ def get_images(path):
     for img in filtered_items:
         width, height = 0, 0
         has_compressed = False
-        p = './' + RELATIVE_PATH + '/' + path + '/' + img
+        p = WEB_PATH + '/' + path + '/' + img
         with open(PHOTO_PATH + '/' + path + '/' + img, 'rb') as f:
             _, width, height = getImageInfo(f.read())
-        if os.path.isfile(get_min_path(p)):
-            has_compressed = True
+        has_compressed = True
         result.append({
             'width': width,
             'height': height,
-            'path': './' + RELATIVE_PATH + '/' + path + '/' + img,
-            'compressed_path': get_min_path(p),
+            'path': WEB_PATH + '/' + path + '/' + img,
+            'compressed_path': p.replace("remix-salon", "low-res").replace("jpg", "min.jpg").replace("png", "min.jpg").replace("webp", "min.webp"),
             'compressed': has_compressed,
-            'placeholder_path': get_placeholder_path(p)
+            'placeholder_path': p.replace("remix-salon", "lazy").replace("jpg", "placeholder.jpg").replace("png", "placeholder.jpg")
         })
     return result
 
@@ -81,12 +81,14 @@ def run():
     print('Starting to collect all albums within the /photos directory...')
     config = {}
     dirs = get_directories()
-    print('Found {length} directories'.format(length=len(dirs)))
+    print('Found {length} directories\n'.format(length=len(dirs)))
     for i, path in enumerate(dirs):
+        if "lazy" in path or "low-res" in path:
+            i-=1
+            continue
         print(str(i+1) + ': Processing photos for the album "{album}"'.format(
             album=path))
         config[path] = get_images(path)
-
         print('   Done processing {l} photos for "{album}"\n'.format(
             l=len(config[path]),
             album=path))
