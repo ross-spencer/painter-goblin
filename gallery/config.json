@@ -1,8 +1,8 @@
 {
-  "the remix salon": [
+  "remix salon": [
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1130370877957263361-D6_iUrfWkAAwOEv.min.webp",
+      "compressed_path": "gallery/images/low-res/1130370877957263361-D6_iUrfWkAAwOEv.min.jpg",
       "width": 722,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1130370877957263361-D6_iUrfWkAAwOEv.placeholder.jpg",
@@ -10,7 +10,7 @@
     },
     {
       "height": 697,
-      "compressed_path": "gallery/images/low-res/902038035369472002-DISuzy2UEAAa0v2.min.webp",
+      "compressed_path": "gallery/images/low-res/902038035369472002-DISuzy2UEAAa0v2.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/902038035369472002-DISuzy2UEAAa0v2.placeholder.jpg",
@@ -18,7 +18,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/952254620247748610-DTcWhy6X4AA0Tnb.min.webp",
+      "compressed_path": "gallery/images/low-res/952254620247748610-DTcWhy6X4AA0Tnb.min.jpg",
       "width": 931,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/952254620247748610-DTcWhy6X4AA0Tnb.placeholder.jpg",
@@ -26,7 +26,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/972791836799414272-DYAMu9jVQAA2YSs.min.webp",
+      "compressed_path": "gallery/images/low-res/972791836799414272-DYAMu9jVQAA2YSs.min.jpg",
       "width": 815,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/972791836799414272-DYAMu9jVQAA2YSs.placeholder.jpg",
@@ -34,7 +34,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/949539552464695298-DS1xMDRX0AAoh-c.min.webp",
+      "compressed_path": "gallery/images/low-res/949539552464695298-DS1xMDRX0AAoh-c.min.jpg",
       "width": 844,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/949539552464695298-DS1xMDRX0AAoh-c.placeholder.jpg",
@@ -42,7 +42,7 @@
     },
     {
       "height": 791,
-      "compressed_path": "gallery/images/low-res/888027085163307011-DFLnoTOVwAM25s-.min.webp",
+      "compressed_path": "gallery/images/low-res/888027085163307011-DFLnoTOVwAM25s-.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/888027085163307011-DFLnoTOVwAM25s-.placeholder.jpg",
@@ -50,7 +50,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/991244410980532224-DcGbiWCXkAALGqo.min.webp",
+      "compressed_path": "gallery/images/low-res/991244410980532224-DcGbiWCXkAALGqo.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/991244410980532224-DcGbiWCXkAALGqo.placeholder.jpg",
@@ -58,7 +58,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/901415770525020160-DIJ4kHeVYAEFqym.min.webp",
+      "compressed_path": "gallery/images/low-res/901415770525020160-DIJ4kHeVYAEFqym.min.jpg",
       "width": 913,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/901415770525020160-DIJ4kHeVYAEFqym.placeholder.jpg",
@@ -66,7 +66,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/948045482013675521-DSgiVdmVwAArq8p.min.webp",
+      "compressed_path": "gallery/images/low-res/948045482013675521-DSgiVdmVwAArq8p.min.jpg",
       "width": 963,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948045482013675521-DSgiVdmVwAArq8p.placeholder.jpg",
@@ -74,7 +74,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/964824999713542145-DWO_OQ2WAAAswC9.min.webp",
+      "compressed_path": "gallery/images/low-res/964824999713542145-DWO_OQ2WAAAswC9.min.jpg",
       "width": 976,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/964824999713542145-DWO_OQ2WAAAswC9.placeholder.jpg",
@@ -82,7 +82,7 @@
     },
     {
       "height": 894,
-      "compressed_path": "gallery/images/low-res/948046718368649216-DSgjdgjVoAIXe-b.min.webp",
+      "compressed_path": "gallery/images/low-res/948046718368649216-DSgjdgjVoAIXe-b.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948046718368649216-DSgjdgjVoAIXe-b.placeholder.jpg",
@@ -90,7 +90,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/948037178797559808-DSgayRrVoAAF838.min.webp",
+      "compressed_path": "gallery/images/low-res/948037178797559808-DSgayRrVoAAF838.min.jpg",
       "width": 879,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948037178797559808-DSgayRrVoAAF838.placeholder.jpg",
@@ -98,7 +98,7 @@
     },
     {
       "height": 972,
-      "compressed_path": "gallery/images/low-res/906052792334376960-DJLyNd3XgAAQJbQ.min.webp",
+      "compressed_path": "gallery/images/low-res/906052792334376960-DJLyNd3XgAAQJbQ.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/906052792334376960-DJLyNd3XgAAQJbQ.placeholder.jpg",
@@ -106,7 +106,7 @@
     },
     {
       "height": 881,
-      "compressed_path": "gallery/images/low-res/999727364321013760-Dd--vTGVwAEsL-o.min.webp",
+      "compressed_path": "gallery/images/low-res/999727364321013760-Dd--vTGVwAEsL-o.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/999727364321013760-Dd--vTGVwAEsL-o.placeholder.jpg",
@@ -114,7 +114,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/873297307763998721-DB6TRTrU0AAYzm_.min.webp",
+      "compressed_path": "gallery/images/low-res/873297307763998721-DB6TRTrU0AAYzm_.min.jpg",
       "width": 840,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/873297307763998721-DB6TRTrU0AAYzm_.placeholder.jpg",
@@ -122,7 +122,7 @@
     },
     {
       "height": 300,
-      "compressed_path": "gallery/images/low-res/993025900424855554-DcfvyteXUAADqfL.min.webp",
+      "compressed_path": "gallery/images/low-res/993025900424855554-DcfvyteXUAADqfL.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/993025900424855554-DcfvyteXUAADqfL.placeholder.jpg",
@@ -130,7 +130,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/941383023785897984-DRB23m_VAAAgGOl.min.webp",
+      "compressed_path": "gallery/images/low-res/941383023785897984-DRB23m_VAAAgGOl.min.jpg",
       "width": 898,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/941383023785897984-DRB23m_VAAAgGOl.placeholder.jpg",
@@ -138,7 +138,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/972791836799414272-DYAMu9kVwAAEAJg.min.webp",
+      "compressed_path": "gallery/images/low-res/972791836799414272-DYAMu9kVwAAEAJg.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/972791836799414272-DYAMu9kVwAAEAJg.placeholder.jpg",
@@ -146,7 +146,7 @@
     },
     {
       "height": 796,
-      "compressed_path": "gallery/images/low-res/955515941743484928-DUKsrxPW4AANWRy.min.webp",
+      "compressed_path": "gallery/images/low-res/955515941743484928-DUKsrxPW4AANWRy.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/955515941743484928-DUKsrxPW4AANWRy.placeholder.jpg",
@@ -154,7 +154,7 @@
     },
     {
       "height": 873,
-      "compressed_path": "gallery/images/low-res/989764431457353729-DbxZgJ0U8AEdMKm.min.webp",
+      "compressed_path": "gallery/images/low-res/989764431457353729-DbxZgJ0U8AEdMKm.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/989764431457353729-DbxZgJ0U8AEdMKm.placeholder.jpg",
@@ -162,7 +162,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/986640811550019585-DbFAlmTXUAAI_P3.min.webp",
+      "compressed_path": "gallery/images/low-res/986640811550019585-DbFAlmTXUAAI_P3.min.jpg",
       "width": 921,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/986640811550019585-DbFAlmTXUAAI_P3.placeholder.jpg",
@@ -170,7 +170,7 @@
     },
     {
       "height": 790,
-      "compressed_path": "gallery/images/low-res/891240408352686081-DF5SKHQUIAAyJoi.min.webp",
+      "compressed_path": "gallery/images/low-res/891240408352686081-DF5SKHQUIAAyJoi.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/891240408352686081-DF5SKHQUIAAyJoi.placeholder.jpg",
@@ -178,7 +178,7 @@
     },
     {
       "height": 779,
-      "compressed_path": "gallery/images/low-res/926353225459970050-DNsRGWFUEAAo_Rb.min.webp",
+      "compressed_path": "gallery/images/low-res/926353225459970050-DNsRGWFUEAAo_Rb.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/926353225459970050-DNsRGWFUEAAo_Rb.placeholder.jpg",
@@ -186,7 +186,7 @@
     },
     {
       "height": 756,
-      "compressed_path": "gallery/images/low-res/955653516084817925-DUMpzlbVoAETocn.min.webp",
+      "compressed_path": "gallery/images/low-res/955653516084817925-DUMpzlbVoAETocn.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/955653516084817925-DUMpzlbVoAETocn.placeholder.jpg",
@@ -194,7 +194,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/955650527911727104-DUMnFs5VQAAOvXy.min.webp",
+      "compressed_path": "gallery/images/low-res/955650527911727104-DUMnFs5VQAAOvXy.min.jpg",
       "width": 904,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/955650527911727104-DUMnFs5VQAAOvXy.placeholder.jpg",
@@ -202,7 +202,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/948045280464826368-DSgiJxuVAAAzM6a.min.webp",
+      "compressed_path": "gallery/images/low-res/948045280464826368-DSgiJxuVAAAzM6a.min.jpg",
       "width": 1184,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948045280464826368-DSgiJxuVAAAzM6a.placeholder.jpg",
@@ -210,7 +210,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/947455118634602496-DSYJaGGU8AAFymC.min.webp",
+      "compressed_path": "gallery/images/low-res/947455118634602496-DSYJaGGU8AAFymC.min.jpg",
       "width": 907,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/947455118634602496-DSYJaGGU8AAFymC.placeholder.jpg",
@@ -218,7 +218,7 @@
     },
     {
       "height": 845,
-      "compressed_path": "gallery/images/low-res/947817364120272896-DSdS3lSVoAAx-3F.min.webp",
+      "compressed_path": "gallery/images/low-res/947817364120272896-DSdS3lSVoAAx-3F.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/947817364120272896-DSdS3lSVoAAx-3F.placeholder.jpg",
@@ -226,7 +226,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/888027085163307011-DFLnsRDUwAAedYr.min.webp",
+      "compressed_path": "gallery/images/low-res/888027085163307011-DFLnsRDUwAAedYr.min.jpg",
       "width": 1066,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/888027085163307011-DFLnsRDUwAAedYr.placeholder.jpg",
@@ -234,7 +234,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/983057341787656194-DaSFcK1W0AEQ5E_.min.webp",
+      "compressed_path": "gallery/images/low-res/983057341787656194-DaSFcK1W0AEQ5E_.min.jpg",
       "width": 798,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/983057341787656194-DaSFcK1W0AEQ5E_.placeholder.jpg",
@@ -242,7 +242,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/966755267265249280-DWqayj0VoAATa9g.min.webp",
+      "compressed_path": "gallery/images/low-res/966755267265249280-DWqayj0VoAATa9g.min.jpg",
       "width": 1116,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/966755267265249280-DWqayj0VoAATa9g.placeholder.jpg",
@@ -250,7 +250,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/870135933227683840-DBNYBICW0AA1IYR.min.webp",
+      "compressed_path": "gallery/images/low-res/870135933227683840-DBNYBICW0AA1IYR.min.jpg",
       "width": 994,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/870135933227683840-DBNYBICW0AA1IYR.placeholder.jpg",
@@ -258,7 +258,7 @@
     },
     {
       "height": 778,
-      "compressed_path": "gallery/images/low-res/1161673985005953024-EB8YVT2WsAIRG9v.min.webp",
+      "compressed_path": "gallery/images/low-res/1161673985005953024-EB8YVT2WsAIRG9v.min.jpg",
       "width": 1095,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1161673985005953024-EB8YVT2WsAIRG9v.placeholder.jpg",
@@ -266,7 +266,7 @@
     },
     {
       "height": 802,
-      "compressed_path": "gallery/images/low-res/981970417844879360-DaCo46BWAAA1Oq9.min.webp",
+      "compressed_path": "gallery/images/low-res/981970417844879360-DaCo46BWAAA1Oq9.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/981970417844879360-DaCo46BWAAA1Oq9.placeholder.jpg",
@@ -274,7 +274,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/922176229226270720-DMw6ZAmXUAUoUbV.min.webp",
+      "compressed_path": "gallery/images/low-res/922176229226270720-DMw6ZAmXUAUoUbV.min.jpg",
       "width": 1040,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/922176229226270720-DMw6ZAmXUAUoUbV.placeholder.jpg",
@@ -282,7 +282,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/932572375316656128-DPEpoYyWkAEDbop.min.webp",
+      "compressed_path": "gallery/images/low-res/932572375316656128-DPEpoYyWkAEDbop.min.jpg",
       "width": 1096,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/932572375316656128-DPEpoYyWkAEDbop.placeholder.jpg",
@@ -290,7 +290,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1108112364681994240-D2DNnSyWsAAWvzq.min.webp",
+      "compressed_path": "gallery/images/low-res/1108112364681994240-D2DNnSyWsAAWvzq.min.jpg",
       "width": 927,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1108112364681994240-D2DNnSyWsAAWvzq.placeholder.jpg",
@@ -298,7 +298,7 @@
     },
     {
       "height": 847,
-      "compressed_path": "gallery/images/low-res/963447870035779584-DV7auwKVQAA_UDc.min.webp",
+      "compressed_path": "gallery/images/low-res/963447870035779584-DV7auwKVQAA_UDc.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/963447870035779584-DV7auwKVQAA_UDc.placeholder.jpg",
@@ -306,7 +306,7 @@
     },
     {
       "height": 770,
-      "compressed_path": "gallery/images/low-res/878769823400026112-DDIEfqWXcAARs2J.min.webp",
+      "compressed_path": "gallery/images/low-res/878769823400026112-DDIEfqWXcAARs2J.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/878769823400026112-DDIEfqWXcAARs2J.placeholder.jpg",
@@ -314,7 +314,7 @@
     },
     {
       "height": 881,
-      "compressed_path": "gallery/images/low-res/896333253703065601-DHBqV4VUwAAIHEo.min.webp",
+      "compressed_path": "gallery/images/low-res/896333253703065601-DHBqV4VUwAAIHEo.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/896333253703065601-DHBqV4VUwAAIHEo.placeholder.jpg",
@@ -322,7 +322,7 @@
     },
     {
       "height": 990,
-      "compressed_path": "gallery/images/low-res/901409229755400193-DIJy5pKUIAA7Hmp.min.webp",
+      "compressed_path": "gallery/images/low-res/901409229755400193-DIJy5pKUIAA7Hmp.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/901409229755400193-DIJy5pKUIAA7Hmp.placeholder.jpg",
@@ -330,7 +330,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/964196348189798401-DWGDd1WU0AAodln.min.webp",
+      "compressed_path": "gallery/images/low-res/964196348189798401-DWGDd1WU0AAodln.min.jpg",
       "width": 953,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/964196348189798401-DWGDd1WU0AAodln.placeholder.jpg",
@@ -338,7 +338,7 @@
     },
     {
       "height": 473,
-      "compressed_path": "gallery/images/low-res/945255776137990144-DR45HfBXUAAdwKZ.min.webp",
+      "compressed_path": "gallery/images/low-res/945255776137990144-DR45HfBXUAAdwKZ.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/945255776137990144-DR45HfBXUAAdwKZ.placeholder.jpg",
@@ -346,7 +346,7 @@
     },
     {
       "height": 1046,
-      "compressed_path": "gallery/images/low-res/916557464555855872-DLhEJ1xUMAAQBfn.min.webp",
+      "compressed_path": "gallery/images/low-res/916557464555855872-DLhEJ1xUMAAQBfn.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/916557464555855872-DLhEJ1xUMAAQBfn.placeholder.jpg",
@@ -354,7 +354,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/985674337884758018-Da3RlaUV4AAjoHY.min.webp",
+      "compressed_path": "gallery/images/low-res/985674337884758018-Da3RlaUV4AAjoHY.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/985674337884758018-Da3RlaUV4AAjoHY.placeholder.jpg",
@@ -362,7 +362,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/908227125722992640-DJqrwXdWAAEQOm7.min.webp",
+      "compressed_path": "gallery/images/low-res/908227125722992640-DJqrwXdWAAEQOm7.min.jpg",
       "width": 960,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/908227125722992640-DJqrwXdWAAEQOm7.placeholder.jpg",
@@ -370,7 +370,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1015558780958986241-Dhf9VBuWkAE4zsL.min.webp",
+      "compressed_path": "gallery/images/low-res/1015558780958986241-Dhf9VBuWkAE4zsL.min.jpg",
       "width": 1050,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1015558780958986241-Dhf9VBuWkAE4zsL.placeholder.jpg",
@@ -378,7 +378,7 @@
     },
     {
       "height": 719,
-      "compressed_path": "gallery/images/low-res/953421973543112704-DTs8OrxW0AALA7s.min.webp",
+      "compressed_path": "gallery/images/low-res/953421973543112704-DTs8OrxW0AALA7s.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/953421973543112704-DTs8OrxW0AALA7s.placeholder.jpg",
@@ -386,7 +386,7 @@
     },
     {
       "height": 768,
-      "compressed_path": "gallery/images/low-res/1076802326214643712-DvGSAk9XgAAkpKq.min.webp",
+      "compressed_path": "gallery/images/low-res/1076802326214643712-DvGSAk9XgAAkpKq.min.jpg",
       "width": 1000,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1076802326214643712-DvGSAk9XgAAkpKq.placeholder.jpg",
@@ -394,7 +394,7 @@
     },
     {
       "height": 666,
-      "compressed_path": "gallery/images/low-res/1016973906232700928-Dh0EYLyW4AAwvtd.min.webp",
+      "compressed_path": "gallery/images/low-res/1016973906232700928-Dh0EYLyW4AAwvtd.min.jpg",
       "width": 1000,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1016973906232700928-Dh0EYLyW4AAwvtd.placeholder.jpg",
@@ -402,7 +402,7 @@
     },
     {
       "height": 800,
-      "compressed_path": "gallery/images/low-res/871441621908418560-DBf7iSmW0AI-kGO.min.webp",
+      "compressed_path": "gallery/images/low-res/871441621908418560-DBf7iSmW0AI-kGO.min.jpg",
       "width": 677,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/871441621908418560-DBf7iSmW0AI-kGO.placeholder.jpg",
@@ -410,7 +410,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/891231227163721728-DF5JuGfUAAIUOTm.min.webp",
+      "compressed_path": "gallery/images/low-res/891231227163721728-DF5JuGfUAAIUOTm.min.jpg",
       "width": 463,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/891231227163721728-DF5JuGfUAAIUOTm.placeholder.jpg",
@@ -418,7 +418,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/965859574019276800-DWdr7_VUMAArcqh.min.webp",
+      "compressed_path": "gallery/images/low-res/965859574019276800-DWdr7_VUMAArcqh.min.jpg",
       "width": 1013,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/965859574019276800-DWdr7_VUMAArcqh.placeholder.jpg",
@@ -426,7 +426,7 @@
     },
     {
       "height": 944,
-      "compressed_path": "gallery/images/low-res/888010002048233476-DFLYY1IUIAU-gU4.min.webp",
+      "compressed_path": "gallery/images/low-res/888010002048233476-DFLYY1IUIAU-gU4.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/888010002048233476-DFLYY1IUIAU-gU4.placeholder.jpg",
@@ -434,7 +434,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1006250186216230913-DfbrNgIUEAAJpAC.min.webp",
+      "compressed_path": "gallery/images/low-res/1006250186216230913-DfbrNgIUEAAJpAC.min.jpg",
       "width": 927,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1006250186216230913-DfbrNgIUEAAJpAC.placeholder.jpg",
@@ -442,7 +442,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1088899880469311493-DxyMq20WoAA7XJz.min.webp",
+      "compressed_path": "gallery/images/low-res/1088899880469311493-DxyMq20WoAA7XJz.min.jpg",
       "width": 886,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1088899880469311493-DxyMq20WoAA7XJz.placeholder.jpg",
@@ -450,7 +450,7 @@
     },
     {
       "height": 500,
-      "compressed_path": "gallery/images/low-res/983215294750609408-DaUVGUpWkAAQhv3.min.webp",
+      "compressed_path": "gallery/images/low-res/983215294750609408-DaUVGUpWkAAQhv3.min.jpg",
       "width": 494,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/983215294750609408-DaUVGUpWkAAQhv3.placeholder.jpg",
@@ -458,7 +458,7 @@
     },
     {
       "height": 974,
-      "compressed_path": "gallery/images/low-res/1163552666661920768-ECXE-7ZXkAA1etO.min.webp",
+      "compressed_path": "gallery/images/low-res/1163552666661920768-ECXE-7ZXkAA1etO.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1163552666661920768-ECXE-7ZXkAA1etO.placeholder.jpg",
@@ -466,7 +466,7 @@
     },
     {
       "height": 911,
-      "compressed_path": "gallery/images/low-res/1018095467039805440-DiEAbXhU8AEHF9M.min.webp",
+      "compressed_path": "gallery/images/low-res/1018095467039805440-DiEAbXhU8AEHF9M.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1018095467039805440-DiEAbXhU8AEHF9M.placeholder.jpg",
@@ -474,7 +474,7 @@
     },
     {
       "height": 776,
-      "compressed_path": "gallery/images/low-res/1160707680203345920-EBupe73XYAUm9cm.min.webp",
+      "compressed_path": "gallery/images/low-res/1160707680203345920-EBupe73XYAUm9cm.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1160707680203345920-EBupe73XYAUm9cm.placeholder.jpg",
@@ -482,7 +482,7 @@
     },
     {
       "height": 879,
-      "compressed_path": "gallery/images/low-res/1161432345276223489-EB48kA-XYAEDQT8.min.webp",
+      "compressed_path": "gallery/images/low-res/1161432345276223489-EB48kA-XYAEDQT8.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1161432345276223489-EB48kA-XYAEDQT8.placeholder.jpg",
@@ -490,7 +490,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/980407607985831936-DZsbhZgXcAETLrC.min.webp",
+      "compressed_path": "gallery/images/low-res/980407607985831936-DZsbhZgXcAETLrC.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/980407607985831936-DZsbhZgXcAETLrC.placeholder.jpg",
@@ -498,7 +498,7 @@
     },
     {
       "height": 823,
-      "compressed_path": "gallery/images/low-res/931485184972771328-DO1M1kQWkAAuUYi.min.webp",
+      "compressed_path": "gallery/images/low-res/931485184972771328-DO1M1kQWkAAuUYi.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/931485184972771328-DO1M1kQWkAAuUYi.placeholder.jpg",
@@ -506,7 +506,7 @@
     },
     {
       "height": 888,
-      "compressed_path": "gallery/images/low-res/944893529683365888-DRzvqA5W4AAQ7B_.min.webp",
+      "compressed_path": "gallery/images/low-res/944893529683365888-DRzvqA5W4AAQ7B_.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/944893529683365888-DRzvqA5W4AAQ7B_.placeholder.jpg",
@@ -514,7 +514,7 @@
     },
     {
       "height": 807,
-      "compressed_path": "gallery/images/low-res/948542221263032321-DSnmHuRX0AA3QH-.min.webp",
+      "compressed_path": "gallery/images/low-res/948542221263032321-DSnmHuRX0AA3QH-.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948542221263032321-DSnmHuRX0AA3QH-.placeholder.jpg",
@@ -522,7 +522,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/950080426172911616-DS9dG8oVwAENfuq.min.webp",
+      "compressed_path": "gallery/images/low-res/950080426172911616-DS9dG8oVwAENfuq.min.jpg",
       "width": 766,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/950080426172911616-DS9dG8oVwAENfuq.placeholder.jpg",
@@ -530,7 +530,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/950626776006479872-DTFOAzfX0AA48Kd.min.webp",
+      "compressed_path": "gallery/images/low-res/950626776006479872-DTFOAzfX0AA48Kd.min.jpg",
       "width": 932,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/950626776006479872-DTFOAzfX0AA48Kd.placeholder.jpg",
@@ -538,7 +538,7 @@
     },
     {
       "height": 633,
-      "compressed_path": "gallery/images/low-res/890486679730962432-DFuk5IeUwAEYmf3.min.webp",
+      "compressed_path": "gallery/images/low-res/890486679730962432-DFuk5IeUwAEYmf3.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/890486679730962432-DFuk5IeUwAEYmf3.placeholder.jpg",
@@ -546,7 +546,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/943999888504782848-DRnC5N3VQAAZR-X.min.webp",
+      "compressed_path": "gallery/images/low-res/943999888504782848-DRnC5N3VQAAZR-X.min.jpg",
       "width": 916,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/943999888504782848-DRnC5N3VQAAZR-X.placeholder.jpg",
@@ -554,7 +554,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/970170304172498945-DXa8v17UMAE5OQe.min.webp",
+      "compressed_path": "gallery/images/low-res/970170304172498945-DXa8v17UMAE5OQe.min.jpg",
       "width": 1037,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/970170304172498945-DXa8v17UMAE5OQe.placeholder.jpg",
@@ -562,7 +562,7 @@
     },
     {
       "height": 778,
-      "compressed_path": "gallery/images/low-res/1019673706082324480-Diab1JPX0AElDxG.min.webp",
+      "compressed_path": "gallery/images/low-res/1019673706082324480-Diab1JPX0AElDxG.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1019673706082324480-Diab1JPX0AElDxG.placeholder.jpg",
@@ -570,7 +570,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1161601073775357953-EB7WBURXUAMDg4c.min.webp",
+      "compressed_path": "gallery/images/low-res/1161601073775357953-EB7WBURXUAMDg4c.min.jpg",
       "width": 1059,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1161601073775357953-EB7WBURXUAMDg4c.placeholder.jpg",
@@ -578,7 +578,7 @@
     },
     {
       "height": 592,
-      "compressed_path": "gallery/images/low-res/1108040650254110720-D2CNGTRW0AA6YaA.min.webp",
+      "compressed_path": "gallery/images/low-res/1108040650254110720-D2CNGTRW0AA6YaA.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1108040650254110720-D2CNGTRW0AA6YaA.placeholder.jpg",
@@ -586,7 +586,7 @@
     },
     {
       "height": 881,
-      "compressed_path": "gallery/images/low-res/923705998245707776-DNGptYFWkAAPgcm.min.webp",
+      "compressed_path": "gallery/images/low-res/923705998245707776-DNGptYFWkAAPgcm.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/923705998245707776-DNGptYFWkAAPgcm.placeholder.jpg",
@@ -594,7 +594,7 @@
     },
     {
       "height": 549,
-      "compressed_path": "gallery/images/low-res/948037338113953792-DSga7rnUIAATsDu.min.webp",
+      "compressed_path": "gallery/images/low-res/948037338113953792-DSga7rnUIAATsDu.min.jpg",
       "width": 758,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948037338113953792-DSga7rnUIAATsDu.placeholder.jpg",
@@ -602,7 +602,7 @@
     },
     {
       "height": 830,
-      "compressed_path": "gallery/images/low-res/891234694670553088-DF5NMQZUIAAyNI4.min.webp",
+      "compressed_path": "gallery/images/low-res/891234694670553088-DF5NMQZUIAAyNI4.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/891234694670553088-DF5NMQZUIAAyNI4.placeholder.jpg",
@@ -610,7 +610,7 @@
     },
     {
       "height": 864,
-      "compressed_path": "gallery/images/low-res/1008311021730193408-Df49h3RW4AEpavU.min.webp",
+      "compressed_path": "gallery/images/low-res/1008311021730193408-Df49h3RW4AEpavU.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1008311021730193408-Df49h3RW4AEpavU.placeholder.jpg",
@@ -618,7 +618,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/989432597657866244-Dbsrs8sW4AAOHb6.min.webp",
+      "compressed_path": "gallery/images/low-res/989432597657866244-Dbsrs8sW4AAOHb6.min.jpg",
       "width": 798,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/989432597657866244-Dbsrs8sW4AAOHb6.placeholder.jpg",
@@ -626,7 +626,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/956195576269492224-DUUWzmFW4AAxqlu.min.webp",
+      "compressed_path": "gallery/images/low-res/956195576269492224-DUUWzmFW4AAxqlu.min.jpg",
       "width": 933,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/956195576269492224-DUUWzmFW4AAxqlu.placeholder.jpg",
@@ -634,7 +634,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/975138739948175360-DYhjgzCUMAAJUPd.min.webp",
+      "compressed_path": "gallery/images/low-res/975138739948175360-DYhjgzCUMAAJUPd.min.jpg",
       "width": 945,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/975138739948175360-DYhjgzCUMAAJUPd.placeholder.jpg",
@@ -642,7 +642,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/973819440386248704-DYOzngTX4AARalp.min.webp",
+      "compressed_path": "gallery/images/low-res/973819440386248704-DYOzngTX4AARalp.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/973819440386248704-DYOzngTX4AARalp.placeholder.jpg",
@@ -650,7 +650,7 @@
     },
     {
       "height": 764,
-      "compressed_path": "gallery/images/low-res/876152758721818626-DCi4Sf6XcAAa3HP.min.webp",
+      "compressed_path": "gallery/images/low-res/876152758721818626-DCi4Sf6XcAAa3HP.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/876152758721818626-DCi4Sf6XcAAa3HP.placeholder.jpg",
@@ -658,7 +658,7 @@
     },
     {
       "height": 749,
-      "compressed_path": "gallery/images/low-res/992559711529635840-DcZHy-IXUAAnhhL.min.webp",
+      "compressed_path": "gallery/images/low-res/992559711529635840-DcZHy-IXUAAnhhL.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/992559711529635840-DcZHy-IXUAAnhhL.placeholder.jpg",
@@ -666,7 +666,7 @@
     },
     {
       "height": 794,
-      "compressed_path": "gallery/images/low-res/980158509005361157-DZo4998XcAA_qRW.min.webp",
+      "compressed_path": "gallery/images/low-res/980158509005361157-DZo4998XcAA_qRW.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/980158509005361157-DZo4998XcAA_qRW.placeholder.jpg",
@@ -674,7 +674,7 @@
     },
     {
       "height": 916,
-      "compressed_path": "gallery/images/low-res/967554942377582592-DW1yF2TWAAECZJS.min.webp",
+      "compressed_path": "gallery/images/low-res/967554942377582592-DW1yF2TWAAECZJS.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/967554942377582592-DW1yF2TWAAECZJS.placeholder.jpg",
@@ -682,7 +682,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/965859574019276800-DWdr9JbU8AQ9LG6.min.webp",
+      "compressed_path": "gallery/images/low-res/965859574019276800-DWdr9JbU8AQ9LG6.min.jpg",
       "width": 1013,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/965859574019276800-DWdr9JbU8AQ9LG6.placeholder.jpg",
@@ -690,7 +690,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1116133985577521152-D31N8aVWsAIfkaF.min.webp",
+      "compressed_path": "gallery/images/low-res/1116133985577521152-D31N8aVWsAIfkaF.min.jpg",
       "width": 1021,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1116133985577521152-D31N8aVWsAIfkaF.placeholder.jpg",
@@ -698,7 +698,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/938033020367527936-DQSQDz7XkAAvjnd.min.webp",
+      "compressed_path": "gallery/images/low-res/938033020367527936-DQSQDz7XkAAvjnd.min.jpg",
       "width": 938,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/938033020367527936-DQSQDz7XkAAvjnd.placeholder.jpg",
@@ -706,7 +706,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/869151812959387648-DA_Y9zTUwAAtvT4.min.webp",
+      "compressed_path": "gallery/images/low-res/869151812959387648-DA_Y9zTUwAAtvT4.min.jpg",
       "width": 923,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/869151812959387648-DA_Y9zTUwAAtvT4.placeholder.jpg",
@@ -714,7 +714,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/880413370784116737-DDfbSw4W0AA-Px9.min.webp",
+      "compressed_path": "gallery/images/low-res/880413370784116737-DDfbSw4W0AA-Px9.min.jpg",
       "width": 994,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/880413370784116737-DDfbSw4W0AA-Px9.placeholder.jpg",
@@ -722,7 +722,7 @@
     },
     {
       "height": 892,
-      "compressed_path": "gallery/images/low-res/959502399869202434-DVDWWIwW0AAcHkS.min.webp",
+      "compressed_path": "gallery/images/low-res/959502399869202434-DVDWWIwW0AAcHkS.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/959502399869202434-DVDWWIwW0AAcHkS.placeholder.jpg",
@@ -730,7 +730,7 @@
     },
     {
       "height": 283,
-      "compressed_path": "gallery/images/low-res/949266991772258304-DSx5S9WV4AEMDDw.min.webp",
+      "compressed_path": "gallery/images/low-res/949266991772258304-DSx5S9WV4AEMDDw.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/949266991772258304-DSx5S9WV4AEMDDw.placeholder.jpg",
@@ -738,7 +738,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1001538961708388352-DeYuYHNVMAAaWsq.min.webp",
+      "compressed_path": "gallery/images/low-res/1001538961708388352-DeYuYHNVMAAaWsq.min.jpg",
       "width": 911,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1001538961708388352-DeYuYHNVMAAaWsq.placeholder.jpg",
@@ -746,7 +746,7 @@
     },
     {
       "height": 900,
-      "compressed_path": "gallery/images/low-res/948993405786390530-DSuAeLWVoAARW8_.min.webp",
+      "compressed_path": "gallery/images/low-res/948993405786390530-DSuAeLWVoAARW8_.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948993405786390530-DSuAeLWVoAARW8_.placeholder.jpg",
@@ -754,7 +754,7 @@
     },
     {
       "height": 866,
-      "compressed_path": "gallery/images/low-res/868832773603250177-DA62zPwXoAEp_Qu.min.webp",
+      "compressed_path": "gallery/images/low-res/868832773603250177-DA62zPwXoAEp_Qu.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/868832773603250177-DA62zPwXoAEp_Qu.placeholder.jpg",
@@ -762,7 +762,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/975138220139622400-DYhjCnzVwAA0YSs.min.webp",
+      "compressed_path": "gallery/images/low-res/975138220139622400-DYhjCnzVwAA0YSs.min.jpg",
       "width": 976,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/975138220139622400-DYhjCnzVwAA0YSs.placeholder.jpg",
@@ -770,7 +770,7 @@
     },
     {
       "height": 800,
-      "compressed_path": "gallery/images/low-res/947727415698186240-DScBD7rX4AATym8.min.webp",
+      "compressed_path": "gallery/images/low-res/947727415698186240-DScBD7rX4AATym8.min.jpg",
       "width": 279,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/947727415698186240-DScBD7rX4AATym8.placeholder.jpg",
@@ -778,7 +778,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/948268527559077899-DSjtMqtX4AEvA20.min.webp",
+      "compressed_path": "gallery/images/low-res/948268527559077899-DSjtMqtX4AEvA20.min.jpg",
       "width": 999,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948268527559077899-DSjtMqtX4AEvA20.placeholder.jpg",
@@ -786,7 +786,7 @@
     },
     {
       "height": 825,
-      "compressed_path": "gallery/images/low-res/1124831293773176837-D5w0GZbWsAAyk8z.min.webp",
+      "compressed_path": "gallery/images/low-res/1124831293773176837-D5w0GZbWsAAyk8z.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1124831293773176837-D5w0GZbWsAAyk8z.placeholder.jpg",
@@ -794,7 +794,7 @@
     },
     {
       "height": 496,
-      "compressed_path": "gallery/images/low-res/983214830294315008-DaUUrL6WsAMv1zt.min.webp",
+      "compressed_path": "gallery/images/low-res/983214830294315008-DaUUrL6WsAMv1zt.min.jpg",
       "width": 391,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/983214830294315008-DaUUrL6WsAMv1zt.placeholder.jpg",
@@ -802,7 +802,7 @@
     },
     {
       "height": 832,
-      "compressed_path": "gallery/images/low-res/957287405727436808-DUj30eyWsAITnS5.min.webp",
+      "compressed_path": "gallery/images/low-res/957287405727436808-DUj30eyWsAITnS5.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/957287405727436808-DUj30eyWsAITnS5.placeholder.jpg",
@@ -810,7 +810,7 @@
     },
     {
       "height": 608,
-      "compressed_path": "gallery/images/low-res/947905995883282432-DSejeogX0AERHBd.min.webp",
+      "compressed_path": "gallery/images/low-res/947905995883282432-DSejeogX0AERHBd.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/947905995883282432-DSejeogX0AERHBd.placeholder.jpg",
@@ -818,7 +818,7 @@
     },
     {
       "height": 817,
-      "compressed_path": "gallery/images/low-res/951054130667229184-DTLSsFLXcAYEyT2.min.webp",
+      "compressed_path": "gallery/images/low-res/951054130667229184-DTLSsFLXcAYEyT2.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/951054130667229184-DTLSsFLXcAYEyT2.placeholder.jpg",
@@ -826,7 +826,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/956787083837890560-DUcwx5vW0AAHAk-.min.webp",
+      "compressed_path": "gallery/images/low-res/956787083837890560-DUcwx5vW0AAHAk-.min.jpg",
       "width": 967,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/956787083837890560-DUcwx5vW0AAHAk-.placeholder.jpg",
@@ -834,7 +834,7 @@
     },
     {
       "height": 839,
-      "compressed_path": "gallery/images/low-res/946005592711286784-DSDjEjLXUAEC9t6.min.webp",
+      "compressed_path": "gallery/images/low-res/946005592711286784-DSDjEjLXUAEC9t6.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/946005592711286784-DSDjEjLXUAEC9t6.placeholder.jpg",
@@ -842,7 +842,7 @@
     },
     {
       "height": 831,
-      "compressed_path": "gallery/images/low-res/955655060188430336-DUMrNcWVQAAeIJt.min.webp",
+      "compressed_path": "gallery/images/low-res/955655060188430336-DUMrNcWVQAAeIJt.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/955655060188430336-DUMrNcWVQAAeIJt.placeholder.jpg",
@@ -850,7 +850,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1109055008778137600-D2QnptwXgAA8P2Q.min.webp",
+      "compressed_path": "gallery/images/low-res/1109055008778137600-D2QnptwXgAA8P2Q.min.jpg",
       "width": 896,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1109055008778137600-D2QnptwXgAA8P2Q.placeholder.jpg",
@@ -858,7 +858,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/965859574019276800-DWdr61pVAAAgEwq.min.webp",
+      "compressed_path": "gallery/images/low-res/965859574019276800-DWdr61pVAAAgEwq.min.jpg",
       "width": 1013,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/965859574019276800-DWdr61pVAAAgEwq.placeholder.jpg",
@@ -866,7 +866,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1076737448321957888-DvFXALrXgAAqpCs.min.webp",
+      "compressed_path": "gallery/images/low-res/1076737448321957888-DvFXALrXgAAqpCs.min.jpg",
       "width": 780,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1076737448321957888-DvFXALrXgAAqpCs.placeholder.jpg",
@@ -874,7 +874,7 @@
     },
     {
       "height": 1024,
-      "compressed_path": "gallery/images/low-res/986219133841936389-Da_AyEbWsAAzQNv.min.webp",
+      "compressed_path": "gallery/images/low-res/986219133841936389-Da_AyEbWsAAzQNv.min.jpg",
       "width": 826,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/986219133841936389-Da_AyEbWsAAzQNv.placeholder.jpg",
@@ -882,7 +882,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1091233079979622400-DyTWs9lX4AAc1JC.min.webp",
+      "compressed_path": "gallery/images/low-res/1091233079979622400-DyTWs9lX4AAc1JC.min.jpg",
       "width": 924,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1091233079979622400-DyTWs9lX4AAc1JC.placeholder.jpg",
@@ -890,7 +890,7 @@
     },
     {
       "height": 655,
-      "compressed_path": "gallery/images/low-res/965313327646699520-DWV6Yq_UMAANnTK.min.webp",
+      "compressed_path": "gallery/images/low-res/965313327646699520-DWV6Yq_UMAANnTK.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/965313327646699520-DWV6Yq_UMAANnTK.placeholder.jpg",
@@ -898,7 +898,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/942984925636124672-DRYnyqBU8AAedE5.min.webp",
+      "compressed_path": "gallery/images/low-res/942984925636124672-DRYnyqBU8AAedE5.min.jpg",
       "width": 1178,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/942984925636124672-DRYnyqBU8AAedE5.placeholder.jpg",
@@ -906,7 +906,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/981494412437016576-DZ739xrWkAAg-Dg.min.webp",
+      "compressed_path": "gallery/images/low-res/981494412437016576-DZ739xrWkAAg-Dg.min.jpg",
       "width": 982,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/981494412437016576-DZ739xrWkAAg-Dg.placeholder.jpg",
@@ -914,7 +914,7 @@
     },
     {
       "height": 851,
-      "compressed_path": "gallery/images/low-res/977339540980445185-DZA1IcGXcAANFv7.min.webp",
+      "compressed_path": "gallery/images/low-res/977339540980445185-DZA1IcGXcAANFv7.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/977339540980445185-DZA1IcGXcAANFv7.placeholder.jpg",
@@ -922,7 +922,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/977145839410995200-DY-E9bvUQAAEd14.min.webp",
+      "compressed_path": "gallery/images/low-res/977145839410995200-DY-E9bvUQAAEd14.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/977145839410995200-DY-E9bvUQAAEd14.placeholder.jpg",
@@ -930,7 +930,7 @@
     },
     {
       "height": 767,
-      "compressed_path": "gallery/images/low-res/948880007119720449-DSsZVijVwAEZWih.min.webp",
+      "compressed_path": "gallery/images/low-res/948880007119720449-DSsZVijVwAEZWih.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948880007119720449-DSsZVijVwAEZWih.placeholder.jpg",
@@ -938,7 +938,7 @@
     },
     {
       "height": 951,
-      "compressed_path": "gallery/images/low-res/868831810028949504-DA617HIVYAAFiXD.min.webp",
+      "compressed_path": "gallery/images/low-res/868831810028949504-DA617HIVYAAFiXD.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/868831810028949504-DA617HIVYAAFiXD.placeholder.jpg",
@@ -946,7 +946,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/978530364351242240-DZRwLc8WkAARhfp.min.webp",
+      "compressed_path": "gallery/images/low-res/978530364351242240-DZRwLc8WkAARhfp.min.jpg",
       "width": 913,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/978530364351242240-DZRwLc8WkAARhfp.placeholder.jpg",
@@ -954,7 +954,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1154650929196609538-EAYk5pYWkAAW__j.min.webp",
+      "compressed_path": "gallery/images/low-res/1154650929196609538-EAYk5pYWkAAW__j.min.jpg",
       "width": 901,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1154650929196609538-EAYk5pYWkAAW__j.placeholder.jpg",
@@ -962,7 +962,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1147903370864316416-D-4sB_EXUAEee3s.min.webp",
+      "compressed_path": "gallery/images/low-res/1147903370864316416-D-4sB_EXUAEee3s.min.jpg",
       "width": 809,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1147903370864316416-D-4sB_EXUAEee3s.placeholder.jpg",
@@ -970,7 +970,7 @@
     },
     {
       "height": 847,
-      "compressed_path": "gallery/images/low-res/951441433394860034-DTQy8G7WsAAz5aH.min.webp",
+      "compressed_path": "gallery/images/low-res/951441433394860034-DTQy8G7WsAAz5aH.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/951441433394860034-DTQy8G7WsAAz5aH.placeholder.jpg",
@@ -978,7 +978,7 @@
     },
     {
       "height": 913,
-      "compressed_path": "gallery/images/low-res/973850581331832832-DYPP8G9WsAAIlYJ.min.webp",
+      "compressed_path": "gallery/images/low-res/973850581331832832-DYPP8G9WsAAIlYJ.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/973850581331832832-DYPP8G9WsAAIlYJ.placeholder.jpg",
@@ -986,7 +986,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/870434897986453504-DBRn7KpW0AEjQ0p.min.webp",
+      "compressed_path": "gallery/images/low-res/870434897986453504-DBRn7KpW0AEjQ0p.min.jpg",
       "width": 762,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/870434897986453504-DBRn7KpW0AEjQ0p.placeholder.jpg",
@@ -994,7 +994,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/956165476840804353-DUT7boaW4AIDjSK.min.webp",
+      "compressed_path": "gallery/images/low-res/956165476840804353-DUT7boaW4AIDjSK.min.jpg",
       "width": 900,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/956165476840804353-DUT7boaW4AIDjSK.placeholder.jpg",
@@ -1002,7 +1002,7 @@
     },
     {
       "height": 415,
-      "compressed_path": "gallery/images/low-res/944555928317251585-DRu8nBUVQAIeU4l.min.webp",
+      "compressed_path": "gallery/images/low-res/944555928317251585-DRu8nBUVQAIeU4l.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/944555928317251585-DRu8nBUVQAIeU4l.placeholder.jpg",
@@ -1010,7 +1010,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/965859574019276800-DWdr5yfVoAAOZZX.min.webp",
+      "compressed_path": "gallery/images/low-res/965859574019276800-DWdr5yfVoAAOZZX.min.jpg",
       "width": 1013,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/965859574019276800-DWdr5yfVoAAOZZX.placeholder.jpg",
@@ -1018,7 +1018,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/888958619001040896-DFY3GAmU0AIi24T.min.webp",
+      "compressed_path": "gallery/images/low-res/888958619001040896-DFY3GAmU0AIi24T.min.jpg",
       "width": 940,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/888958619001040896-DFY3GAmU0AIi24T.placeholder.jpg",
@@ -1026,7 +1026,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/956924933396819968-DUeuJ2LWAAEfnqs.min.webp",
+      "compressed_path": "gallery/images/low-res/956924933396819968-DUeuJ2LWAAEfnqs.min.jpg",
       "width": 978,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/956924933396819968-DUeuJ2LWAAEfnqs.placeholder.jpg",
@@ -1034,7 +1034,7 @@
     },
     {
       "height": 812,
-      "compressed_path": "gallery/images/low-res/1098980929454948354-D0BdVKSWoAAqQns.min.webp",
+      "compressed_path": "gallery/images/low-res/1098980929454948354-D0BdVKSWoAAqQns.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1098980929454948354-D0BdVKSWoAAqQns.placeholder.jpg",
@@ -1042,7 +1042,7 @@
     },
     {
       "height": 926,
-      "compressed_path": "gallery/images/low-res/983635052696399873-DaaS3e_WkAAjUIB.min.webp",
+      "compressed_path": "gallery/images/low-res/983635052696399873-DaaS3e_WkAAjUIB.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/983635052696399873-DaaS3e_WkAAjUIB.placeholder.jpg",
@@ -1050,7 +1050,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/869179334917066753-DA_x_1zXcAA4Zly.min.webp",
+      "compressed_path": "gallery/images/low-res/869179334917066753-DA_x_1zXcAA4Zly.min.jpg",
       "width": 928,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/869179334917066753-DA_x_1zXcAA4Zly.placeholder.jpg",
@@ -1058,7 +1058,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/890469728086482945-DFuVfAYVYAAQuDJ.min.webp",
+      "compressed_path": "gallery/images/low-res/890469728086482945-DFuVfAYVYAAQuDJ.min.jpg",
       "width": 940,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/890469728086482945-DFuVfAYVYAAQuDJ.placeholder.jpg",
@@ -1066,7 +1066,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/890885526974119936-DF0Pn51UIAAs5aS.min.webp",
+      "compressed_path": "gallery/images/low-res/890885526974119936-DF0Pn51UIAAs5aS.min.jpg",
       "width": 942,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/890885526974119936-DF0Pn51UIAAs5aS.placeholder.jpg",
@@ -1074,7 +1074,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1116302622787624961-D33nUZTWkAEmIYN.min.webp",
+      "compressed_path": "gallery/images/low-res/1116302622787624961-D33nUZTWkAEmIYN.min.jpg",
       "width": 814,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1116302622787624961-D33nUZTWkAEmIYN.placeholder.jpg",
@@ -1082,7 +1082,7 @@
     },
     {
       "height": 854,
-      "compressed_path": "gallery/images/low-res/977870694318067712-DZIYNoHXkAA_gNq.min.webp",
+      "compressed_path": "gallery/images/low-res/977870694318067712-DZIYNoHXkAA_gNq.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/977870694318067712-DZIYNoHXkAA_gNq.placeholder.jpg",
@@ -1090,7 +1090,7 @@
     },
     {
       "height": 807,
-      "compressed_path": "gallery/images/low-res/935043860543176704-DPnxbwFX0AAaXh-.min.webp",
+      "compressed_path": "gallery/images/low-res/935043860543176704-DPnxbwFX0AAaXh-.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/935043860543176704-DPnxbwFX0AAaXh-.placeholder.jpg",
@@ -1098,7 +1098,7 @@
     },
     {
       "height": 810,
-      "compressed_path": "gallery/images/low-res/869503453772435456-DBEYx4YUMAEOgYs.min.webp",
+      "compressed_path": "gallery/images/low-res/869503453772435456-DBEYx4YUMAEOgYs.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/869503453772435456-DBEYx4YUMAEOgYs.placeholder.jpg",
@@ -1106,7 +1106,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/976718568988532736-DY4AXGVU0AUXvxN.min.webp",
+      "compressed_path": "gallery/images/low-res/976718568988532736-DY4AXGVU0AUXvxN.min.jpg",
       "width": 965,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/976718568988532736-DY4AXGVU0AUXvxN.placeholder.jpg",
@@ -1114,7 +1114,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/934046917826433027-DPZmuBrXcAAgWD4.min.webp",
+      "compressed_path": "gallery/images/low-res/934046917826433027-DPZmuBrXcAAgWD4.min.jpg",
       "width": 823,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/934046917826433027-DPZmuBrXcAAgWD4.placeholder.jpg",
@@ -1122,7 +1122,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/876515114794569728-DCoB2ZvWAAAM-MJ.min.webp",
+      "compressed_path": "gallery/images/low-res/876515114794569728-DCoB2ZvWAAAM-MJ.min.jpg",
       "width": 923,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/876515114794569728-DCoB2ZvWAAAM-MJ.placeholder.jpg",
@@ -1130,7 +1130,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/890003867001335811-DFntzD7XgAAO5IW.min.webp",
+      "compressed_path": "gallery/images/low-res/890003867001335811-DFntzD7XgAAO5IW.min.jpg",
       "width": 1146,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/890003867001335811-DFntzD7XgAAO5IW.placeholder.jpg",
@@ -1138,7 +1138,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/893786487753383936-DGddkzKUQAAg5e-.min.webp",
+      "compressed_path": "gallery/images/low-res/893786487753383936-DGddkzKUQAAg5e-.min.jpg",
       "width": 765,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/893786487753383936-DGddkzKUQAAg5e-.placeholder.jpg",
@@ -1146,7 +1146,7 @@
     },
     {
       "height": 911,
-      "compressed_path": "gallery/images/low-res/952503302947835904-DTf4tCwVwAEWYqc.min.webp",
+      "compressed_path": "gallery/images/low-res/952503302947835904-DTf4tCwVwAEWYqc.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/952503302947835904-DTf4tCwVwAEWYqc.placeholder.jpg",
@@ -1154,7 +1154,7 @@
     },
     {
       "height": 853,
-      "compressed_path": "gallery/images/low-res/947067970160705536-DSSpTC3X0AA1F3J.min.webp",
+      "compressed_path": "gallery/images/low-res/947067970160705536-DSSpTC3X0AA1F3J.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/947067970160705536-DSSpTC3X0AA1F3J.placeholder.jpg",
@@ -1162,7 +1162,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/902855024178376705-DIeV22PV4AAlan2.min.webp",
+      "compressed_path": "gallery/images/low-res/902855024178376705-DIeV22PV4AAlan2.min.jpg",
       "width": 960,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/902855024178376705-DIeV22PV4AAlan2.placeholder.jpg",
@@ -1170,7 +1170,7 @@
     },
     {
       "height": 927,
-      "compressed_path": "gallery/images/low-res/1049012211660869633-Do7XC8DW4Acizxl.min.webp",
+      "compressed_path": "gallery/images/low-res/1049012211660869633-Do7XC8DW4Acizxl.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1049012211660869633-Do7XC8DW4Acizxl.placeholder.jpg",
@@ -1178,7 +1178,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1140910599221764096-D9VUJJWWsAAzpVK.min.webp",
+      "compressed_path": "gallery/images/low-res/1140910599221764096-D9VUJJWWsAAzpVK.min.jpg",
       "width": 882,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1140910599221764096-D9VUJJWWsAAzpVK.placeholder.jpg",
@@ -1186,7 +1186,7 @@
     },
     {
       "height": 858,
-      "compressed_path": "gallery/images/low-res/1019545224517996547-DiYm-iVX0AA80vg.min.webp",
+      "compressed_path": "gallery/images/low-res/1019545224517996547-DiYm-iVX0AA80vg.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1019545224517996547-DiYm-iVX0AA80vg.placeholder.jpg",
@@ -1194,7 +1194,7 @@
     },
     {
       "height": 848,
-      "compressed_path": "gallery/images/low-res/956542221276385281-DUZSFEWW0AAh38s.min.webp",
+      "compressed_path": "gallery/images/low-res/956542221276385281-DUZSFEWW0AAh38s.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/956542221276385281-DUZSFEWW0AAh38s.placeholder.jpg",
@@ -1202,7 +1202,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/944828303466205185-DRy0VU5UMAAtFOT.min.webp",
+      "compressed_path": "gallery/images/low-res/944828303466205185-DRy0VU5UMAAtFOT.min.jpg",
       "width": 890,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/944828303466205185-DRy0VU5UMAAtFOT.placeholder.jpg",
@@ -1210,7 +1210,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/944644419600470018-DRwNF5XX4AYPIA_.min.webp",
+      "compressed_path": "gallery/images/low-res/944644419600470018-DRwNF5XX4AYPIA_.min.jpg",
       "width": 670,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/944644419600470018-DRwNF5XX4AYPIA_.placeholder.jpg",
@@ -1218,7 +1218,7 @@
     },
     {
       "height": 826,
-      "compressed_path": "gallery/images/low-res/1019654444022226944-DiaKT5dU0AAvsyZ.min.webp",
+      "compressed_path": "gallery/images/low-res/1019654444022226944-DiaKT5dU0AAvsyZ.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1019654444022226944-DiaKT5dU0AAvsyZ.placeholder.jpg",
@@ -1226,7 +1226,7 @@
     },
     {
       "height": 836,
-      "compressed_path": "gallery/images/low-res/965259998405255168-DWVK2iPW4AIp_On.min.webp",
+      "compressed_path": "gallery/images/low-res/965259998405255168-DWVK2iPW4AIp_On.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/965259998405255168-DWVK2iPW4AIp_On.placeholder.jpg",
@@ -1234,7 +1234,7 @@
     },
     {
       "height": 760,
-      "compressed_path": "gallery/images/low-res/1008608541765193729-Df9MH5KWkAAOfFG.min.webp",
+      "compressed_path": "gallery/images/low-res/1008608541765193729-Df9MH5KWkAAOfFG.min.jpg",
       "width": 1000,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1008608541765193729-Df9MH5KWkAAOfFG.placeholder.jpg",
@@ -1242,7 +1242,7 @@
     },
     {
       "height": 914,
-      "compressed_path": "gallery/images/low-res/974574596597919744-DYZibcbX4AAXmb4.min.webp",
+      "compressed_path": "gallery/images/low-res/974574596597919744-DYZibcbX4AAXmb4.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/974574596597919744-DYZibcbX4AAXmb4.placeholder.jpg",
@@ -1250,7 +1250,7 @@
     },
     {
       "height": 684,
-      "compressed_path": "gallery/images/low-res/955039911861719040-DUD7vPAVQAAejTu.min.webp",
+      "compressed_path": "gallery/images/low-res/955039911861719040-DUD7vPAVQAAejTu.min.jpg",
       "width": 517,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/955039911861719040-DUD7vPAVQAAejTu.placeholder.jpg",
@@ -1258,7 +1258,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/944531007923019776-DRul8ZXWsAE1oKV.min.webp",
+      "compressed_path": "gallery/images/low-res/944531007923019776-DRul8ZXWsAE1oKV.min.jpg",
       "width": 1012,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/944531007923019776-DRul8ZXWsAE1oKV.placeholder.jpg",
@@ -1266,7 +1266,7 @@
     },
     {
       "height": 839,
-      "compressed_path": "gallery/images/low-res/904203201666154496-DIxgAs2UQAAi2og.min.webp",
+      "compressed_path": "gallery/images/low-res/904203201666154496-DIxgAs2UQAAi2og.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/904203201666154496-DIxgAs2UQAAi2og.placeholder.jpg",
@@ -1274,7 +1274,7 @@
     },
     {
       "height": 895,
-      "compressed_path": "gallery/images/low-res/1024691558736642048-Djhvir2WwAcdx2B.min.webp",
+      "compressed_path": "gallery/images/low-res/1024691558736642048-Djhvir2WwAcdx2B.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1024691558736642048-Djhvir2WwAcdx2B.placeholder.jpg",
@@ -1282,7 +1282,7 @@
     },
     {
       "height": 761,
-      "compressed_path": "gallery/images/low-res/1015856581978796032-DhkMLSJVMAAoa5n.min.webp",
+      "compressed_path": "gallery/images/low-res/1015856581978796032-DhkMLSJVMAAoa5n.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1015856581978796032-DhkMLSJVMAAoa5n.placeholder.jpg",
@@ -1290,7 +1290,7 @@
     },
     {
       "height": 620,
-      "compressed_path": "gallery/images/low-res/871692740852985856-DBjf7PjUQAA2lt5.min.webp",
+      "compressed_path": "gallery/images/low-res/871692740852985856-DBjf7PjUQAA2lt5.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/871692740852985856-DBjf7PjUQAA2lt5.placeholder.jpg",
@@ -1298,7 +1298,7 @@
     },
     {
       "height": 413,
-      "compressed_path": "gallery/images/low-res/958302021240713223-DUySm7uWAAAqDW4.min.webp",
+      "compressed_path": "gallery/images/low-res/958302021240713223-DUySm7uWAAAqDW4.min.jpg",
       "width": 936,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/958302021240713223-DUySm7uWAAAqDW4.placeholder.jpg",
@@ -1306,7 +1306,7 @@
     },
     {
       "height": 768,
-      "compressed_path": "gallery/images/low-res/1163378640345882630-ECUmtU4X4AEMfDd.min.webp",
+      "compressed_path": "gallery/images/low-res/1163378640345882630-ECUmtU4X4AEMfDd.min.jpg",
       "width": 520,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1163378640345882630-ECUmtU4X4AEMfDd.placeholder.jpg",
@@ -1314,7 +1314,7 @@
     },
     {
       "height": 428,
-      "compressed_path": "gallery/images/low-res/1091263443661922305-DyTyUZ3WwAAvWZP.min.webp",
+      "compressed_path": "gallery/images/low-res/1091263443661922305-DyTyUZ3WwAAvWZP.min.jpg",
       "width": 700,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1091263443661922305-DyTyUZ3WwAAvWZP.placeholder.jpg",
@@ -1322,7 +1322,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/891498965471973376-DF89kTOUQAEtGmW.min.webp",
+      "compressed_path": "gallery/images/low-res/891498965471973376-DF89kTOUQAEtGmW.min.jpg",
       "width": 807,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/891498965471973376-DF89kTOUQAEtGmW.placeholder.jpg",
@@ -1330,7 +1330,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/966749647304830976-DWqVrbTW4AIbHlK.min.webp",
+      "compressed_path": "gallery/images/low-res/966749647304830976-DWqVrbTW4AIbHlK.min.jpg",
       "width": 853,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/966749647304830976-DWqVrbTW4AIbHlK.placeholder.jpg",
@@ -1338,7 +1338,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/897947218447040514-DHYmO_RXcAE-aL4.min.webp",
+      "compressed_path": "gallery/images/low-res/897947218447040514-DHYmO_RXcAE-aL4.min.jpg",
       "width": 981,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/897947218447040514-DHYmO_RXcAE-aL4.placeholder.jpg",
@@ -1346,7 +1346,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/956875703940730880-DUeBYVYW4AAq0jE.min.webp",
+      "compressed_path": "gallery/images/low-res/956875703940730880-DUeBYVYW4AAq0jE.min.jpg",
       "width": 889,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/956875703940730880-DUeBYVYW4AAq0jE.placeholder.jpg",
@@ -1354,7 +1354,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/972990794843021312-DYDB-CZXkAEgiHb.min.webp",
+      "compressed_path": "gallery/images/low-res/972990794843021312-DYDB-CZXkAEgiHb.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/972990794843021312-DYDB-CZXkAEgiHb.placeholder.jpg",
@@ -1362,7 +1362,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/948037759566077955-DSgbUKnV4AAqEAs.min.webp",
+      "compressed_path": "gallery/images/low-res/948037759566077955-DSgbUKnV4AAqEAs.min.jpg",
       "width": 1171,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948037759566077955-DSgbUKnV4AAqEAs.placeholder.jpg",
@@ -1370,7 +1370,7 @@
     },
     {
       "height": 919,
-      "compressed_path": "gallery/images/low-res/952697013153484802-DTio4e3XkAUdRm-.min.webp",
+      "compressed_path": "gallery/images/low-res/952697013153484802-DTio4e3XkAUdRm-.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/952697013153484802-DTio4e3XkAUdRm-.placeholder.jpg",
@@ -1378,7 +1378,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/956199111744684032-DUUaBeNW0AAHF1C.min.webp",
+      "compressed_path": "gallery/images/low-res/956199111744684032-DUUaBeNW0AAHF1C.min.jpg",
       "width": 955,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/956199111744684032-DUUaBeNW0AAHF1C.placeholder.jpg",
@@ -1386,7 +1386,7 @@
     },
     {
       "height": 431,
-      "compressed_path": "gallery/images/low-res/948044931616202753-DSgh1hSVAAABGAu.min.webp",
+      "compressed_path": "gallery/images/low-res/948044931616202753-DSgh1hSVAAABGAu.min.jpg",
       "width": 350,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/948044931616202753-DSgh1hSVAAABGAu.placeholder.jpg",
@@ -1394,7 +1394,7 @@
     },
     {
       "height": 768,
-      "compressed_path": "gallery/images/low-res/888027085163307011-DFLnvF7UIAEZuUR.min.webp",
+      "compressed_path": "gallery/images/low-res/888027085163307011-DFLnvF7UIAEZuUR.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/888027085163307011-DFLnvF7UIAEZuUR.placeholder.jpg",
@@ -1402,7 +1402,7 @@
     },
     {
       "height": 846,
-      "compressed_path": "gallery/images/low-res/878689672112869376-DDG7mS7XUAAJaGV.min.webp",
+      "compressed_path": "gallery/images/low-res/878689672112869376-DDG7mS7XUAAJaGV.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/878689672112869376-DDG7mS7XUAAJaGV.placeholder.jpg",
@@ -1410,7 +1410,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/992003805939163137-DcROM9OV0AAjfy8.min.webp",
+      "compressed_path": "gallery/images/low-res/992003805939163137-DcROM9OV0AAjfy8.min.jpg",
       "width": 856,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/992003805939163137-DcROM9OV0AAjfy8.placeholder.jpg",
@@ -1418,7 +1418,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/891983685385433088-DGD1-EyUMAAOBZm.min.webp",
+      "compressed_path": "gallery/images/low-res/891983685385433088-DGD1-EyUMAAOBZm.min.jpg",
       "width": 854,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/891983685385433088-DGD1-EyUMAAOBZm.placeholder.jpg",
@@ -1426,7 +1426,7 @@
     },
     {
       "height": 990,
-      "compressed_path": "gallery/images/low-res/947792555487449088-DSc8Tf0UQAAyOOW.min.webp",
+      "compressed_path": "gallery/images/low-res/947792555487449088-DSc8Tf0UQAAyOOW.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/947792555487449088-DSc8Tf0UQAAyOOW.placeholder.jpg",
@@ -1434,7 +1434,7 @@
     },
     {
       "height": 781,
-      "compressed_path": "gallery/images/low-res/1014834059753803777-DhVqMuWXcAEaTHk.min.webp",
+      "compressed_path": "gallery/images/low-res/1014834059753803777-DhVqMuWXcAEaTHk.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1014834059753803777-DhVqMuWXcAEaTHk.placeholder.jpg",
@@ -1442,7 +1442,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/962360696490070016-DVr984rW4AIc3Cr.min.webp",
+      "compressed_path": "gallery/images/low-res/962360696490070016-DVr984rW4AIc3Cr.min.jpg",
       "width": 1016,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/962360696490070016-DVr984rW4AIc3Cr.placeholder.jpg",
@@ -1450,7 +1450,7 @@
     },
     {
       "height": 923,
-      "compressed_path": "gallery/images/low-res/976043290100248577-DYuZ6UtUMAAyf1B.min.webp",
+      "compressed_path": "gallery/images/low-res/976043290100248577-DYuZ6UtUMAAyf1B.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/976043290100248577-DYuZ6UtUMAAyf1B.placeholder.jpg",
@@ -1458,7 +1458,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/888004044106616832-DFLS-EMVwAAc2E5.min.webp",
+      "compressed_path": "gallery/images/low-res/888004044106616832-DFLS-EMVwAAc2E5.min.jpg",
       "width": 945,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/888004044106616832-DFLS-EMVwAAc2E5.placeholder.jpg",
@@ -1466,7 +1466,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/993418744704765952-DclVFBsW0AAMykB.min.webp",
+      "compressed_path": "gallery/images/low-res/993418744704765952-DclVFBsW0AAMykB.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/993418744704765952-DclVFBsW0AAMykB.placeholder.jpg",
@@ -1474,7 +1474,7 @@
     },
     {
       "height": 560,
-      "compressed_path": "gallery/images/low-res/983215004253122560-DaUU1aTXcAA1gyG.min.webp",
+      "compressed_path": "gallery/images/low-res/983215004253122560-DaUU1aTXcAA1gyG.min.jpg",
       "width": 700,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/983215004253122560-DaUU1aTXcAA1gyG.placeholder.jpg",
@@ -1482,7 +1482,7 @@
     },
     {
       "height": 778,
-      "compressed_path": "gallery/images/low-res/962222927675580416-DVqApuGX0AIlkBr.min.webp",
+      "compressed_path": "gallery/images/low-res/962222927675580416-DVqApuGX0AIlkBr.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/962222927675580416-DVqApuGX0AIlkBr.placeholder.jpg",
@@ -1490,7 +1490,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/972791836799414272-DYAMu9kVMAEsH63.min.webp",
+      "compressed_path": "gallery/images/low-res/972791836799414272-DYAMu9kVMAEsH63.min.jpg",
       "width": 941,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/972791836799414272-DYAMu9kVMAEsH63.placeholder.jpg",
@@ -1498,7 +1498,7 @@
     },
     {
       "height": 1194,
-      "compressed_path": "gallery/images/low-res/913662972614103041-DK37oSVW0AAGcpI.min.webp",
+      "compressed_path": "gallery/images/low-res/913662972614103041-DK37oSVW0AAGcpI.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/913662972614103041-DK37oSVW0AAGcpI.placeholder.jpg",
@@ -1506,7 +1506,7 @@
     },
     {
       "height": 767,
-      "compressed_path": "gallery/images/low-res/975140039444217856-DYhksgcVwAAjNeN.min.webp",
+      "compressed_path": "gallery/images/low-res/975140039444217856-DYhksgcVwAAjNeN.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/975140039444217856-DYhksgcVwAAjNeN.placeholder.jpg",
@@ -1514,7 +1514,7 @@
     },
     {
       "height": 723,
-      "compressed_path": "gallery/images/low-res/996714871071870978-DdUK5HfXcAAiJRO.min.webp",
+      "compressed_path": "gallery/images/low-res/996714871071870978-DdUK5HfXcAAiJRO.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/996714871071870978-DdUK5HfXcAAiJRO.placeholder.jpg",
@@ -1522,7 +1522,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1156165357276663808-EAuGQ6mX4AAEqxs.min.webp",
+      "compressed_path": "gallery/images/low-res/1156165357276663808-EAuGQ6mX4AAEqxs.min.jpg",
       "width": 1024,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1156165357276663808-EAuGQ6mX4AAEqxs.placeholder.jpg",
@@ -1530,7 +1530,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/999082759443402754-Dd10eTgUQAADCfY.min.webp",
+      "compressed_path": "gallery/images/low-res/999082759443402754-Dd10eTgUQAADCfY.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/999082759443402754-Dd10eTgUQAADCfY.placeholder.jpg",
@@ -1538,7 +1538,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/869885402533871617-DBJ0KSfUMAAh1g5.min.webp",
+      "compressed_path": "gallery/images/low-res/869885402533871617-DBJ0KSfUMAAh1g5.min.jpg",
       "width": 847,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/869885402533871617-DBJ0KSfUMAAh1g5.placeholder.jpg",
@@ -1546,7 +1546,7 @@
     },
     {
       "height": 950,
-      "compressed_path": "gallery/images/low-res/869845808136339456-DBJQJmnU0AAdVHO.min.webp",
+      "compressed_path": "gallery/images/low-res/869845808136339456-DBJQJmnU0AAdVHO.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/869845808136339456-DBJQJmnU0AAdVHO.placeholder.jpg",
@@ -1554,7 +1554,7 @@
     },
     {
       "height": 780,
-      "compressed_path": "gallery/images/low-res/982219349808201730-DaGLSn_U0AA8S2Q.min.webp",
+      "compressed_path": "gallery/images/low-res/982219349808201730-DaGLSn_U0AA8S2Q.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/982219349808201730-DaGLSn_U0AA8S2Q.placeholder.jpg",
@@ -1562,7 +1562,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1108112364681994240-D2DNnSuX4AAI_Vx.min.webp",
+      "compressed_path": "gallery/images/low-res/1108112364681994240-D2DNnSuX4AAI_Vx.min.jpg",
       "width": 927,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1108112364681994240-D2DNnSuX4AAI_Vx.placeholder.jpg",
@@ -1570,7 +1570,7 @@
     },
     {
       "height": 827,
-      "compressed_path": "gallery/images/low-res/952438481439031296-DTe9wB2W4AAEj-K.min.webp",
+      "compressed_path": "gallery/images/low-res/952438481439031296-DTe9wB2W4AAEj-K.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/952438481439031296-DTe9wB2W4AAEj-K.placeholder.jpg",
@@ -1578,7 +1578,7 @@
     },
     {
       "height": 704,
-      "compressed_path": "gallery/images/low-res/870072602903150598-DBMea2sXoAImHfP.min.webp",
+      "compressed_path": "gallery/images/low-res/870072602903150598-DBMea2sXoAImHfP.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/870072602903150598-DBMea2sXoAImHfP.placeholder.jpg",
@@ -1586,7 +1586,7 @@
     },
     {
       "height": 930,
-      "compressed_path": "gallery/images/low-res/962947753142898688-DV0T4GHWAAABjyt.min.webp",
+      "compressed_path": "gallery/images/low-res/962947753142898688-DV0T4GHWAAABjyt.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/962947753142898688-DV0T4GHWAAABjyt.placeholder.jpg",
@@ -1594,7 +1594,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1156130952428605441-EAtm-U5WwAYfSxQ.min.webp",
+      "compressed_path": "gallery/images/low-res/1156130952428605441-EAtm-U5WwAYfSxQ.min.jpg",
       "width": 787,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1156130952428605441-EAtm-U5WwAYfSxQ.placeholder.jpg",
@@ -1602,7 +1602,7 @@
     },
     {
       "height": 900,
-      "compressed_path": "gallery/images/low-res/970920448782422016-DXlnAEtWsAE0cjs.min.webp",
+      "compressed_path": "gallery/images/low-res/970920448782422016-DXlnAEtWsAE0cjs.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/970920448782422016-DXlnAEtWsAE0cjs.placeholder.jpg",
@@ -1610,7 +1610,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1161739820869345280-EB9UNc6WwAE5Gut.min.webp",
+      "compressed_path": "gallery/images/low-res/1161739820869345280-EB9UNc6WwAE5Gut.min.jpg",
       "width": 1151,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1161739820869345280-EB9UNc6WwAE5Gut.placeholder.jpg",
@@ -1618,7 +1618,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/950443362632523776-DTCnMu-WkAIjDoW.min.webp",
+      "compressed_path": "gallery/images/low-res/950443362632523776-DTCnMu-WkAIjDoW.min.jpg",
       "width": 792,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/950443362632523776-DTCnMu-WkAIjDoW.placeholder.jpg",
@@ -1626,7 +1626,7 @@
     },
     {
       "height": 762,
-      "compressed_path": "gallery/images/low-res/869903895862157312-DBKE-0_WsAE-c97.min.webp",
+      "compressed_path": "gallery/images/low-res/869903895862157312-DBKE-0_WsAE-c97.min.jpg",
       "width": 590,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/869903895862157312-DBKE-0_WsAE-c97.placeholder.jpg",
@@ -1634,7 +1634,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/873696400336408576-DB_-Pk_XsAAhzri.min.webp",
+      "compressed_path": "gallery/images/low-res/873696400336408576-DB_-Pk_XsAAhzri.min.jpg",
       "width": 960,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/873696400336408576-DB_-Pk_XsAAhzri.placeholder.jpg",
@@ -1642,7 +1642,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/1088364058112393216-DxqlV5iWwAALdUc.min.webp",
+      "compressed_path": "gallery/images/low-res/1088364058112393216-DxqlV5iWwAALdUc.min.jpg",
       "width": 882,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1088364058112393216-DxqlV5iWwAALdUc.placeholder.jpg",
@@ -1650,7 +1650,7 @@
     },
     {
       "height": 824,
-      "compressed_path": "gallery/images/low-res/959582336819048448-DVEfDHtXkAAVfwG.min.webp",
+      "compressed_path": "gallery/images/low-res/959582336819048448-DVEfDHtXkAAVfwG.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/959582336819048448-DVEfDHtXkAAVfwG.placeholder.jpg",
@@ -1658,7 +1658,7 @@
     },
     {
       "height": 816,
-      "compressed_path": "gallery/images/low-res/1157325384314236931-EA-lTaMWkAASv5c.min.webp",
+      "compressed_path": "gallery/images/low-res/1157325384314236931-EA-lTaMWkAASv5c.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1157325384314236931-EA-lTaMWkAASv5c.placeholder.jpg",
@@ -1666,7 +1666,7 @@
     },
     {
       "height": 1199,
-      "compressed_path": "gallery/images/low-res/1157083697235079175-EA7JfZHVAAApwDU.min.webp",
+      "compressed_path": "gallery/images/low-res/1157083697235079175-EA7JfZHVAAApwDU.min.jpg",
       "width": 805,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/1157083697235079175-EA7JfZHVAAApwDU.placeholder.jpg",
@@ -1674,7 +1674,7 @@
     },
     {
       "height": 798,
-      "compressed_path": "gallery/images/low-res/991472539783360512-DcJrBNiXkAEdD7S.min.webp",
+      "compressed_path": "gallery/images/low-res/991472539783360512-DcJrBNiXkAEdD7S.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/991472539783360512-DcJrBNiXkAEdD7S.placeholder.jpg",
@@ -1682,7 +1682,7 @@
     },
     {
       "height": 1024,
-      "compressed_path": "gallery/images/low-res/868620529804099584-CTPcbPIUcAAeBzk.min.webp",
+      "compressed_path": "gallery/images/low-res/868620529804099584-CTPcbPIUcAAeBzk.min.jpg",
       "width": 848,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/868620529804099584-CTPcbPIUcAAeBzk.placeholder.jpg",
@@ -1690,7 +1690,7 @@
     },
     {
       "height": 1200,
-      "compressed_path": "gallery/images/low-res/977836054983200768-DZH4tZBXcAIvMjw.min.webp",
+      "compressed_path": "gallery/images/low-res/977836054983200768-DZH4tZBXcAIvMjw.min.jpg",
       "width": 1200,
       "compressed": true,
       "placeholder_path": "gallery/images/lazy/977836054983200768-DZH4tZBXcAIvMjw.placeholder.jpg",

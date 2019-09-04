@@ -16,7 +16,7 @@ if [ -n "$(uname -a | ack Ubuntu)" -a -x "$(command -v mogrify)" ]; then
 		# gm convert -define webp:lossless=false "${f}" $SCRIPT_PATH/images/remix-salon/"${fname}".webp
 		# gm convert "${f}" $SCRIPT_PATH/images/remix-salon/"${fname}".jpg
 
-		gm convert -resize 640x -define webp:lossless=false "${f}" $SCRIPT_PATH/images/low-res/"${fname}".min.webp
+		gm convert -resize 800x "${f}" $SCRIPT_PATH/images/low-res/"${fname}".min.jpg
 		gm convert -resize 32x "${f}" $SCRIPT_PATH/images/lazy/"${fname}".placeholder.jpg
 	done
 fi
