@@ -100,7 +100,7 @@ class WikiGoblin:
           <{{LINK}}> wdt:P195 ?coll .
           OPTIONAL { <{{LINK}}> wdt:P170 ?artist . }
           OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
-          SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
+          SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it,pt,sv,ja,es,nl,pt-br"}
         }
         LIMIT 1
         """
@@ -168,7 +168,7 @@ class WikiGoblin:
           ?item wdt:P195 ?coll .
           ?item wdt:P170 ?artist .
           OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
-          SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
+          SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it,pt,sv,ja,es,nl,pt-br"}
         } ORDER BY ?random
         LIMIT 1
         """
@@ -188,7 +188,7 @@ class WikiGoblin:
               ?item wdt:P195 ?coll .
               ?item wdt:P170 ?artist .
               OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
-              SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
+              SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it,pt,sv,ja,es,nl,pt-br"}
             } ORDER BY ?random
             LIMIT 1
         """
