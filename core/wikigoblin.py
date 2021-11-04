@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# noqa: E501
+
 import argparse
 import sys
 import time
@@ -87,21 +89,21 @@ class WikiGoblin:
         sys.stderr.write("retrieving from: " + link + "\n")
 
         query = """
-		SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll WHERE {
-		  OPTIONAL { <{{LINK}}> rdfs:label ?itemLabel .
-		  FILTER (LANG(?itemLabel) = "en") }
-		  <{{LINK}}> wdt:P18 ?image .
-  		  OPTIONAL {
+        SELECT ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll WHERE {
+          OPTIONAL { <{{LINK}}> rdfs:label ?itemLabel .
+          FILTER (LANG(?itemLabel) = "en") }
+          <{{LINK}}> wdt:P18 ?image .
+          OPTIONAL {
              <{{LINK}}> wdt:P276 ?loc .
-		     ?loc wdt:P2002 ?twitter_loc .
-		  }
-		  <{{LINK}}> wdt:P195 ?coll .
-		  OPTIONAL { <{{LINK}}> wdt:P170 ?artist . }
-		  OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
-		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
-		}
-		LIMIT 1
-		"""
+             ?loc wdt:P2002 ?twitter_loc .
+          }
+          <{{LINK}}> wdt:P195 ?coll .
+          OPTIONAL { <{{LINK}}> wdt:P170 ?artist . }
+          OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
+          SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
+        }
+        LIMIT 1
+        """
 
         sparql.setQuery(query.replace("{{LINK}}", link))
 
@@ -125,7 +127,7 @@ class WikiGoblin:
                 res.loc = r["locLabel"]["value"]
                 if res.loc == "museum's storage space":
                     res.loc = r["collLabel"]["value"]
-            if res.loc == None:
+            if res.loc is None:
                 res.loc = r["collLabel"]["value"]
             res.fileloc = r["image"]["value"]
             if "twitter_loc" in r:
@@ -156,40 +158,40 @@ class WikiGoblin:
         )
 
         query = """
-		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll ({{ALGORITHM}}(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
-		  ?item wdt:P31 wd:{{TYPE}}.
-		  ?item wdt:P18 ?image.
-		  OPTIONAL {
-	         ?item wdt:P276 ?loc .
-			 ?loc wdt:P2002 ?twitter_loc .
-	      }
-		  ?item wdt:P195 ?coll .
-		  ?item wdt:P170 ?artist .
-		  OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
-		  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
-		} ORDER BY ?random
-		LIMIT 1
-		"""
+        SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll ({{ALGORITHM}}(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+          ?item wdt:P31 wd:{{TYPE}}.
+          ?item wdt:P18 ?image.
+          OPTIONAL {
+             ?item wdt:P276 ?loc .
+             ?loc wdt:P2002 ?twitter_loc .
+          }
+          ?item wdt:P195 ?coll .
+          ?item wdt:P170 ?artist .
+          OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
+          SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
+        } ORDER BY ?random
+        LIMIT 1
+        """
 
         # When we want photos we can use this query...
         photoQuery = """
-			#defaultView:ImageGrid
-			SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll ({{ALGORITHM}}(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
-			  ?item wdt:P31 wd:Q125191.
-			  ?item wdt:P18 ?image.
-			  OPTIONAL {
-		         ?item wdt:P276 ?loc .
-				 ?loc wdt:P2002 ?twitter_loc .
-		      }
-			  FILTER NOT EXISTS { ?item wdt:P276 wd:Q666063 . }
-			  FILTER NOT EXISTS { ?item wdt:P276 wd:Q2051997 . }
-			  ?item wdt:P195 ?coll .
-			  ?item wdt:P170 ?artist .
-  			  OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
-			  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
-			} ORDER BY ?random
-			LIMIT 1
-		"""
+            #defaultView:ImageGrid
+            SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll ({{ALGORITHM}}(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
+              ?item wdt:P31 wd:Q125191.
+              ?item wdt:P18 ?image.
+              OPTIONAL {
+                 ?item wdt:P276 ?loc .
+                 ?loc wdt:P2002 ?twitter_loc .
+              }
+              FILTER NOT EXISTS { ?item wdt:P276 wd:Q666063 . }
+              FILTER NOT EXISTS { ?item wdt:P276 wd:Q2051997 . }
+              ?item wdt:P195 ?coll .
+              ?item wdt:P170 ?artist .
+              OPTIONAL { ?coll wdt:P2002 ?twitter_coll . }
+              SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,de,it"}
+            } ORDER BY ?random
+            LIMIT 1
+        """
 
         query = query.replace("{{ALGORITHM}}", algorithm)
         photoQuery = photoQuery.replace("{{ALGORITHM}}", algorithm)
@@ -217,7 +219,7 @@ class WikiGoblin:
                 res.loc = r["locLabel"]["value"]
                 if res.loc == "museum's storage space":
                     res.loc = r["collLabel"]["value"]
-            if res.loc == None:
+            if res.loc is None:
                 res.loc = r["collLabel"]["value"]
             res.fileloc = r["image"]["value"]
             if "twitter_loc" in r:
@@ -242,18 +244,17 @@ class WikiGoblin:
         hashtagshort = "#digitalart"
         urilen = 22
         loc = ""
-        arttype = ""
         charlimit = 280
 
         # Use Twitter handle if we have one, else try for Museum Location
-        if res.twitter != None:
+        if res.twitter is not None:
             loc = res.twitter
-        elif res.loc != None:
+        elif res.loc is not None:
             loc = res.loc
 
         # Build Tweets based on the information we have. TODO: Make more
         # intelligent... this is not very sophisticated...
-        if loc != "" and res.arttype != None:
+        if loc != "" and res.arttype is not None:
             tweet = (
                 res.label
                 + ", "
@@ -271,7 +272,7 @@ class WikiGoblin:
                 + " "
                 + emoji
             )
-        elif loc != "" and res.arttype == None:
+        elif loc != "" and res.arttype is None:
             tweet = (
                 res.label
                 + ", "
@@ -287,7 +288,7 @@ class WikiGoblin:
                 + " "
                 + emoji
             )
-        elif loc == "" and res.arttype != None:
+        elif loc == "" and res.arttype is not None:
             tweet = (
                 res.label
                 + ", "
@@ -353,8 +354,8 @@ class WikiGoblin:
 
 def main():
 
-    # 	Usage: 	--link [imgFile]
-    # 	Handle command line arguments for the script
+    #   Usage:  --link [imgFile]
+    #   Handle command line arguments for the script
     parser = argparse.ArgumentParser(description="Run the Wikidata algorithm manually.")
     parser.add_argument(
         "--link", help="OPTIONAL: Wikidata link to retrieve file from...", default=False
@@ -413,7 +414,7 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    # 	Parse arguments into namespace object to reference later in the script
+    #   Parse arguments into namespace object to reference later in the script
     global args
     args = parser.parse_args()
 

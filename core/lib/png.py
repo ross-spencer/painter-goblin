@@ -155,10 +155,12 @@ try:  # See :pyver:old
 except ImportError:
     pass
 import math
+
 # http://www.python.org/doc/2.4.4/lib/module-operator.html
 import operator
 import struct
 import sys
+
 # http://www.python.org/doc/2.4.4/lib/module-warnings.html
 import warnings
 import zlib

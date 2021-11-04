@@ -2,13 +2,9 @@
 # -*- coding: utf-8 -*
 
 import os
-import sys
-
-# twitter
-# sys.path.insert(0, 'twitter')
-from twitter import *
 
 # Twitter pieces
+from twitter import read_token_file, Twitter, OAuth, oauth_dance
 
 conkey = (
     "/home/ross-spencer/git/ross-spencer/painter-goblin/core/.twitter-consumer-keys"
@@ -33,7 +29,6 @@ def twitter_authentication():
 
 
 def twitter_image_authentication():
-    CONSUMER_KEYS = conkey
     CONSUMER_KEY, CONSUMER_SECRET = read_token_file(conkey)
 
     MY_TWITTER_CREDS = os.path.expanduser(creds)

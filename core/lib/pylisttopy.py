@@ -9,7 +9,7 @@ class ListToPy:
     varname = ""
     fname = ""
 
-    HEADER = "#!/usr/bin/python" + "\n" + "# -*- coding: utf-8 -*- \n\n"
+    HEADER = "#!/usr/bin/python" + "\n" + "# -*- coding: utf-8 -*-\n\n"
 
     def __init__(self, arblist, varname, fname):
         self.arb_list = arblist
@@ -21,8 +21,8 @@ class ListToPy:
             f.write(self.HEADER)
             f.write(self.varname + " = ")
             f.write(
-                "["
-                + ", \\\n".join('"' + str(x) + '"' for x in self.arb_list)
-                + "]"
+                "[\n    "
+                + ",\n    ".join('"' + str(x) + '"' for x in self.arb_list)
+                + ",\n]"
                 + "\n"
             )

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+
 # legacy
 import base64
 import os
@@ -15,12 +16,13 @@ from lib import pylisttopy as pl
 from lib import twitterpieces as tw
 from lib import urilist as ulist
 from paintergoblin import PainterGoblin
+
 # Primary Exes
 from wikigoblin import WikiGoblin
 
 # twitter
 sys.path.insert(0, "twitter")
-from twitter import *
+from twitter import TwitterHTTPError
 
 # if the service should stop working, try switching off legacy to
 # modern api... Twitter api difficulties at time of writing when

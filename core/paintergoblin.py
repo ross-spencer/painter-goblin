@@ -4,8 +4,6 @@
 import argparse
 import os
 import sys
-import time
-from random import seed, shuffle
 
 from PIL import Image, ImageEnhance
 
@@ -30,7 +28,7 @@ class PainterGoblin:
     def readimage(self, reader, out):
         height, width, pixels, meta = reader.read()
         try:
-            palette = meta["palette"]
+            _ = meta["palette"]
         except KeyError:
             sys.stderr.write("No palette dictionary returned by PyPNG" + "\n")
             sys.exit(-1)
