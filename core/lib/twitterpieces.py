@@ -10,8 +10,8 @@ from twitter import *
 
 # Twitter pieces
 
-conkey = ""
-creds = ""
+conkey = "/home/ross-spencer/git/ross-spencer/painter-goblin/core/.twitter-consumer-keys"
+creds = "/home/ross-spencer/git/ross-spencer/painter-goblin/core/.twitter-paintergoblin-credentials"
 
 
 def twitter_authentication():

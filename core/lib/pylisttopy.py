@@ -17,7 +17,7 @@ class ListToPy:
         self.fname = fname.replace('.py', '') + '.py'
 
     def list_to_py(self):
-        with open(self.fname, 'wb') as f:
+        with open(self.fname, 'w') as f:
             f.write(self.HEADER)
             f.write(self.varname + " = ")
             f.write(

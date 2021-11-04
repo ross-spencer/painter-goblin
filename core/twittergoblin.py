@@ -31,7 +31,7 @@ legacy = False
 wg = WikiGoblin()
 pg = PainterGoblin()
 
-emoji = unicode("🖌🎨", 'utf-8')
+emoji = "🖌🎨"
 
 
 def MakeTweet(link, sendtweet, style, algorithm="MD5"):
@@ -67,7 +67,7 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
                 time.sleep(10)
             return MakeTweet(link, sendtweet, style)
         else:
-            sys.stderr.write("Adding to Painter Goblin's Tweet list." + "\n")
+            print("Adding to Painter Goblin's Tweet list.", file=sys.stderr)
             ulist.wikilist.append(uri)
 
     # new file
@@ -79,12 +79,12 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
     # we've seen attribute error a few times, see if we can
     # counter it here somehow...
     try:
-        tweet = tweet.encode('utf-8')
-    except AttributeError as e:
-        sys.stderr.write(e + "\n")
+        tweet = tweet
+    except AttributeError as err:
+        print(err, file=sys.stderr)
         return MakeTweet(link, sendtweet, style)
 
-    sys.stderr.write(tweet + "\n")
+    print(tweet, file=sys.stderr)
 
     if not legacy:
         if sendtweet:
@@ -93,7 +93,7 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
         if sendtweet:
             sendLegacyMethod(link, tweet, nf, uri)
     else:
-        sys.stdout.write("Testing config, Tweet not sent.\n")
+        print("Testing config, Tweet not sent.")
 
 
 def sendNewMethod(link, tweet, nf, uri):
@@ -143,6 +143,7 @@ def logtweet(wikiuri):
 
 # filesize needs to be 3145728
 def testresize(img, p=None):
+    return
     sys.stderr.write("test resize...\n")
     fsz = os.stat(img).st_size
     sys.stderr.write("size: " + str(fsz) + "\n")

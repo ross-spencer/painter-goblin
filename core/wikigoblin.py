@@ -3,7 +3,7 @@
 
 import sys
 import time
-import urllib
+from urllib.request import urlretrieve
 import argparse
 from random import seed, shuffle
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -209,12 +209,12 @@ class WikiGoblin:
         return res
 
     def getfile(self, res, loc):
-        urllib.urlretrieve(res.fileloc, loc)
+        urlretrieve(res.fileloc, loc)
         return
 
     # not pretty code below here but works for now...
     def maketweet(self, res, palette_name):
-        emoji = unicode("🖌🎨", 'utf-8')
+        emoji = "🖌🎨"
         palette_name = "(Palette: %s)" % palette_name
         hashtag = "#wikidata #digitalart"
         hashtagshort = "#digitalart"
