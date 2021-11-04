@@ -1,30 +1,28 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import argparse
 import os
 import sys
 import time
-import argparse
-
-from PIL import Image
-from PIL import ImageEnhance
-
 from random import seed, shuffle
-from palettes import palettes
+
+from PIL import Image, ImageEnhance
 
 from lib import png
+from palettes import palettes
+
 
 class PainterGoblin:
-
     def __init__(self):
         """Initialize class by retrieving the palette we're going to work with
-        to create a new PainterGoblin Image. 
+        to create a new PainterGoblin Image.
         """
         p = palettes.Palettes()
         self.palette_label, self.palette = p.get_palette()
 
     def writeimage(self, height, width, pixels, palette, out):
-        f = open(out, 'wb')
+        f = open(out, "wb")
         w = png.Writer(height, width, palette=palette, bitdepth=4)
         w.write(f, pixels)
         f.close()
@@ -32,7 +30,7 @@ class PainterGoblin:
     def readimage(self, reader, out):
         height, width, pixels, meta = reader.read()
         try:
-            palette = meta['palette']
+            palette = meta["palette"]
         except KeyError:
             sys.stderr.write("No palette dictionary returned by PyPNG" + "\n")
             sys.exit(-1)
@@ -69,9 +67,11 @@ class PainterGoblin:
         i = self.addpalette(i, depth)
         i.save(tmpfolder + "/" + self.tmpfilename, mode="P", colors=depth)
         self.handleimage(
-            tmpfolder + "/" + self.tmpfilename, tmpfolder + "/" + outfilename)
+            tmpfolder + "/" + self.tmpfilename, tmpfolder + "/" + outfilename
+        )
         os.remove(tmpfolder + "/" + self.tmpfilename)
         return self.palette_label
+
 
 def paintimage(imagein, imageout):
     # new instance of the painter goblin class...
@@ -86,21 +86,23 @@ def paintimage(imagein, imageout):
 
 def main():
 
-    #	Usage: 	--img [imgFile]
-    #	Usage: 	--out [imgFile]
+    # 	Usage: 	--img [imgFile]
+    # 	Usage: 	--out [imgFile]
 
-    #	Handle command line arguments for the script
+    # 	Handle command line arguments for the script
     parser = argparse.ArgumentParser(
-        description='Run the Painter Goblin algorithm manually.')
-    parser.add_argument('--img', help='Image to paint...')
+        description="Run the Painter Goblin algorithm manually."
+    )
+    parser.add_argument("--img", help="Image to paint...")
     parser.add_argument(
-        '--out', help='OPTIONAL: Output file name...', default='ByThePainterGoblin.png')
+        "--out", help="OPTIONAL: Output file name...", default="ByThePainterGoblin.png"
+    )
 
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit(1)
 
-    #	Parse arguments into namespace object to reference later in the script
+    # 	Parse arguments into namespace object to reference later in the script
     global args
     args = parser.parse_args()
 
@@ -109,6 +111,7 @@ def main():
     else:
         parser.print_help()
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

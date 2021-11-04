@@ -1,26 +1,25 @@
 # -*- coding: utf-8 -*-
 
+import argparse
+# legacy
+import base64
 import os
 import sys
 import time
-import argparse
+
 from PIL import Image
 
 # Library libs
 from lib import locations
 from lib import pylisttopy as pl
-from lib import urilist as ulist
 from lib import twitterpieces as tw
-
+from lib import urilist as ulist
+from paintergoblin import PainterGoblin
 # Primary Exes
 from wikigoblin import WikiGoblin
-from paintergoblin import PainterGoblin
-
-# legacy
-import base64
 
 # twitter
-sys.path.insert(0, 'twitter')
+sys.path.insert(0, "twitter")
 from twitter import *
 
 # if the service should stop working, try switching off legacy to
@@ -45,7 +44,9 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
     wg.getfile(res, locations.wikiloc)
 
     # make a new image and return the palette
-    palette_label = pg.paintpicture(locations.wikiloc, 5, locations.tempfolder, locations.paintloc)
+    palette_label = pg.paintpicture(
+        locations.wikiloc, 5, locations.tempfolder, locations.paintloc
+    )
 
     # return tuple from maketweet...
     data = wg.maketweet(res, palette_label)
@@ -58,12 +59,14 @@ def MakeTweet(link, sendtweet, style, algorithm="MD5"):
     if not link:
         if uri in ulist.wikilist:
             sys.stderr.write(
-                "Painter Goblin has painted this before. Making new Tweet" + "\n")
+                "Painter Goblin has painted this before. Making new Tweet" + "\n"
+            )
             if algorithm == "MD5":
                 return MakeTweet(link, sendtweet, style, "SHA1")
             if algorithm == "SHA1":
                 sys.stderr.write(
-                    "Two hashes used, trying to sleep before trying again..." + "\n")
+                    "Two hashes used, trying to sleep before trying again..." + "\n"
+                )
                 time.sleep(10)
             return MakeTweet(link, sendtweet, style)
         else:
@@ -112,7 +115,10 @@ def sendNewMethod(link, tweet, nf, uri):
             logtweet(uri)
     except TwitterHTTPError as e:
         sys.stderr.write(e[0] + "\n")
-        if "details: {u'errors': [{u'message': u'Internal error', u'code': 131}]}" in e[0]:
+        if (
+            "details: {u'errors': [{u'message': u'Internal error', u'code': 131}]}"
+            in e[0]
+        ):
             testresize(nf, 0.1)
             sendNewMethod(link, tweet, nf, uri)
 
@@ -132,7 +138,10 @@ def sendLegacyMethod(link, tweet, nf, uri):
             logtweet(uri)
     except TwitterHTTPError as e:
         sys.stderr.write(e[0] + "\n")
-        if "details: {u'errors': [{u'message': u'Internal error', u'code': 131}]}" in e[0]:
+        if (
+            "details: {u'errors': [{u'message': u'Internal error', u'code': 131}]}"
+            in e[0]
+        ):
             testresize(nf, 0.1)
         sendLegacyMethod(link, tweet, nf, uri)
 
@@ -140,6 +149,7 @@ def sendLegacyMethod(link, tweet, nf, uri):
 def logtweet(wikiuri):
     lto = pl.ListToPy(set(ulist.wikilist), "wikilist", locations.listloc)
     lto.list_to_py()
+
 
 # filesize needs to be 3145728
 def testresize(img, p=None):
@@ -153,13 +163,13 @@ def testresize(img, p=None):
     elif fsz >= ideal:
         diff = float(fsz) - float(ideal)
         avg = float(fsz) + float(ideal) / 2
-        perc = (diff / avg)
-        sys.stderr.write(
-            "File size too big, making smaller: " + str(fsz) + "\n")
+        perc = diff / avg
+        sys.stderr.write("File size too big, making smaller: " + str(fsz) + "\n")
         sys.stderr.write("Percent too big: " + str(perc * 100) + "\n")
         resize(img, perc)
     else:
         return
+
 
 def resize(img, perc):
     i = Image.open(img)
@@ -173,43 +183,73 @@ def resize(img, perc):
 
 def main():
 
-    #	Usage: 	--link [imgFile]
+    # 	Usage: 	--link [imgFile]
 
-    #	Handle command line arguments for the script
-    parser = argparse.ArgumentParser(
-        description='Run the Wikidata algorithm manually.')
+    # 	Handle command line arguments for the script
+    parser = argparse.ArgumentParser(description="Run the Wikidata algorithm manually.")
     parser.add_argument(
-        '--link', help='OPTIONAL: Wikidata link to retrieve file from...', default=False)
+        "--link", help="OPTIONAL: Wikidata link to retrieve file from...", default=False
+    )
     parser.add_argument(
-        '--notweet', help='OPTIONAL: For testing choose not to update Twitter status...', action='store_false')
+        "--notweet",
+        help="OPTIONAL: For testing choose not to update Twitter status...",
+        action="store_false",
+    )
 
     # not so good styles to generate art from...
     parser.add_argument(
-        '--tprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tprint",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tlitho', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tlitho",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tdraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tdraw",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tphoto', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tphoto",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
 
     # best styles to generate art from...
     parser.add_argument(
-        '--twater', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--twater",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tpaint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tpaint",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--twood', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--twood",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tpastel', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tpastel",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tposter', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tposter",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
 
     if len(sys.argv) == 0:
         parser.print_help()
         sys.exit(1)
 
-    #	Parse arguments into namespace object to reference later in the script
+    # 	Parse arguments into namespace object to reference later in the script
     global args
     args = parser.parse_args()
 
@@ -234,6 +274,7 @@ def main():
         style = wg.imglitho
 
     MakeTweet(args.link, args.notweet, style)
+
 
 if __name__ == "__main__":
     main()

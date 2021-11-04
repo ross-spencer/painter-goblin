@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import argparse
 import sys
 import time
-from urllib.request import urlretrieve
-import argparse
 from random import seed, shuffle
-from SPARQLWrapper import SPARQLWrapper, JSON
+from urllib.request import urlretrieve
+
+from SPARQLWrapper import JSON, SPARQLWrapper
 
 sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
 
@@ -17,6 +18,7 @@ sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
 # p276, location of item
 # p170, creator of item
 
+
 class WikiResults:
     label = ""
     artist = ""
@@ -25,6 +27,7 @@ class WikiResults:
     uri = ""
     arttype = None
     twitter = None
+
 
 class WikiGoblin:
 
@@ -49,22 +52,37 @@ class WikiGoblin:
     imgnone = None
 
     # art type list...
-    arttypes = [imgwatercolor, imgpainting,
-                imgwoodcutprint, imgpastel, imgposter, imgphoto,
-                imgprint, imglitho, imgdrawing,
-                ]
+    arttypes = [
+        imgwatercolor,
+        imgpainting,
+        imgwoodcutprint,
+        imgpastel,
+        imgposter,
+        imgphoto,
+        imgprint,
+        imglitho,
+        imgdrawing,
+    ]
 
     # plain-text art types
-    artdict = {imgwatercolor: "#watercolor", imgpainting: "#painting",
-               imgwoodcutprint: "#woodcutprint", imgpastel: "#pastel",
-               imgposter: "#poster", imgphoto: "#photo", imgprint: "#print",
-               imglitho: "#lithograph", imgdrawing: "#drawing"}
+    artdict = {
+        imgwatercolor: "#watercolor",
+        imgpainting: "#painting",
+        imgwoodcutprint: "#woodcutprint",
+        imgpastel: "#pastel",
+        imgposter: "#poster",
+        imgphoto: "#photo",
+        imgprint: "#print",
+        imglitho: "#lithograph",
+        imgdrawing: "#drawing",
+    }
 
     def resultsfromlink(self, link):
 
         # check we're looking at the URI not the item URL...
         link = link.replace(
-            "https://www.wikidata.org/wiki/", "http://www.wikidata.org/entity/")
+            "https://www.wikidata.org/wiki/", "http://www.wikidata.org/entity/"
+        )
 
         sys.stderr.write("retrieving from: " + link + "\n")
 
@@ -94,27 +112,27 @@ class WikiGoblin:
 
         res = WikiResults()
 
-        for r in results['results']['bindings']:
-            if 'itemLabel' in r:
-                res.label = r['itemLabel']['value']
+        for r in results["results"]["bindings"]:
+            if "itemLabel" in r:
+                res.label = r["itemLabel"]["value"]
             else:
                 res.label = "Untitled"
-            if 'artistLabel' in r:
-                res.artist = r['artistLabel']['value']
+            if "artistLabel" in r:
+                res.artist = r["artistLabel"]["value"]
             else:
                 res.artist = "Unknown"
-            if 'locLabel' in r:
-                res.loc = r['locLabel']['value']
+            if "locLabel" in r:
+                res.loc = r["locLabel"]["value"]
                 if res.loc == "museum's storage space":
-                    res.loc = r['collLabel']['value']
+                    res.loc = r["collLabel"]["value"]
             if res.loc == None:
-                res.loc = r['collLabel']['value']
-            res.fileloc = r['image']['value']
-            if 'twitter_loc' in r:
-                res.twitter = "@" + r['twitter_loc']['value']
-            elif 'twitter_coll' in r:
+                res.loc = r["collLabel"]["value"]
+            res.fileloc = r["image"]["value"]
+            if "twitter_loc" in r:
+                res.twitter = "@" + r["twitter_loc"]["value"]
+            elif "twitter_coll" in r:
                 "twitter col"
-                res.twitter = "@" + r['twitter_coll']['value']
+                res.twitter = "@" + r["twitter_coll"]["value"]
 
         res.uri = link
 
@@ -130,8 +148,12 @@ class WikiGoblin:
             shuffle(self.arttypes)
             style = self.arttypes[0]
 
-        sys.stderr.write("Painter Goblin is retrieving a " +
-                         self.artdict[style] + " to paint... " + "\n")
+        sys.stderr.write(
+            "Painter Goblin is retrieving a "
+            + self.artdict[style]
+            + " to paint... "
+            + "\n"
+        )
 
         query = """
 		SELECT ?item ?itemLabel ?image ?loc ?locLabel ?coll ?collLabel ?artist ?artistLabel ?twitter_loc ?twitter_coll ({{ALGORITHM}}(CONCAT(str(?item),str(RAND()))) as ?random)  WHERE {
@@ -184,25 +206,25 @@ class WikiGoblin:
 
         res = WikiResults()
 
-        for r in results['results']['bindings']:
-            res.uri = r['item']['value']
-            if 'itemLabel' in r:
-                res.label = r['itemLabel']['value']
+        for r in results["results"]["bindings"]:
+            res.uri = r["item"]["value"]
+            if "itemLabel" in r:
+                res.label = r["itemLabel"]["value"]
             else:
                 res.label = "Untitled"
-            res.artist = r['artistLabel']['value']
-            if 'locLabel' in r:
-                res.loc = r['locLabel']['value']
+            res.artist = r["artistLabel"]["value"]
+            if "locLabel" in r:
+                res.loc = r["locLabel"]["value"]
                 if res.loc == "museum's storage space":
-                    res.loc = r['collLabel']['value']
+                    res.loc = r["collLabel"]["value"]
             if res.loc == None:
-                res.loc = r['collLabel']['value']
-            res.fileloc = r['image']['value']
-            if 'twitter_loc' in r:
-                res.twitter = "@" + r['twitter_loc']['value']
-            elif 'twitter_coll' in r:
+                res.loc = r["collLabel"]["value"]
+            res.fileloc = r["image"]["value"]
+            if "twitter_loc" in r:
+                res.twitter = "@" + r["twitter_loc"]["value"]
+            elif "twitter_coll" in r:
                 "twitter col"
-                res.twitter = "@" + r['twitter_coll']['value']
+                res.twitter = "@" + r["twitter_coll"]["value"]
 
         res.arttype = self.artdict[style]
 
@@ -232,28 +254,85 @@ class WikiGoblin:
         # Build Tweets based on the information we have. TODO: Make more
         # intelligent... this is not very sophisticated...
         if loc != "" and res.arttype != None:
-            tweet = res.label + ", " + res.artist + ", " + loc + " " + \
-                res.uri + " " + hashtag + " " + res.arttype + " " + \
-                palette_name + " " + emoji
+            tweet = (
+                res.label
+                + ", "
+                + res.artist
+                + ", "
+                + loc
+                + " "
+                + res.uri
+                + " "
+                + hashtag
+                + " "
+                + res.arttype
+                + " "
+                + palette_name
+                + " "
+                + emoji
+            )
         elif loc != "" and res.arttype == None:
-            tweet = res.label + ", " + res.artist + ", " + \
-                loc + " " + res.uri + " " + hashtag + " " + palette_name + \
-                " " + emoji
+            tweet = (
+                res.label
+                + ", "
+                + res.artist
+                + ", "
+                + loc
+                + " "
+                + res.uri
+                + " "
+                + hashtag
+                + " "
+                + palette_name
+                + " "
+                + emoji
+            )
         elif loc == "" and res.arttype != None:
-            tweet = res.label + ", " + res.artist + ", " + \
-                res.uri + " " + hashtag + " " + res.arttype + " " + \
-                palette_name + " " +  emoji
+            tweet = (
+                res.label
+                + ", "
+                + res.artist
+                + ", "
+                + res.uri
+                + " "
+                + hashtag
+                + " "
+                + res.arttype
+                + " "
+                + palette_name
+                + " "
+                + emoji
+            )
         else:
-            tweet = res.label + ", " + res.artist + \
-                ", " + res.uri + " " + hashtag + " " + palette_name + " " + \
-                emoji
+            tweet = (
+                res.label
+                + ", "
+                + res.artist
+                + ", "
+                + res.uri
+                + " "
+                + hashtag
+                + " "
+                + palette_name
+                + " "
+                + emoji
+            )
 
         if len(tweet) - urilen + len(emoji) >= charlimit:
             tweet = tweet.replace(hashtag, hashtagshort)
 
         if len(tweet) - urilen + len(emoji) >= charlimit:
-            tweet = res.label + ", " + res.artist + \
-                " " + res.uri + " " + hashtag + " " + emoji
+            tweet = (
+                res.label
+                + ", "
+                + res.artist
+                + " "
+                + res.uri
+                + " "
+                + hashtag
+                + " "
+                + emoji
+            )
 
         if len(tweet) - urilen + len(emoji) >= charlimit:
             tweet = res.label + " " + res.uri + " " + hashtag + " " + emoji
@@ -271,42 +350,70 @@ class WikiGoblin:
             res = wg.newresults(t)
         return res
 
+
 def main():
 
-    #	Usage: 	--link [imgFile]
-    #	Handle command line arguments for the script
-    parser = argparse.ArgumentParser(
-        description='Run the Wikidata algorithm manually.')
+    # 	Usage: 	--link [imgFile]
+    # 	Handle command line arguments for the script
+    parser = argparse.ArgumentParser(description="Run the Wikidata algorithm manually.")
     parser.add_argument(
-        '--link', help='OPTIONAL: Wikidata link to retrieve file from...', default=False)
+        "--link", help="OPTIONAL: Wikidata link to retrieve file from...", default=False
+    )
 
     # not so good styles to generate art from...
     parser.add_argument(
-        '--tprint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tprint",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tlitho', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tlitho",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tdraw', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tdraw",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tphoto', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tphoto",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
 
     # best styles to generate art from...
     parser.add_argument(
-        '--twater', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--twater",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tpaint', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tpaint",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--twood', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--twood",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tpastel', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tpastel",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
     parser.add_argument(
-        '--tposter', help='OPTIONAL: Choose an art style to output...', action='store_true')
+        "--tposter",
+        help="OPTIONAL: Choose an art style to output...",
+        action="store_true",
+    )
 
     if len(sys.argv) == 0:
         parser.print_help()
         sys.exit(1)
 
-    #	Parse arguments into namespace object to reference later in the script
+    # 	Parse arguments into namespace object to reference later in the script
     global args
     args = parser.parse_args()
 
@@ -334,6 +441,7 @@ def main():
 
     res = wg.getresults(args.link, style)
     sys.stdout.write(wg.maketweet(res) + "\n")
+
 
 if __name__ == "__main__":
     main()
