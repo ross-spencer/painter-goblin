@@ -28,6 +28,7 @@ class UserPassAuth(Auth):
     Basic auth authentication using email/username and
     password. Deprecated.
     """
+
     def __init__(self, username, password):
         self.username = username
         self.password = password
@@ -38,16 +39,19 @@ class UserPassAuth(Auth):
         return urllib_parse.urlencode(params)
 
     def generate_headers(self):
-        return {b"Authorization": b"Basic " + encodebytes(
-                ("%s:%s" %(self.username, self.password))
-                .encode('utf8')).strip(b'\n')
-                }
+        return {
+            b"Authorization": b"Basic "
+            + encodebytes(
+                ("%s:%s" % (self.username, self.password)).encode("utf8")
+            ).strip(b"\n")
+        }
 
 
 class NoAuth(Auth):
     """
     No authentication authenticator.
     """
+
     def __init__(self):
         pass
 

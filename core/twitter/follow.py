@@ -30,8 +30,8 @@ except ImportError:
     import httplib
 
 # T-Follow (Twitter-Follow) application registered by @stalkr_
-CONSUMER_KEY='USRZQfvFFjB6UvZIN2Edww'
-CONSUMER_SECRET='AwGAaSzZa5r0TDL8RKCDtffnI9H9mooZUdOa95nw8'
+CONSUMER_KEY = "USRZQfvFFjB6UvZIN2Edww"
+CONSUMER_SECRET = "AwGAaSzZa5r0TDL8RKCDtffnI9H9mooZUdOa95nw8"
 
 from .api import Twitter, TwitterError
 from .oauth import OAuth, read_token_file
@@ -42,34 +42,36 @@ from .util import Fail, err
 
 def parse_args(args, options):
     """Parse arguments from command-line to set options."""
-    long_opts = ['help', 'oauth', 'followers', 'following', 'api-rate', 'ids']
+    long_opts = ["help", "oauth", "followers", "following", "api-rate", "ids"]
     short_opts = "horgai"
     opts, extra_args = getopt(args, short_opts, long_opts)
 
     for opt, arg in opts:
-        if opt in ('-h', '--help'):
+        if opt in ("-h", "--help"):
             print(__doc__)
             raise SystemExit(1)
-        elif opt in ('-o', '--oauth'):
-            options['oauth'] = True
-        elif opt in ('-r', '--followers'):
-            options['followers'] = True
-        elif opt in ('-g', '--following'):
-            options['followers'] = False
-        elif opt in ('-a', '--api-rate'):
-            options['api-rate' ] = True
-        elif opt in ('-i', '--ids'):
-            options['show_id'] = True
+        elif opt in ("-o", "--oauth"):
+            options["oauth"] = True
+        elif opt in ("-r", "--followers"):
+            options["followers"] = True
+        elif opt in ("-g", "--following"):
+            options["followers"] = False
+        elif opt in ("-a", "--api-rate"):
+            options["api-rate"] = True
+        elif opt in ("-i", "--ids"):
+            options["show_id"] = True
 
-    options['extra_args'] = extra_args
+    options["extra_args"] = extra_args
+
 
 def lookup_portion(twitter, user_ids):
     """Resolve a limited list of user ids to screen names."""
     users = {}
     kwargs = dict(user_id=",".join(map(str, user_ids)), skip_status=1)
     for u in twitter.users.lookup(**kwargs):
-        users[int(u['id'])] = u['screen_name']
+        users[int(u["id"])] = u["screen_name"]
     return users
+
 
 def lookup(twitter, user_ids):
     """Resolve an entire list of user ids to screen names."""
@@ -86,16 +88,18 @@ def lookup(twitter, user_ids):
                     rls = twitter.application.rate_limit_status()
                     reset = rls.rate_limit_reset
                     reset = time.asctime(time.localtime(reset))
-                    delay = int(rls.rate_limit_reset
-                                - time.time()) + 5 # avoid race
-                    err("Interval limit of %i requests reached, next reset on "
+                    delay = int(rls.rate_limit_reset - time.time()) + 5  # avoid race
+                    err(
+                        "Interval limit of %i requests reached, next reset on "
                         "%s: going to sleep for %i secs"
-                        % (rls.rate_limit_limit, reset, delay))
+                        % (rls.rate_limit_limit, reset, delay)
+                    )
                     fail.wait(delay)
                     continue
                 elif e.e.code == 502:
-                    err("Fail: %i Service currently unavailable, retrying..."
-                        % e.e.code)
+                    err(
+                        "Fail: %i Service currently unavailable, retrying..." % e.e.code
+                    )
                 else:
                     err("Fail: %s\nRetrying..." % str(e)[:500])
                 fail.wait(3)
@@ -110,19 +114,23 @@ def lookup(twitter, user_ids):
                 fail.wait(3)
             else:
                 users.update(portion)
-                err("Resolving user ids to screen names: %i/%i"
-                    % (len(users), len(user_ids)))
+                err(
+                    "Resolving user ids to screen names: %i/%i"
+                    % (len(users), len(user_ids))
+                )
                 break
     return users
+
 
 def follow_portion(twitter, screen_name, cursor=-1, followers=True):
     """Get a portion of followers/following for a user."""
     kwargs = dict(screen_name=screen_name, cursor=cursor)
     if followers:
         t = twitter.followers.ids(**kwargs)
-    else: # following
+    else:  # following
         t = twitter.friends.ids(**kwargs)
-    return t['ids'], t['next_cursor']
+    return t["ids"], t["next_cursor"]
+
 
 def follow(twitter, screen_name, followers=True):
     """Get the entire list of followers/following for a user."""
@@ -131,12 +139,12 @@ def follow(twitter, screen_name, followers=True):
     fail = Fail()
     while True:
         try:
-            portion, cursor = follow_portion(twitter, screen_name, cursor,
-                                             followers)
+            portion, cursor = follow_portion(twitter, screen_name, cursor, followers)
         except TwitterError as e:
             if e.e.code == 401:
-                reason = ("follow%s of that user are protected"
-                          % ("ers" if followers else "ing"))
+                reason = "follow%s of that user are protected" % (
+                    "ers" if followers else "ing"
+                )
                 err("Fail: %i Unauthorized (%s)" % (e.e.code, reason))
                 break
             elif e.e.code == 429:
@@ -144,16 +152,15 @@ def follow(twitter, screen_name, followers=True):
                 rls = twitter.application.rate_limit_status()
                 reset = rls.rate_limit_reset
                 reset = time.asctime(time.localtime(reset))
-                delay = int(rls.rate_limit_reset
-                            - time.time()) + 5 # avoid race
-                err("Interval limit of %i requests reached, next reset on %s: "
-                    "going to sleep for %i secs" % (rls.rate_limit_limit,
-                                                    reset, delay))
+                delay = int(rls.rate_limit_reset - time.time()) + 5  # avoid race
+                err(
+                    "Interval limit of %i requests reached, next reset on %s: "
+                    "going to sleep for %i secs" % (rls.rate_limit_limit, reset, delay)
+                )
                 fail.wait(delay)
                 continue
             elif e.e.code == 502:
-                err("Fail: %i Service currently unavailable, retrying..."
-                    % e.e.code)
+                err("Fail: %i Service currently unavailable, retrying..." % e.e.code)
             else:
                 err("Fail: %s\nRetrying..." % str(e)[:500])
             fail.wait(3)
@@ -181,19 +188,21 @@ def follow(twitter, screen_name, followers=True):
 def rate_limit_status(twitter):
     """Print current Twitter API rate limit status."""
     rls = twitter.application.rate_limit_status()
-    print("Remaining API requests: %i/%i (interval limit)"
-          % (rls.rate_limit_remaining, rls.rate_limit_limit))
-    print("Next reset in %is (%s)"
-          % (int(rls.rate_limit_reset - time.time()),
-             time.asctime(time.localtime(rls.rate_limit_reset))))
+    print(
+        "Remaining API requests: %i/%i (interval limit)"
+        % (rls.rate_limit_remaining, rls.rate_limit_limit)
+    )
+    print(
+        "Next reset in %is (%s)"
+        % (
+            int(rls.rate_limit_reset - time.time()),
+            time.asctime(time.localtime(rls.rate_limit_reset)),
+        )
+    )
+
 
 def main(args=sys.argv[1:]):
-    options = {
-        'oauth': False,
-        'followers': True,
-        'api-rate': False,
-        'show_id': False
-    }
+    options = {"oauth": False, "followers": True, "api-rate": False, "show_id": False}
     try:
         parse_args(args, options)
     except GetoptError as e:
@@ -201,34 +210,31 @@ def main(args=sys.argv[1:]):
         raise SystemExit(1)
 
     # exit if no user or given, except if asking for API rate
-    if not options['extra_args'] and not options['api-rate']:
+    if not options["extra_args"] and not options["api-rate"]:
         print(__doc__)
         raise SystemExit(1)
 
     # authenticate using OAuth, asking for token if necessary
-    if options['oauth']:
-        oauth_filename = (os.getenv("HOME", "") + os.sep
-                          + ".twitter-follow_oauth")
+    if options["oauth"]:
+        oauth_filename = os.getenv("HOME", "") + os.sep + ".twitter-follow_oauth"
         if not os.path.exists(oauth_filename):
-            oauth_dance("Twitter-Follow", CONSUMER_KEY, CONSUMER_SECRET,
-                        oauth_filename)
+            oauth_dance("Twitter-Follow", CONSUMER_KEY, CONSUMER_SECRET, oauth_filename)
         oauth_token, oauth_token_secret = read_token_file(oauth_filename)
-        auth = OAuth(oauth_token, oauth_token_secret, CONSUMER_KEY,
-                     CONSUMER_SECRET)
+        auth = OAuth(oauth_token, oauth_token_secret, CONSUMER_KEY, CONSUMER_SECRET)
     else:
         auth = NoAuth()
 
-    twitter = Twitter(auth=auth, api_version='1.1', domain='api.twitter.com')
+    twitter = Twitter(auth=auth, api_version="1.1", domain="api.twitter.com")
 
-    if options['api-rate']:
+    if options["api-rate"]:
         rate_limit_status(twitter)
         return
 
     # obtain list of followers (or following) for every given user
-    for user in options['extra_args']:
+    for user in options["extra_args"]:
         user_ids, users = [], {}
         try:
-            user_ids = follow(twitter, user, options['followers'])
+            user_ids = follow(twitter, user, options["followers"])
             users = lookup(twitter, user_ids)
         except KeyboardInterrupt as e:
             err()
@@ -236,20 +242,20 @@ def main(args=sys.argv[1:]):
             raise SystemExit(1)
 
         for uid in user_ids:
-            if options['show_id']:
-              try:
-                print(str(uid) + "\t" + users[uid].encode("utf-8"))
-              except KeyError:
-                pass
+            if options["show_id"]:
+                try:
+                    print(str(uid) + "\t" + users[uid].encode("utf-8"))
+                except KeyError:
+                    pass
 
             else:
-              try:
-                print(users[uid].encode("utf-8"))
-              except KeyError:
-                pass
+                try:
+                    print(users[uid].encode("utf-8"))
+                except KeyError:
+                    pass
 
         # print total on stderr to separate from user list on stdout
-        if options['followers']:
+        if options["followers"]:
             err("Total followers for %s: %i" % (user, len(user_ids)))
         else:
             err("Total users %s is following: %i" % (user, len(user_ids)))

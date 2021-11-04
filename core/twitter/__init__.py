@@ -10,12 +10,13 @@ from textwrap import dedent
 
 from .api import Twitter, TwitterError, TwitterHTTPError, TwitterResponse
 from .auth import NoAuth, UserPassAuth
-from .oauth import (
-    OAuth, read_token_file, write_token_file,
-    __doc__ as oauth_doc)
+from .oauth import OAuth, read_token_file, write_token_file, __doc__ as oauth_doc
 from .oauth2 import (
-    OAuth2, read_bearer_token_file, write_bearer_token_file,
-    __doc__ as oauth2_doc)
+    OAuth2,
+    read_bearer_token_file,
+    write_bearer_token_file,
+    __doc__ as oauth2_doc,
+)
 from .stream import TwitterStream
 from .oauth_dance import oauth_dance, oauth2_dance
 
@@ -80,4 +81,4 @@ __all__ = [
     "UserPassAuth",
     "write_bearer_token_file",
     "write_token_file",
-    ]
+]

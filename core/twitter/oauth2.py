@@ -33,13 +33,15 @@ except ImportError:
 from base64 import b64encode
 from .auth import Auth, MissingCredentialsError
 
+
 def write_bearer_token_file(filename, oauth2_bearer_token):
     """
     Write a token file to hold the oauth2 bearer token.
     """
-    oauth_file = open(filename, 'w')
+    oauth_file = open(filename, "w")
     print(oauth2_bearer_token, file=oauth_file)
     oauth_file.close()
+
 
 def read_bearer_token_file(filename):
     """
@@ -50,12 +52,13 @@ def read_bearer_token_file(filename):
     f.close()
     return bearer_token
 
+
 class OAuth2(Auth):
     """
     An OAuth2 application-only authenticator.
     """
-    def __init__(self, consumer_key=None, consumer_secret=None,
-                 bearer_token=None):
+
+    def __init__(self, consumer_key=None, consumer_secret=None, bearer_token=None):
         """
         Create an authenticator. You can supply consumer_key and
         consumer_secret if you are requesting a bearer_token. Otherwise
@@ -67,8 +70,9 @@ class OAuth2(Auth):
 
         if not (bearer_token or (consumer_key and consumer_secret)):
             raise MissingCredentialsError(
-                'You must supply either a bearer token, or both a '
-                'consumer_key and a consumer_secret.')
+                "You must supply either a bearer token, or both a "
+                "consumer_key and a consumer_secret."
+            )
 
     def encode_params(self, base_url, method, params):
         return urlencode(params)
@@ -76,18 +80,19 @@ class OAuth2(Auth):
     def generate_headers(self):
         if self.bearer_token:
             headers = {
-                b'Authorization': 'Bearer {0}'.format(
-                    self.bearer_token).encode('utf8')
+                b"Authorization": "Bearer {0}".format(self.bearer_token).encode("utf8")
             }
         else:
             headers = {
-                b'Content-Type': (b'application/x-www-form-urlencoded;'
-                                  b'charset=UTF-8'),
-                b'Authorization': 'Basic {0}'.format(
-                    b64encode('{0}:{1}'.format(
-                        quote(self.consumer_key),
-                        quote(self.consumer_secret)).encode('utf8')
-                    ).decode('utf8')
-                ).encode('utf8')
+                b"Content-Type": (
+                    b"application/x-www-form-urlencoded;" b"charset=UTF-8"
+                ),
+                b"Authorization": "Basic {0}".format(
+                    b64encode(
+                        "{0}:{1}".format(
+                            quote(self.consumer_key), quote(self.consumer_secret)
+                        ).encode("utf8")
+                    ).decode("utf8")
+                ).encode("utf8"),
             }
         return headers
